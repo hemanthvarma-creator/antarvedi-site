@@ -53,9 +53,16 @@ h2 {
 }
 
 /* LOGO IMAGE ONLY */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
-  height: 40px;
+  height: 40px;     
   width: auto;
+  max-height: 40px;
+  object-fit: contain;
   display: block;
 }
 
