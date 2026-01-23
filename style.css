@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +33,7 @@ h2 {
   font-weight: 600;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER (FIXED ACROSS ALL PAGES) ================= */
 .site-header {
   position: absolute;
   width: 100%;
@@ -52,7 +53,6 @@ h2 {
   padding: 20px 0;
 }
 
-/* LOGO IMAGE ONLY */
 .logo {
   display: flex;
   align-items: center;
@@ -61,7 +61,6 @@ h2 {
 .logo img {
   height: 36px;
   width: auto;
-  max-height: 36px;
   object-fit: contain;
   display: block;
 }
@@ -129,11 +128,6 @@ h2 {
   opacity: 0.95;
 }
 
-/* ================= TEMPLE HERO ================= */
-.temple-hero {
-  background: url("assets/images/temple.jpg") center/cover no-repeat;
-}
-
 /* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
@@ -158,7 +152,6 @@ h2 {
 .secondary {
   background: white;
   color: #083344;
-  border: none;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
@@ -194,13 +187,13 @@ h2 {
   overflow: hidden;
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  text-decoration: none;
 }
 
 .place-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  display: block;
 }
 
 .place-card span {
@@ -229,36 +222,9 @@ h2 {
 .exp-item {
   text-align: center;
   font-weight: 500;
-  color: #083344;
 }
 
-/* ================= TEMPLE PAGE (FIXED) ================= */
-.temple-content {
-  background: #f8fafc;
-  padding: 100px 0 80px;
-}
-
-.temple-inner {
-  max-width: 900px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-.temple-intro {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  margin-bottom: 48px;
-  color: #0f172a;
-}
-
-.temple-title {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 56px;
-}
-
-/* ================= TEMPLE PAGE – SPACIOUS / PREMIUM ================= */
-
+/* ================= TEMPLE PAGE ================= */
 .temple-content {
   background: #f8fafc;
   padding: 110px 0 90px;
@@ -280,20 +246,16 @@ h2 {
 }
 
 .temple-title {
-  text-align: center;
   font-size: 2.4rem;
   margin-bottom: 64px;
-  color: #083344;
 }
 
-/* GRID LAYOUT */
 .temple-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
 }
 
-/* CARD STYLE */
 .temple-card {
   background: white;
   padding: 36px;
@@ -304,7 +266,7 @@ h2 {
 .temple-card h3 {
   font-size: 1.4rem;
   margin-bottom: 18px;
-  color: #083344;
+  text-align: left;
 }
 
 .temple-card ul {
@@ -312,42 +274,19 @@ h2 {
 }
 
 .temple-card li {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-size: 1.05rem;
-  color: #334155;
 }
 
-/* FOOTNOTE */
 .temple-note {
-  margin-top: 72px;
+  max-width: 780px;
+  margin: 64px auto 0;
   text-align: center;
   font-style: italic;
   color: #475569;
 }
 
-/* MOBILE TUNING */
-@media (max-width: 768px) {
-  .temple-content {
-    padding: 80px 0 70px;
-  }
-
-  .temple-title {
-    font-size: 1.9rem;
-  }
-
-  .temple-card {
-    padding: 28px;
-  }
-}
-
-
-.temple-note {
-  margin-top: 40px;
-  font-style: italic;
-  color: #475569;
-}
-
-/* ================= FOOTER ================= */
+/* ================= FOOTER (FIXED ACROSS ALL PAGES) ================= */
 .site-footer {
   margin-top: 80px;
   background: linear-gradient(to right, #083344, #0b4d63);
@@ -369,10 +308,6 @@ h2 {
     font-size: 2.1rem;
   }
 
-  .hero-content p {
-    font-size: 1rem;
-  }
-
   .hero-buttons {
     flex-direction: column;
   }
@@ -381,82 +316,17 @@ h2 {
     padding: 60px 0;
   }
 
-  .places-grid {
+  .places-grid,
+  .experience-bar,
+  .temple-grid {
     grid-template-columns: 1fr;
   }
 
-  .experience-bar {
-    grid-template-columns: 1fr;
-  }
-
-  header .logo img {
-    height: 36px !important;
-    width: auto !important;
-    max-height: 36px !important;
-    min-height: 36px !important;
-    object-fit: contain !important;
-  }
-
-  /* Temple mobile refinement */
   .temple-content {
-    padding: 70px 0 60px;
+    padding: 80px 0 70px;
   }
 
   .temple-title {
     font-size: 1.9rem;
   }
-  /* ================= TEMPLE GRID LAYOUT ================= */
-
-.temple-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-  margin-top: 48px;
-  margin-bottom: 48px;
-}
-
-/* ================= TEMPLE INFO CARDS ================= */
-
-.temple-card {
-  background: white;
-  border-radius: 18px;
-  padding: 32px 28px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.temple-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-.temple-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 18px;
-  color: #0f172a;
-  text-align: left;
-}
-
-.temple-card ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.temple-card li {
-  margin-bottom: 12px;
-  font-size: 1.05rem;
-  color: #334155;
-}
-
-/* ================= TEMPLE NOTE ================= */
-
-.temple-note {
-  max-width: 780px;
-  margin: 48px auto 0;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #475569;
-  line-height: 1.7;
-}
-
 }
