@@ -1,107 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Temple – Antarvedi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css?v=5">
-</head>
-<body>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar container">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Antarvedi Logo">
-    </div>
+body {
+  background: #f8fafc;
+  color: #083344;
+  line-height: 1.6;
+}
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="places.html">Places</a></li>
-      <li><a href="#">Experiences</a></li>
-      <li><a href="temple.html" class="active">Temple</a></li>
-      <li><a href="travel.html">Travel</a></li>
-    </ul>
-  </nav>
-</header>
+/* ================= GLOBAL ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
 
-<!-- ================= HERO ================= -->
-<section class="hero" style="background-image:url('assets/images/temple.jpg')">
-  <div class="hero-content">
-    <h1>Sri Lakshmi Narasimha Swamy Temple</h1>
-    <p>
-      A sacred pilgrimage site at the confluence of the Godavari River and the Bay of Bengal
-    </p>
+section {
+  padding: 70px 0; /* ⬅ reduced overall spacing */
+}
 
-    <div class="hero-buttons">
-      <a
-        href="https://www.aptemples.org/en-in/temples/SLNSD/aboutTemple"
-        target="_blank"
-        class="btn primary"
-      >
-        Book Darshan
-      </a>
-    </div>
-  </div>
-</section>
+h1, h2, h3 {
+  text-align: center;
+}
 
-<!-- ================= TEMPLE CONTENT ================= -->
-<section class="temple-content">
-  <div class="temple-inner">
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
 
-    <p class="temple-intro">
-      Sri Lakshmi Narasimha Swamy Temple, Antarvedi, is a revered ancient shrine
-      located at the sacred confluence of the Godavari River and the Bay of Bengal.
-      Believed to be established by Sage Vasishta, the temple attracts thousands
-      of devotees every year who seek divine blessings, spiritual peace, and
-      fulfillment through sacred rituals and darshan.
-    </p>
+/* ================= HEADER ================= */
+.site-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
 
-    <h2 class="temple-title">Temple Timings & Rituals</h2>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
 
-    <div class="temple-grid">
+.logo {
+  color: white;
+  font-weight: 600;
+}
 
-      <div class="temple-card">
-        <h3>Darshan Timings</h3>
-        <ul>
-          <li><strong>Temple Opens:</strong> 6:00 AM</li>
-          <li><strong>Morning Darshan:</strong> 6:00 AM – 12:30 PM</li>
-          <li><strong>Afternoon Break:</strong> 1:00 PM – 3:30 PM</li>
-          <li><strong>Evening Darshan:</strong> 3:30 PM – 7:30 PM</li>
-        </ul>
-      </div>
+.logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 
-      <div class="temple-card">
-        <h3>Abhishekams</h3>
-        <ul>
-          <li><strong>Daily Abhishekam:</strong> 8:00 AM – 9:30 AM</li>
-          <li>Special Abhishekams on Ekadasi and festival days</li>
-        </ul>
-      </div>
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
 
-      <div class="temple-card">
-        <h3>Annadanam</h3>
-        <ul>
-          <li><strong>Annadanam Timings:</strong> 10:00 AM – 3:00 PM</li>
-          <li>Free meals are served daily to all devotees</li>
-        </ul>
-      </div>
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    </div>
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background: url("assets/images/hero.jpg") center/cover no-repeat;
+  position: relative;
+  color: white;
+}
 
-    <p class="temple-note">
-      Note: Temple timings and rituals may vary during festivals and special
-      occasions. Devotees are advised to verify the latest schedule through the
-      official AP Temples website before planning their visit.
-    </p>
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55),
+    rgba(248,250,252,1)
+  );
+}
 
-  </div>
-</section>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  © Antarvedi Teertham & Tourism
-</footer>
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
 
-</body>
-</html>
+.hero-content p {
+  max-width: 720px;
+  font-size: 1.15rem;
+}
+
+/* ================= BUTTONS ================= */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px; /* ⬅ reduced gap below hero text */
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary {
+  background: #0ea5e9;
+  color: white;
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+/* ================= PLACES GRID ================= */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.place-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  aspect-ratio: 4 / 3; /* ✅ consistent card size */
+}
+
+.place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ image fits perfectly */
+  display: block;
+}
+
+/* PLACEHOLDER TEXT FIXED */
+.place-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  z-index: 2;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0)
+  );
+
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7); /* ✅ text always readable */
+}
+
+/* ================= PAGE HERO (INNER PAGES) ================= */
+.page-hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.page-hero h1 {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 0 20px;
+}
+
+/* ================= TEXT BLOCK ================= */
+.text-block {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #083344;
+  color: white;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 60px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .nav-links {
+    gap: 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .places-grid {
+    grid-template-columns: 1fr;
+  }
+}
