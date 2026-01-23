@@ -49,13 +49,14 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0;
+  padding: 20px 0;
 }
 
-.logo {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: white;
+/* LOGO IMAGE ONLY */
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -89,13 +90,12 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.35) 0%,
-      rgba(0,0,0,0.25) 40%,
-      rgba(248,250,252,1) 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.25) 45%,
+    rgba(248,250,252,1) 100%
+  );
 }
 
 .hero-content {
@@ -150,26 +150,14 @@ h2 {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* ================= INTRO ================= */
-.intro-section {
-  text-align: center;
-  padding: 60px 20px 40px;
-}
-
-.intro-section p {
-  max-width: 720px;
-  margin: auto;
-  color: #475569;
-  font-size: 1.05rem;
-}
-
 /* ================= SECTION TITLE ================= */
+/* Reduced top spacing to match reference image */
 .section-title {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 40px 0 30px;
+  margin: 20px 0 28px;   /* 🔽 reduced top space */
 }
 
 .section-title h3 {
