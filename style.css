@@ -257,23 +257,89 @@ h2 {
   margin-bottom: 56px;
 }
 
-.temple-section {
-  margin-bottom: 56px;
+/* ================= TEMPLE PAGE – SPACIOUS / PREMIUM ================= */
+
+.temple-content {
+  background: #f8fafc;
+  padding: 110px 0 90px;
 }
 
-.temple-section h3 {
+.temple-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.temple-intro {
+  max-width: 900px;
+  margin: 0 auto 72px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: center;
+  color: #0f172a;
+}
+
+.temple-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 64px;
+  color: #083344;
+}
+
+/* GRID LAYOUT */
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+}
+
+/* CARD STYLE */
+.temple-card {
+  background: white;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.temple-card h3 {
   font-size: 1.4rem;
   margin-bottom: 18px;
+  color: #083344;
 }
 
-.temple-section ul {
-  padding-left: 24px;
+.temple-card ul {
+  padding-left: 20px;
 }
 
-.temple-section li {
+.temple-card li {
   margin-bottom: 14px;
   font-size: 1.05rem;
+  color: #334155;
 }
+
+/* FOOTNOTE */
+.temple-note {
+  margin-top: 72px;
+  text-align: center;
+  font-style: italic;
+  color: #475569;
+}
+
+/* MOBILE TUNING */
+@media (max-width: 768px) {
+  .temple-content {
+    padding: 80px 0 70px;
+  }
+
+  .temple-title {
+    font-size: 1.9rem;
+  }
+
+  .temple-card {
+    padding: 28px;
+  }
+}
+
 
 .temple-note {
   margin-top: 40px;
