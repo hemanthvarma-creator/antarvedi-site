@@ -154,6 +154,11 @@ h1, h2, h3 {
   background: white;
   color: #083344;
 }
+/* ================= TEMPLE HERO OVERRIDE ================= */
+.temple-hero {
+  background: url("assets/images/temple.jpg") center/cover no-repeat;
+}
+
 
 /* ================= PLACES TO VISIT ================= */
 .places-grid {
