@@ -59,7 +59,7 @@ h2 {
 }
 
 .logo img {
-  height: 72px;          /* ⬅ BIG, CLEAR, PREMIUM */
+  height: 64px;          /* ⬅ BIG, CLEAR, PREMIUM */
   width: auto;
   max-height: 64px;
   object-fit: contain;
