@@ -20,7 +20,7 @@ body {
 }
 
 section {
-  padding: 70px 0; /* ⬅ reduced overall spacing */
+  padding: 70px 0;
 }
 
 h1, h2, h3 {
@@ -48,14 +48,8 @@ h2 {
   padding: 24px 0;
 }
 
-.logo {
-  color: white;
-  font-weight: 600;
-}
-
 .logo img {
   height: 36px;
-  width: auto;
   display: block;
 }
 
@@ -69,6 +63,13 @@ h2 {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  opacity: 0.9;
+}
+
+.nav-links a.active {
+  opacity: 1;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
 }
 
 /* ================= HERO ================= */
@@ -85,9 +86,9 @@ h2 {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55),
-    rgba(248,250,252,1)
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.45) 65%,
+    rgba(248,250,252,0.85) 100%
   );
 }
 
@@ -117,7 +118,7 @@ h2 {
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 20px; /* ⬅ reduced gap below hero text */
+  margin-top: 20px;
 }
 
 .btn {
@@ -133,8 +134,28 @@ h2 {
 }
 
 .secondary {
-  border: 2px solid white;
-  color: white;
+  background: white;
+  color: #083344;
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 20px 0 36px;
+}
+
+.section-title h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.section-title .line {
+  width: 90px;
+  height: 1px;
+  background: #cbd5e1;
 }
 
 /* ================= PLACES GRID ================= */
@@ -148,19 +169,39 @@ h2 {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  aspect-ratio: 4 / 3;
   text-decoration: none;
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-  aspect-ratio: 4 / 3; /* ✅ consistent card size */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
 }
 
 .place-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✅ image fits perfectly */
+  object-fit: cover;
   display: block;
 }
 
-/* PLACEHOLDER TEXT FIXED */
+/* Overlay on hover */
+.place-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.place-card:hover::after {
+  opacity: 1;
+}
+
+/* PLACE TEXT */
 .place-card span {
   position: absolute;
   bottom: 0;
@@ -172,17 +213,35 @@ h2 {
   color: white;
   text-align: center;
   z-index: 2;
-
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.85),
     rgba(0,0,0,0)
   );
-
-  text-shadow: 0 2px 8px rgba(0,0,0,0.7); /* ✅ text always readable */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
-/* ================= PAGE HERO (INNER PAGES) ================= */
+/* ================= EXPERIENCE BAR ================= */
+.experience-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+}
+
+.exp-item {
+  text-align: center;
+  font-weight: 600;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #083344;
+}
+
+/* ================= PAGE HERO ================= */
 .page-hero {
   height: 60vh;
   background-size: cover;
@@ -209,20 +268,12 @@ h2 {
   padding: 0 20px;
 }
 
-/* ================= TEXT BLOCK ================= */
-.text-block {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
 /* ================= FOOTER ================= */
 .site-footer {
   background: #083344;
   color: white;
   text-align: center;
-  padding: 24px 0;
+  padding: 26px 0;
   margin-top: 60px;
 }
 
@@ -242,11 +293,20 @@ h2 {
     font-size: 1rem;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+  }
+
   section {
     padding: 55px 0;
   }
 
-  .places-grid {
+  .places-grid,
+  .experience-bar {
     grid-template-columns: 1fr;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
   }
 }
