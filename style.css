@@ -56,23 +56,16 @@ h2 {
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;                 /* more breathing space */
 }
 
 .logo img {
-  height: 80px;              /* 🔥 BIG & PREMIUM */
+  height: 72px;          /* ⬅ BIG, CLEAR, PREMIUM */
   width: auto;
+  max-height: 64px;
   object-fit: contain;
   display: block;
 }
 
-.logo span {
-  font-size: 1.85rem;        /* 🔥 CLEARLY BIG */
-  font-weight: 700;
-  color: white;
-  line-height: 1;
-  letter-spacing: 0.3px;
-}
 
 
 
