@@ -37,18 +37,17 @@
       A sacred coastal destination of nature, spirituality, and peace
     </p>
 
-    <!-- IMPORTANT:
-         Plan Visit does NOT reuse temple layout or content.
-         It is a neutral routing page (AI planner later). -->
+    <!-- BUTTONS -->
     <div class="hero-buttons">
-      <a href="places.html" class="btn primary">Explore Antarvedi</a>
+      <!-- CHANGED: now scrolls to places on same page -->
+      <a href="#places" class="btn primary">Explore Antarvedi</a>
       <a href="travel.html" class="btn secondary">Plan Visit</a>
     </div>
   </div>
 </section>
 
 <!-- ================= PLACES TITLE ================= -->
-<section class="section-title">
+<section class="section-title" id="places">
   <span class="line"></span>
   <h3>Places to Visit</h3>
   <span class="line"></span>
@@ -73,7 +72,7 @@
       <span>Lighthouse</span>
     </a>
 
-    <!-- Temple appears ONLY here + navbar -->
+    <!-- Temple ONLY here + navbar -->
     <a href="temple.html" class="place-card">
       <img src="assets/images/temple.jpg" alt="Temple">
       <span>Temple</span>
