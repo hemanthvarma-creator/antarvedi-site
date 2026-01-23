@@ -99,6 +99,11 @@ h1, h2, h3 {
 .temple-hero {
   background: url("assets/images/temple.jpg") center/cover no-repeat;
 }
+/* ================= SANGAMAM HERO ================= */
+.sangamam-hero {
+  background: url("assets/images/sangamam.jpg") center/cover no-repeat;
+}
+
 
 .hero::after {
   content: "";
