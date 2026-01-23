@@ -283,5 +283,55 @@ h2 {
     min-height: 36px !important;
     object-fit: contain !important;
   }
+  /* ================= TEMPLE PAGE – SPACIOUS ================= */
+
+.temple-content {
+  background: #f8fafc;
+  padding: 100px 0 80px;
+}
+
+.temple-inner {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.temple-intro {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 48px;
+  color: #0f172a;
+}
+
+.temple-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 56px;
+}
+
+.temple-section {
+  margin-bottom: 56px;
+}
+
+.temple-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.temple-section ul {
+  padding-left: 24px;
+}
+
+.temple-section li {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.temple-note {
+  margin-top: 40px;
+  font-style: italic;
+  color: #475569;
+}
+
 }
 
