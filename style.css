@@ -128,6 +128,11 @@ h2 {
   font-size: 1.15rem;
   opacity: 0.95;
 }
+/* ================= TEMPLE HERO IMAGE ================= */
+.temple-hero {
+  background: url("assets/images/temple.jpg") center/cover no-repeat;
+}
+
 
 /* ================= BUTTONS ================= */
 .hero-buttons {
