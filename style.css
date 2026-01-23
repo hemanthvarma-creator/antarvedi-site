@@ -59,9 +59,9 @@ h2 {
 }
 
 .logo img {
-  height: 64px;          /* ⬅ BIG, CLEAR, PREMIUM */
+  height: 48px;          /* ⬅ BIG, CLEAR, PREMIUM */
   width: auto;
-  max-height: 64px;
+  max-height: 48px;
   object-fit: contain;
   display: block;
 }
