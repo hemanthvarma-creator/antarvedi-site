@@ -272,4 +272,13 @@ h2 {
   .experience-bar {
     grid-template-columns: 1fr;
   }
+  /* FORCE LOGO SIZE */
+header .logo img {
+  height: 36px !important;
+  width: auto !important;
+  max-height: 36px !important;
+  min-height: 36px !important;
+  object-fit: contain !important;
+}
+
 }
