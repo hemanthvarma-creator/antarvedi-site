@@ -405,4 +405,58 @@ h2 {
   .temple-title {
     font-size: 1.9rem;
   }
+  /* ================= TEMPLE GRID LAYOUT ================= */
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+/* ================= TEMPLE INFO CARDS ================= */
+
+.temple-card {
+  background: white;
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.temple-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  color: #0f172a;
+  text-align: left;
+}
+
+.temple-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.temple-card li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+/* ================= TEMPLE NOTE ================= */
+
+.temple-note {
+  max-width: 780px;
+  margin: 48px auto 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
 }
