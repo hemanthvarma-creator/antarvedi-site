@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Antarvedi Tourism</title>
+  <title>Antarvedi Teertham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <nav class="navbar container">
     <div class="logo">Antarvedi</div>
@@ -20,33 +22,61 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Where Godavari Meets the Sea</h1>
     <p>Nature, spirituality, boating, and coastal calm in one destination</p>
-    <a href="places.html" class="btn primary">Explore Antarvedi</a>
-    <a href="travel.html" class="btn secondary">Plan Visit</a>
+
+    <!-- BUTTONS -->
+    <div class="hero-buttons">
+      <a href="places.html" class="btn primary">Explore Antarvedi</a>
+      <a href="travel.html" class="btn secondary">Plan Visit</a>
+    </div>
   </div>
 </section>
 
+<!-- INTRO -->
+<section class="container intro">
+  <h2>Antarvedi Teertham</h2>
+  <p class="text-block">
+    The unique confluence of the Godavari River and the Bay of Bengal.
+    A blend of serene waters, sandy shores, and sacred traditions.
+  </p>
+</section>
+
+<!-- PLACES (NO HEADING, TEMPLE FIRST) -->
 <section class="container">
-  <h2>Places to Visit</h2>
   <div class="places-grid">
-    <a href="places.html" class="place-card">
-      <img src="assets/images/sangamam.jpg">
-      <span>Sangamam</span>
-    </a>
-    <a href="lighthouse.html" class="place-card">
-      <img src="assets/images/lighthouse.jpg">
-      <span>Lighthouse</span>
-    </a>
+
+    <!-- TEMPLE FIRST -->
     <a href="temple.html" class="place-card">
-      <img src="assets/images/temple.jpg">
+      <img src="assets/images/temple.jpg" alt="Antarvedi Temple">
       <span>Temple</span>
     </a>
+
+    <a href="places.html" class="place-card">
+      <img src="assets/images/sangamam.jpg" alt="Godavari Sangamam">
+      <span>Sangamam</span>
+    </a>
+
+    <a href="travel.html" class="place-card">
+      <img src="assets/images/beach.jpg" alt="Antarvedi Beach">
+      <span>Beach</span>
+    </a>
+
+    <a href="lighthouse.html" class="place-card">
+      <img src="assets/images/lighthouse.jpg" alt="Antarvedi Lighthouse">
+      <span>Lighthouse</span>
+    </a>
+
   </div>
 </section>
 
-<footer class="site-footer">© Antarvedi</footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  © Antarvedi
+</footer>
+
 </body>
 </html>
