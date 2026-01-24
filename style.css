@@ -428,15 +428,16 @@ h1, h2, h3 {
 }
 /* ================= RESORTS PAGE NOTE CENTER FIX ================= */
 
+/* ================= RESORTS PAGE NOTE CENTER FIX ================= */
 .resorts-page .temple-note {
-  max-width: 100%;
-  margin: 80px 0 0;
-
-  display: flex;
-  justify-content: center;
-
+  max-width: 900px;          
+  margin: 80px auto 0;       
   padding: 0 24px;
+
+  text-align: center;
+  font-style: italic;
 }
+
 
 .resorts-page .temple-note::before {
   content: "";
