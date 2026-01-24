@@ -23,20 +23,30 @@ section {
   padding: 70px 0;
 }
 
-/* CENTER ALL CONTAINER HEADINGS */
 h1, h2, h3 {
-  text-align: center;
+  text-align: center; /* ✅ force headings centered globally */
 }
 
-.container h1,
-.container h2,
-.container h3,
-.temple-inner h1,
-.temple-inner h2,
-.temple-inner h3 {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
+/* ================= SECTION HEADINGS ================= */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0 48px;
+}
+
+.section-title h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #083344;
+}
+
+.section-title .line {
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  border-radius: 2px;
 }
 
 /* ================= HEADER ================= */
@@ -59,7 +69,6 @@ h1, h2, h3 {
   display: block;
 }
 
-/* NAV LINKS DESKTOP */
 .nav-links {
   list-style: none;
   display: flex;
@@ -87,7 +96,14 @@ h1, h2, h3 {
   color: white;
 }
 
+/* HERO OVERRIDES */
 .temple-hero { background: url("assets/images/temple.jpg") center/cover no-repeat; }
+.sangamam-hero { background: url("assets/images/sangamam.jpg") center/cover no-repeat; }
+.beach-hero { background: url("assets/images/beach.jpg") center/cover no-repeat; }
+.boating-hero { background: url("assets/images/boating.jpg") center/cover no-repeat; }
+.lighthouse-hero { background: url("assets/images/lighthouse.jpg") center/cover no-repeat; }
+.vasista-hero { background: url("assets/images/vasistaashramam.jpg") center/cover no-repeat; }
+.resorts-hero { background: url("assets/images/resorts.jpg") center/cover no-repeat; }
 .travel-hero { background: url("assets/images/travel.jpg") center/cover no-repeat; }
 .contact-hero { background: url("assets/images/contact.jpg") center/cover no-repeat; }
 .planner-hero { background: url("assets/images/planner.jpg") center/cover no-repeat; }
@@ -115,6 +131,147 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  max-width: 720px;
+  font-size: 1.15rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary {
+  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #083344;
+}
+
+/* ===== BOOK NOW BUTTON ===== */
+.book-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto 0;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  box-shadow: 0 8px 22px rgba(2,132,199,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(2,132,199,0.5);
+}
+
+/* ================= PLACES TO VISIT ================= */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.place-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  aspect-ratio: 4 / 3;
+  text-decoration: none;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.28);
+}
+
+.place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.place-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.place-card:hover::after {
+  opacity: 1;
+}
+
+.place-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  z-index: 3;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0)
+  );
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* ================= THINGS TO EXPERIENCE ================= */
+.experience-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.exp-item {
+  background: white;
+  padding: 28px 22px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+  transform: translateY(-4px);
 }
 
 /* ================= TEMPLE PAGE ================= */
@@ -129,34 +286,95 @@ h1, h2, h3 {
   padding: 0 24px;
 }
 
-.temple-title {
+.temple-intro {
   max-width: 900px;
-  margin: 0 auto 64px;
+  margin: 0 auto 70px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #0f172a;
+}
+
+.temple-title {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-/* ================= CONTACT PAGE ================= */
-.contact-box {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 56px 64px;
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+}
+
+.temple-card {
   background: white;
-  border-radius: 22px;
+  padding: 36px;
+  border-radius: 20px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
   text-align: center;
 }
-
-.contact-box ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 24px auto;
-  display: inline-block;
+.temple-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
   text-align: left;
 }
 
-.contact-box a {
-  display: inline-block;
-  margin-top: 28px;
+.temple-card ul {
+  padding-left: 20px;
+}
+
+.temple-card li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.temple-note {
+  width: 100%;
+  margin: 72px auto 0;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #475569;
+}
+
+.resorts-page .temple-note {
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding: 0 24px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: linear-gradient(to right, #083344, #0b4d63);
+  color: white;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 60px;
+}
+
+/* ================= CONTACT PAGE BOX FIX ================= */
+.contact-box {
+  max-width: 1100px;       /* ✅ same width as temple-inner */
+  margin: 0 auto;          /* center horizontally */
+  padding: 0 24px;         /* consistent padding */
+  text-align: center;      /* ✅ center content */
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 36px 28px;
+  }
 }
 
 /* ================= AI PLANNER ================= */
@@ -166,6 +384,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  text-align: center; /* ✅ center headings/content */
 }
 
 .planner-box label {
@@ -195,45 +414,30 @@ h1, h2, h3 {
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
 }
 
-/* ================= FOOTER ================= */
-.site-footer {
-  background: linear-gradient(to right, #083344, #0b4d63);
-  color: white;
-  text-align: center;
-  padding: 26px 0;
-  margin-top: 60px;
-}
-
-/* ================= MOBILE HEADER (FINAL FIX) ================= */
+/* ================= MOBILE HEADER FIX ================= */
 .menu-toggle {
   display: none;
+  font-size: 26px;
   color: white;
   cursor: pointer;
 }
 
+/* MOBILE VIEW */
 @media (max-width: 768px) {
-
-  .site-header .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 0;
+    padding: 16px 0;
+    justify-content: flex-start;   /* ✅ logo + hamburger aligned left */
+    gap: 12px;
   }
 
   .logo {
-    margin-left: 0;
+    order: 1; /* logo first */
   }
 
   .menu-toggle {
     display: block;
-    font-size: 32px;      /* bigger hamburger */
-    padding: 8px 10px;
-    margin-right: 6px;    /* not stuck to edge */
+    order: 2; /* hamburger right after logo */
+    margin-left: 8px;
   }
 
   .nav-links {
@@ -243,18 +447,32 @@ h1, h2, h3 {
     width: 100%;
     background: rgba(8, 51, 68, 0.95);
     flex-direction: column;
+    gap: 0;
+    display: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
   }
 
-  .nav-links.show {
-    max-height: 500px;
+  .nav-links li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
   }
 
   .nav-links a {
+    display: block;
     padding: 14px 24px;
     font-size: 1rem;
-    display: block;
+  }
+
+  .nav-links.show {
+    display: flex;
+    max-height: 500px; /* enough for all links */
+  }
+
+  /* Reduce container padding ONLY for header */
+  .site-header .container {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
+
