@@ -586,7 +586,7 @@ h1, h2, h3 {
   }
 }
 /* ================= MOBILE HEADER REAL FIX ================= */
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
 
   /* Pull everything slightly inward */
   .site-header .container {
@@ -629,6 +629,17 @@ h1, h2, h3 {
     right: 12px;   /* THIS moves it LEFT */
   }
 }
+@media (max-width: 768px) {
+  .menu-toggle {
+    right: 16px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-left: -6px;
+  }
+}
+
 
 
 
