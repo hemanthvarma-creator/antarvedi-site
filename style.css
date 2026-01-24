@@ -345,6 +345,7 @@ h1, h2, h3 {
   padding: 36px;
   border-radius: 20px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  text-align: center; 
 }
 
 .temple-card h3 {
@@ -365,13 +366,14 @@ h1, h2, h3 {
 
 .temple-note {
   max-width: 780px;
-  margin: 64px auto 0;   /* centers horizontally */
+  margin: 72px auto 0;
   text-align: center;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
   font-style: italic;
   color: #475569;
 }
+
 
 
 /* ================= FOOTER ================= */
