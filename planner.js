@@ -1,13 +1,7 @@
-/* ===============================
-   SMART FIELD RULES
-================================ */
-function applyPlannerRules() {
+function handlePurposeChange() {
   const purpose = document.getElementById("purpose").value;
-  const days = document.getElementById("days").value;
   const group = document.getElementById("group");
-  const stay = document.getElementById("stay");
 
-  /* Rule 1: If Family Trip → lock Traveling With = Family */
   if (purpose === "family") {
     group.value = "family";
     [...group.options].forEach(opt => {
@@ -16,8 +10,12 @@ function applyPlannerRules() {
   } else {
     [...group.options].forEach(opt => opt.disabled = false);
   }
+}
 
-  /* Rule 2: If Half Day → only No Stay allowed */
+function handleDaysChange() {
+  const days = document.getElementById("days").value;
+  const stay = document.getElementById("stay");
+
   if (days === "half") {
     stay.value = "none";
     [...stay.options].forEach(opt => {
@@ -28,148 +26,135 @@ function applyPlannerRules() {
   }
 }
 
-/* Run rules whenever user changes selections */
-document.getElementById("purpose").addEventListener("change", applyPlannerRules);
-document.getElementById("days").addEventListener("change", applyPlannerRules);
-
-/* ===============================
-   PLAN GENERATION
-================================ */
 function generatePlan() {
   const purpose = document.getElementById("purpose").value;
   const days = document.getElementById("days").value;
   const stay = document.getElementById("stay").value;
+  const result = document.getElementById("planResult");
 
-  let plan = `<h3>Your Personalized Antarvedi Travel Plan</h3>`;
+  let html = `<h3>Your Personalized Antarvedi Travel Plan</h3>`;
 
-  /* ---------- HALF DAY ---------- */
+  /* ================= HALF DAY ================= */
   if (days === "half") {
-    plan += `
-      <h4>Half Day Itinerary</h4>
-      <ul>
-        ${purpose === "temple" ? `
-          <li>Early morning darshan at Sri Lakshmi Narasimha Swamy Temple</li>
-          <li>Brief visit to Sagar Sangamam</li>` : ``}
+    html += `<h4>Half-Day Plan</h4><ul>`;
 
-        ${purpose === "relax" ? `
-          <li>Peaceful beach walk</li>
-          <li>Lighthouse visit with sea breeze</li>` : ``}
+    if (purpose === "temple") {
+      html += `
+        <li>Early morning darshan at Sri Lakshmi Narasimha Swamy Temple</li>
+        <li>Short visit to Sagar Sangamam</li>
+        <li>Return before afternoon</li>`;
+    }
 
-        ${purpose === "nature" ? `
-          <li>Beach exploration</li>
-          <li>Panoramic lighthouse views</li>` : ``}
+    if (purpose === "nature") {
+      html += `
+        <li>Antarvedi beach walk</li>
+        <li>Lighthouse climb for panoramic views</li>`;
+    }
 
-        ${purpose === "boating" ? `
-          <li>Speed boating experience (weather permitting)</li>
-          <li>Short regular boat ride</li>` : ``}
+    if (purpose === "boating") {
+      html += `
+        <li>Short regular boating experience</li>
+        <li>Optional speed boating (weather permitting)</li>`;
+    }
 
-        ${purpose === "family" ? `
-          <li>Temple darshan with family</li>
-          <li>Calm beach visit suitable for all ages</li>` : ``}
+    if (purpose === "relax") {
+      html += `
+        <li>Quiet beach walk</li>
+        <li>Sea breeze relaxation near lighthouse</li>`;
+    }
 
-        <li>Return journey before afternoon</li>
-      </ul>`;
+    if (purpose === "family") {
+      html += `
+        <li>Temple darshan suitable for all ages</li>
+        <li>Beach visit and light refreshments</li>`;
+    }
+
+    html += `</ul>`;
   }
 
-  /* ---------- 1 DAY ---------- */
+  /* ================= 1 DAY ================= */
   if (days === "1") {
-    plan += `
+    html += `
       <h4>Day 1</h4>
       <ul>
-        ${purpose === "temple" ? `
-          <li>Morning darshan and abhishekam</li>
-          <li>Annadanam lunch</li>
-          <li>Evening beach & lighthouse visit</li>` : ``}
-
-        ${purpose === "relax" ? `
-          <li>Late morning arrival</li>
-          <li>Beach relaxation</li>
-          <li>Calm evening boating</li>` : ``}
-
-        ${purpose === "nature" ? `
-          <li>Beach walk and lighthouse climb</li>
-          <li>Sunset at river–sea confluence</li>` : ``}
-
-        ${purpose === "boating" ? `
-          <li>Regular boating to Sagar Sangamam</li>
-          <li>Afternoon speed boating</li>` : ``}
-
-        ${purpose === "family" ? `
-          <li>Temple darshan and annadanam</li>
-          <li>Evening beach walk</li>` : ``}
+        <li>Morning temple darshan and abhishekam</li>
+        <li>Annadanam lunch at temple</li>
+        <li>Afternoon rest or local exploration</li>
+        <li>Evening beach walk and lighthouse visit</li>
       </ul>`;
   }
 
-  /* ---------- 2 DAYS ---------- */
+  /* ================= 2 DAYS ================= */
   if (days === "2") {
-    plan += `
+    html += `
       <h4>Day 1</h4>
       <ul>
         <li>Arrival and temple darshan</li>
-        <li>Lunch and rest</li>
-        <li>Evening beach walk & sunset</li>
+        <li>Annadanam or local lunch</li>
+        <li>Evening beach walk and sunset views</li>
       </ul>
 
       <h4>Day 2</h4>
       <ul>
-        ${purpose === "temple" ? `
-          <li>Sagar Sangamam boating</li>
-          <li>Spiritual relaxation</li>` : ``}
-
-        ${purpose === "relax" || purpose === "nature" ? `
-          <li>Mada Adavulu mangrove forest boating</li>
-          <li>Nature photography</li>` : ``}
-
-        ${purpose === "boating" ? `
-          <li>Mangrove boating</li>
-          <li>Optional speed boating</li>` : ``}
-
-        ${purpose === "family" ? `
-          <li>Safe regular boating</li>
-          <li>Family leisure time</li>` : ``}
+        <li>Boating to Sagar Sangamam</li>
+        <li>Mada Adavulu mangrove forest boating</li>
+        <li>Relaxed return journey</li>
       </ul>`;
   }
 
-  /* ---------- 3 DAYS ---------- */
+  /* ================= 3 DAYS ================= */
   if (days === "3") {
-    plan += `
-      <h4>Day 1</h4>
+    html += `
+      <h4>Day 1 – Spiritual Focus</h4>
       <ul>
         <li>Temple darshan and rituals</li>
         <li>Evening beach walk</li>
       </ul>
 
-      <h4>Day 2</h4>
+      <h4>Day 2 – Nature & Boating</h4>
       <ul>
         <li>Mada Adavulu mangrove boating</li>
-        <li>Speed or leisure boating</li>
+        <li>Optional speed boating</li>
         <li>Sunset photography</li>
       </ul>
 
-      <h4>Day 3</h4>
+      <h4>Day 3 – Relaxed Exploration</h4>
       <ul>
-        <li>Relaxed morning darshan</li>
+        <li>Morning darshan or meditation</li>
         <li>Explore nearby villages and fishing ponds</li>
         <li>Return journey</li>
       </ul>`;
   }
 
-  /* ---------- STAY (ALWAYS SHOW) ---------- */
+  /* ================= STAY ================= */
+  html += `<h4>Stay Recommendation</h4><p>`;
+
   if (stay === "none") {
-    plan += `<p><strong>Stay:</strong> Same day return (no overnight stay).</p>`;
+    html += `No overnight stay required. Same-day return recommended.`;
   }
 
   if (stay === "budget") {
-    plan += `<p><strong>Stay:</strong> Budget local lodges, guest houses, and homestays near Antarvedi & Dindi.</p>`;
+    html += `Budget local lodges, guest houses, and homestays near Antarvedi and Dindi.`;
   }
 
   if (stay === "resort") {
-    plan += `<p><strong>Stay:</strong> Riverside and backwater resorts at Dindi.</p>`;
+    html += `Riverside and backwater resorts at Dindi for a peaceful stay.`;
   }
 
-  /* ---------- AI TIP ---------- */
-  plan += `
-    <p><strong>AI Tip:</strong> Start early for darshan, confirm boating availability locally, and avoid peak afternoon heat.</p>`;
+  html += `</p>`;
 
-  document.getElementById("planResult").innerHTML = plan;
+  /* ================= AI TIPS ================= */
+  html += `
+    <h4>AI Travel Tips</h4>
+    <ul>
+      <li>Start early for temple darshan</li>
+      <li>Confirm boating availability locally</li>
+      <li>Avoid noon beach visits in summer</li>
+      <li>Best season: October to March</li>
+    </ul>
+  `;
+
+  result.innerHTML = html;
+  result.style.display = "block";
+  result.scrollIntoView({ behavior: "smooth" });
 }
