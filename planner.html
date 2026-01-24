@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>AI Trip Planner – Antarvedi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=7">
 </head>
 
 <body class="planner-page">
@@ -31,7 +31,7 @@
 <section class="hero planner-hero">
   <div class="hero-content">
     <h1>Plan Your Antarvedi Trip with AI</h1>
-    <p>Answer a few questions and get a personalized Antarvedi travel plan</p>
+    <p>Answer a few questions and get a smart, day-wise Antarvedi itinerary</p>
   </div>
 </section>
 
@@ -41,11 +41,11 @@
 
     <h2 class="temple-title">AI Trip Planner</h2>
 
-    <!-- PLANNER INPUT BOX -->
+    <!-- INPUT BOX -->
     <div class="planner-box">
 
       <label>Purpose of Visit</label>
-      <select id="purpose">
+      <select id="purpose" onchange="handlePurposeChange()">
         <option value="temple">Temple Darshan</option>
         <option value="nature">Beach & Nature</option>
         <option value="boating">Boating & Adventure</option>
@@ -54,7 +54,7 @@
       </select>
 
       <label>Trip Duration</label>
-      <select id="days">
+      <select id="days" onchange="handleDaysChange()">
         <option value="half">Half Day</option>
         <option value="1">1 Day</option>
         <option value="2">2 Days</option>
@@ -82,37 +82,16 @@
 
     </div>
 
-    <!-- OUTPUT (HIDDEN INITIALLY) -->
-    <div id="planResult" class="planner-result" style="display: none;"></div>
+    <!-- OUTPUT -->
+    <div id="planResult" class="planner-result" style="display:none;"></div>
 
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   © Antarvedi Teertham & Tourism
 </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-  function generatePlan() {
-    const resultBox = document.getElementById("planResult");
-
-    resultBox.innerHTML = `
-      <h3>Your Personalized Antarvedi Plan</h3>
-      <ul>
-        <li>Early morning temple darshan</li>
-        <li>Visit Sagar Sangamam</li>
-        <li>Lunch at local eateries</li>
-        <li>Evening boating experience</li>
-        <li>Relax by the river before return</li>
-      </ul>
-    `;
-
-    resultBox.style.display = "block";
-    resultBox.scrollIntoView({ behavior: "smooth" });
-  }
-</script>
-
+<script src="planner.js"></script>
 </body>
 </html>
