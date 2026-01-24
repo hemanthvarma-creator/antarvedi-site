@@ -123,6 +123,11 @@ h1, h2, h3 {
 .resorts-hero {
   background: url("assets/images/resorts.jpg") center/cover no-repeat;
 }
+/* ================= TRAVEL HERO ================= */
+.travel-hero {
+  background: url("assets/images/travel.jpg") center/cover no-repeat;
+}
+
 
 
 
