@@ -502,6 +502,51 @@ h1, h2, h3 {
   border-radius: 18px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
 }
+/* ================= MOBILE HEADER FIX ================= */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 51, 68, 0.95);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
 
 
 
