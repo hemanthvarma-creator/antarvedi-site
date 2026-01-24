@@ -473,5 +473,12 @@ h1, h2, h3 {
   padding: 0 24px;
   text-align: center;
 }
+/* ================= BOATING PAGE HEADING SIZE FIX ================= */
+
+.boating-page .temple-title {
+  font-size: 2rem;        /* reduced from 2.4rem */
+  margin-bottom: 48px;   /* slightly tighter spacing */
+}
+
 
 
