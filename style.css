@@ -630,8 +630,10 @@ h1, h2, h3 {
 }
 
 .contact-box ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;          /* restore bullet points */
+  padding-left: 20px;        /* add space so bullets don’t overlap text */
+  text-align: left;          /* keep bullets aligned properly */
+  display: inline-block;     /* centers the whole list block */
   margin-bottom: 36px;
 }
 
@@ -640,6 +642,7 @@ h1, h2, h3 {
   font-size: 1.05rem;
   color: #334155;
 }
+
 
 .contact-box .email-button {
   display: inline-block;
