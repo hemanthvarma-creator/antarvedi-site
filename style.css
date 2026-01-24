@@ -558,6 +558,19 @@ h1, h2, h3 {
     max-height: 500px; /* enough for all links */
   }
 }
+/* ================= MOBILE HEADER TOGGLE FIX ================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    margin-right: 14px;   /* ⬅️ pulls it left */
+    padding: 6px 8px;
+  }
+
+  .navbar {
+    padding-right: 12px;  /* prevents edge hugging */
+  }
+}
+
 
 
 
