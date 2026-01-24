@@ -668,6 +668,65 @@ h1, h2, h3 {
   color: #475569;
   font-style: italic;
 }
+/* ================= CONTACT PAGE FINAL CENTERED WITH BULLETS ================= */
+.contact-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 64px;
+  text-align: center;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+  text-align: center !important;
+  margin-bottom: 48px;
+}
+
+/* Centered list with bullets */
+.contact-box ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block; /* centers the whole list block */
+  margin-bottom: 36px;
+}
+
+.contact-box ul li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+/* Email button */
+.contact-box .book-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(2,132,199,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-box .book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(2,132,199,0.5);
+}
+
+/* Note at bottom */
+.contact-box .note {
+  margin-top: 36px;
+  font-size: 0.9rem;
+  color: #475569;
+  font-style: italic;
+}
+
 
 
 
