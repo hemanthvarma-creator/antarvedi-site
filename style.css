@@ -60,7 +60,7 @@ h1, h2, h3 {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 24px 0;
 }
@@ -70,7 +70,7 @@ h1, h2, h3 {
   display: block;
 }
 .logo {
-  margin: 0 auto;   /* forces logo to the far left */
+  margin-right: auto;   /* forces logo to the far left */
 }
 
 .nav-links {
@@ -667,4 +667,4 @@ h1, h2, h3 {
   font-size: 0.9rem;
   color: #475569;
   font-style: italic;
-}
+}s
