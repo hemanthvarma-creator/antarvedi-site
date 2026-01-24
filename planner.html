@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Trip Planner – Antarvedi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css?v=6">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Antarvedi Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="planner.html" class="active">AI Planner</a></li>
+      <li><a href="travel.html">Travel</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Plan Your Antarvedi Trip with AI</h1>
+    <p>Answer a few questions and get a personalized Antarvedi travel plan</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <h2 class="temple-title">AI Trip Planner</h2>
+
+    <div class="planner-box">
+
+      <!-- PURPOSE -->
+      <label>Purpose of Visit</label>
+      <select id="purpose">
+        <option value="temple">Temple Darshan</option>
+        <option value="nature">Beach & Nature</option>
+        <option value="boating">Boating & Adventure</option>
+        <option value="family">Family Trip</option>
+        <option value="relax">Relaxation</option>
+      </select>
+
+      <!-- DURATION -->
+      <label>Trip Duration</label>
+      <select id="days">
+        <option value="half">Half Day</option>
+        <option value="1">1 Day</option>
+        <option value="2">2 Days</option>
+        <option value="3">3 Days</option>
+      </select>
+
+      <!-- GROUP -->
+      <label>Traveling With</label>
+      <select id="group">
+        <option value="solo">Solo</option>
+        <option value="couple">Couple</option>
+        <option value="family">Family</option>
+        <option value="friends">Friends</option>
+      </select>
+
+      <!-- STAY -->
+      <label>Stay Preference</label>
+      <select id="stay">
+        <option value="none">No Stay (Same Day Return)</option>
+        <option value="budget">Budget Stay (Local Lodges)</option>
+        <option value="resort">Resort Stay</option>
+      </select>
+
+      <button onclick="generatePlan()">Generate My Plan</button>
+
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="planResult" class="planner-result"></div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  © Antarvedi Teertham & Tourism
+</footer>
+
+<script src="planner.js"></script>
+</body>
+</html>
