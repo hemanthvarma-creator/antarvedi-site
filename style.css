@@ -594,6 +594,35 @@ h1, h2, h3 {
     font-size: 26px;
   }
 }
+/* ================= FIXES ================= */
+
+/* Center headings inside containers */
+.container h1,
+.container h2,
+.container h3,
+.temple-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add spacing below headings */
+h1, h2, h3 {
+  margin-bottom: 36px; /* adjust as needed */
+}
+
+.temple-title {
+  margin-bottom: 48px; /* extra breathing room */
+}
+
+.temple-card h3 {
+  margin-bottom: 24px;
+}
+
+.temple-intro {
+  margin-bottom: 48px;
+}
+
 
 
 
