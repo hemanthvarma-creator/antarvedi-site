@@ -446,6 +446,22 @@ h1, h2, h3 {
   line-height: 1.8;
   color: #475569;
 }
+/* ================= CONTACT PAGE BOX FIX ================= */
+
+.contact-box {
+  max-width: 900px;          /* same visual width as other pages */
+  margin: 0 auto;            /* center horizontally */
+  padding: 56px 64px;        /* balanced padding */
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 36px 28px;
+  }
+}
+
 
 
 
