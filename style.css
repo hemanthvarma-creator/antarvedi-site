@@ -429,19 +429,21 @@ h1, h2, h3 {
 /* ================= RESORTS PAGE NOTE CENTER FIX ================= */
 
 /* ================= RESORTS PAGE NOTE CENTER FIX ================= */
+/* ================= FIX: RESORTS PAGE NOTE CENTER ================= */
 .resorts-page .temple-note {
-  max-width: 900px;          
-  margin: 80px auto 0;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 900px;
+  margin: 80px auto 0;
   padding: 0 24px;
 
   text-align: center;
   font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #475569;
 }
 
-
-.resorts-page .temple-note::before {
-  content: "";
-  max-width: 900px;
-  width: 100%;
-}
 
