@@ -325,4 +325,15 @@ h1, h2, h3 {
   .hero-content h1 {
     font-size: 2.1rem;
   }
+  /* ================= RESORTS PAGE BUTTON CENTER FIX ================= */
+
+.resorts-page .temple-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resorts-page .temple-card .book-btn {
+  margin: 28px auto 0;
+}
+
 }
