@@ -27,36 +27,6 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* ================= SECTION HEADINGS ================= */
-.temple-title {
-  font-size: 2.2rem;        /* unified size */
-  font-weight: 600;
-  margin-bottom: 56px;      /* consistent spacing */
-  color: #083344;
-  text-align: center;
-}
-
-.temple-intro {
-  max-width: 900px;
-  margin: 0 auto 70px;
-  text-align: center;
-  font-size: 1.15rem;
-  line-height: 1.9;
-  color: #0f172a;
-}
-
-/* ================= NOTE (ALL PAGES) ================= */
-.temple-note {
-  max-width: 900px;
-  margin: 60px auto 0;       /* consistent gap above note */
-  padding: 0 24px;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  font-style: italic;
-  color: #475569;
-}
-
 /* ================= HEADER ================= */
 .site-header {
   position: absolute;
@@ -74,7 +44,6 @@ h1, h2, h3 {
 
 .logo img {
   height: 36px;
-  display: block;
 }
 
 .nav-links {
@@ -99,10 +68,18 @@ h1, h2, h3 {
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
-  background: url("assets/images/hero.jpg") center/cover no-repeat;
   position: relative;
   color: white;
+  background: center / cover no-repeat;
 }
+
+.temple-hero { background-image: url("assets/images/temple.jpg"); }
+.sangamam-hero { background-image: url("assets/images/sangamam.jpg"); }
+.beach-hero { background-image: url("assets/images/beach.jpg"); }
+.boating-hero { background-image: url("assets/images/boating.jpg"); }
+.lighthouse-hero { background-image: url("assets/images/lighthouse.jpg"); }
+.vasista-hero { background-image: url("assets/images/vasistaashramam.jpg"); }
+.resorts-hero { background-image: url("assets/images/resorts.jpg"); }
 
 .hero::after {
   content: "";
@@ -110,11 +87,11 @@ h1, h2, h3 {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.45) 55%,
-    rgba(0,0,0,0.25) 70%,
-    rgba(248,250,252,0.6) 88%,
-    rgba(248,250,252,1) 100%
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.25),
+    rgba(248,250,252,0.6),
+    rgba(248,250,252,1)
   );
 }
 
@@ -140,35 +117,10 @@ h1, h2, h3 {
   font-size: 1.15rem;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 18px;
-  margin-top: 22px;
-}
-
-.btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.primary {
-  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
-  color: white;
-}
-
-.secondary {
-  background: white;
-  color: #083344;
-}
-
-/* ===== BOOK NOW BUTTON ===== */
+/* ================= BUTTONS ================= */
 .book-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 24px auto 0;
+  display: inline-block;
+  margin: 28px auto 0;
   padding: 12px 28px;
   border-radius: 14px;
   font-weight: 600;
@@ -185,21 +137,39 @@ h1, h2, h3 {
   box-shadow: 0 14px 36px rgba(2,132,199,0.5);
 }
 
-/* ================= HERO VARIANTS ================= */
-.temple-hero { background: url("assets/images/temple.jpg") center/cover no-repeat; }
-.sangamam-hero { background: url("assets/images/sangamam.jpg") center/cover no-repeat; }
-.beach-hero { background: url("assets/images/beach.jpg") center/cover no-repeat; }
-.boating-hero { background: url("assets/images/boating.jpg") center/cover no-repeat; }
-.lighthouse-hero { background: url("assets/images/lighthouse.jpg") center/cover no-repeat; }
-.vasista-hero { background: url("assets/images/vasistaashramam.jpg") center/cover no-repeat; }
-.resorts-hero { background: url("assets/images/resorts.jpg") center/cover no-repeat; }
+/* ================= CONTENT ================= */
+.temple-content {
+  background: #f8fafc;
+  padding: 100px 0 90px;
+}
+
+.temple-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.temple-intro {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+.temple-title {
+  font-size: 2.4rem;
+  margin-bottom: 64px;
+}
 
 /* ================= GRID ================= */
 .temple-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
-  margin-bottom: 40px;   /* ensures gap before note */
+
+  /* ✅ THIS IS THE KEY FIX */
+  margin-bottom: 80px;
 }
 
 .temple-card {
@@ -207,21 +177,42 @@ h1, h2, h3 {
   padding: 36px;
   border-radius: 20px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
-  text-align: center; 
 }
 
 .temple-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 18px;
   text-align: left;
+  margin-bottom: 18px;
 }
 
-.temple-card ul { padding-left: 20px; }
+.temple-card ul {
+  padding-left: 20px;
+}
 
 .temple-card li {
   margin-bottom: 12px;
   font-size: 1.05rem;
-  color: #334155;
+}
+
+/* ================= NOTE ================= */
+.temple-note {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #475569;
+}
+
+/* ================= PAGE-SPECIFIC ================= */
+.resorts-page .temple-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resorts-page .book-btn {
+  margin-top: auto;
 }
 
 /* ================= FOOTER ================= */
@@ -240,17 +231,20 @@ h1, h2, h3 {
     font-size: 0.9rem;
   }
 
-  .hero-content h1 { font-size: 2.1rem; }
-  .hero-content p { font-size: 1rem; }
-  .hero-buttons { flex-direction: column; }
-
-  section { padding: 55px 0; }
-
-  .places-grid,
-  .experience-bar,
-  .temple-grid {
-    grid-template-columns: 1fr;
+  .hero-content h1 {
+    font-size: 2.1rem;
   }
 
-  .temple-title { font-size: 1.9rem; }
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+
+  .temple-title {
+    font-size: 1.9rem;
+  }
 }
