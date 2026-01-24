@@ -115,6 +115,11 @@ h1, h2, h3 {
 .lighthouse-hero {
   background: url("assets/images/lighthouse.jpg") center/cover no-repeat;
 }
+/* ================= VASISTA ASHRAMAM HERO ================= */
+.vasista-hero {
+  background: url("assets/images/vasistaashramam.jpg") center/cover no-repeat;
+}
+
 
 
 
