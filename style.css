@@ -27,26 +27,6 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* ================= SECTION HEADINGS ================= */
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin: 24px 0 48px;
-}
-
-.section-title h3 {
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.section-title .line {
-  width: 90px;
-  height: 2px;
-  background: linear-gradient(to right, #0ea5e9, #0284c7);
-}
-
 /* ================= HEADER ================= */
 .site-header {
   position: absolute;
@@ -137,34 +117,10 @@ h1, h2, h3 {
   font-size: 1.15rem;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 18px;
-  margin-top: 22px;
-}
-
 /* ================= BUTTONS ================= */
-.btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.primary {
-  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
-  color: white;
-}
-
-.secondary {
-  background: white;
-  color: #083344;
-}
-
-/* ================= BOOK NOW BUTTON ================= */
 .book-btn {
   display: inline-block;
-  margin: 24px auto 0;
+  margin: 28px auto 0;
   padding: 12px 28px;
   border-radius: 14px;
   font-weight: 600;
@@ -173,75 +129,9 @@ h1, h2, h3 {
   text-decoration: none;
   background: linear-gradient(to right, #0ea5e9, #0284c7);
   box-shadow: 0 8px 22px rgba(2,132,199,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.book-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(2,132,199,0.5);
-}
-
-/* ================= PLACES GRID ================= */
-.places-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-.place-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  aspect-ratio: 4 / 3;
-  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.place-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 48px rgba(0,0,0,0.28);
-}
-
-.place-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.place-card span {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 18px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.4),
-    transparent
-  );
-}
-
-/* ================= EXPERIENCE ================= */
-.experience-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.exp-item {
-  background: white;
-  padding: 28px;
-  border-radius: 18px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
-}
-
-/* ================= TEMPLE / CONTENT PAGES ================= */
+/* ================= CONTENT PAGES ================= */
 .temple-content {
   background: #f8fafc;
   padding: 100px 0 90px;
@@ -278,31 +168,24 @@ h1, h2, h3 {
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
 }
 
-.temple-card h3 {
-  text-align: left;
-  margin-bottom: 18px;
-}
-
-.temple-card ul {
-  padding-left: 20px;
-}
-
-/* ================= DEFAULT NOTE STYLE ================= */
-.temple-note {
-  max-width: 780px;
-  margin: 64px auto 0;
+/* ================= RESORT PAGE FIXES ================= */
+.resorts-page .temple-card {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  font-style: italic;
-  color: #475569;
 }
 
-/* ================= RESORTS PAGE NOTE FIX ================= */
+.resorts-page .temple-card h3 {
+  text-align: left;
+}
+
 .resorts-page .temple-note {
   max-width: 900px;
   margin: 80px auto 0;
-  padding: 0 24px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #475569;
 }
 
 /* ================= FOOTER ================= */
@@ -314,26 +197,31 @@ h1, h2, h3 {
   margin-top: 60px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE HEADER FIX ================= */
 @media (max-width: 768px) {
-  .experience-bar,
-  .places-grid,
-  .temple-grid {
-    grid-template-columns: 1fr;
+
+  .site-header {
+    position: relative;
+    background: white;
+  }
+
+  .nav-links a {
+    color: #083344;
+  }
+
+  .nav-links a.active {
+    border-color: #083344;
+  }
+
+  .hero {
+    height: 85vh;
   }
 
   .hero-content h1 {
     font-size: 2.1rem;
   }
-  /* ================= RESORTS PAGE BUTTON CENTER FIX ================= */
 
-.resorts-page .temple-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.resorts-page .temple-card .book-btn {
-  margin: 28px auto 0;
-}
-
+  .temple-grid {
+    grid-template-columns: 1fr;
+  }
 }
