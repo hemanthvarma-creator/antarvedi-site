@@ -380,12 +380,9 @@ h1, h2, h3 {
 }
 
 .temple-note {
-  width: 100%;
-  max-width: none;          /* ❌ remove narrow column */
-  margin: 72px auto 0;
-
-  display: flex;            /* ✅ real centering */
-  justify-content: center;
+  max-width: 900px;
+  margin: 64px auto 0;
+  padding: 0 24px;
 
   text-align: center;
   font-size: 0.95rem;
@@ -393,6 +390,7 @@ h1, h2, h3 {
   font-style: italic;
   color: #475569;
 }
+
 
 
 
@@ -454,11 +452,7 @@ h1, h2, h3 {
 }
 
 
-.resorts-page .temple-note::before {
-  content: "";
-  max-width: 900px;
-  width: 100%;
-}
+
 /* ================= BOATING PAGE SPACING FIX ================= */
 
 /* Add space below boating cards */
