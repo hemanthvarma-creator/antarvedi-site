@@ -136,16 +136,6 @@ h1, h2, h3 {
 .planner-hero {
   background: url("assets/images/planner.jpg") center/cover no-repeat;
 }
-
-
-
-
-
-
-
-
-
-
 .hero::after {
   content: "";
   position: absolute;
