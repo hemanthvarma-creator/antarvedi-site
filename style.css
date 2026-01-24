@@ -580,8 +580,8 @@ h1, h2, h3 {
   /* Hamburger position fix */
   .menu-toggle {
     position: relative;
-    right: 6px; /* pulls it LEFT */
-    font-size: 26px;
+    right: 4px; /* pulls it LEFT */
+    font-size: 36px;
   }
 }
 /* ================= FIXES ================= */
