@@ -365,11 +365,14 @@ h1, h2, h3 {
 
 .temple-note {
   max-width: 780px;
-  margin: 64px auto 0;
+  margin: 64px auto 0;   /* centers horizontally */
   text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.7;
   font-style: italic;
   color: #475569;
 }
+
 
 /* ================= FOOTER ================= */
 .site-footer {
