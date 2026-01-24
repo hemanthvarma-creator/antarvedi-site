@@ -26,6 +26,21 @@ section {
 h1, h2, h3 {
   text-align: center;
 }
+/* ================= BOATING PAGE SPACING FIX ================= */
+
+/* Add space below boating cards */
+.boating-page .temple-grid {
+  margin-bottom: 60px;
+}
+
+/* Push note down and center it cleanly */
+.boating-page .temple-note {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
 
 /* ================= SECTION HEADINGS ================= */
 .section-title {
