@@ -127,6 +127,11 @@ h1, h2, h3 {
 .travel-hero {
   background: url("assets/images/travel.jpg") center/cover no-repeat;
 }
+/* ================= CONTACT HERO ================= */
+.contact-hero {
+  background: url("assets/images/contact.jpg") center/cover no-repeat;
+}
+
 
 
 
