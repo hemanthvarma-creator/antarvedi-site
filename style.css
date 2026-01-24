@@ -119,6 +119,11 @@ h1, h2, h3 {
 .vasista-hero {
   background: url("assets/images/vasistaashramam.jpg") center/cover no-repeat;
 }
+/* ================= RESORTS HERO ================= */
+.resorts-hero {
+  background: url("assets/images/resorts.jpg") center/cover no-repeat;
+}
+
 
 
 
