@@ -24,29 +24,8 @@ section {
 }
 
 h1, h2, h3 {
-  text-align: center; /* ✅ force headings centered globally */
-}
-
-/* ================= SECTION HEADINGS ================= */
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin: 24px 0 48px;
-}
-
-.section-title h3 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #083344;
-}
-
-.section-title .line {
-  width: 90px;
-  height: 2px;
-  background: linear-gradient(to right, #0ea5e9, #0284c7);
-  border-radius: 2px;
+  text-align: center; /* FIX: force headings centered globally */
+  margin: 32px 0 28px; /* FIX: add breathing space top/bottom */
 }
 
 /* ================= HEADER ================= */
@@ -87,7 +66,6 @@ h1, h2, h3 {
   border-bottom: 2px solid white;
   padding-bottom: 4px;
 }
-
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
@@ -143,137 +121,6 @@ h1, h2, h3 {
   max-width: 720px;
   font-size: 1.15rem;
 }
-
-.hero-buttons {
-  display: flex;
-  gap: 18px;
-  margin-top: 22px;
-}
-
-.btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.primary {
-  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
-  color: white;
-}
-
-.secondary {
-  background: white;
-  color: #083344;
-}
-
-/* ===== BOOK NOW BUTTON ===== */
-.book-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 24px auto 0;
-  padding: 12px 28px;
-  border-radius: 14px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(to right, #0ea5e9, #0284c7);
-  box-shadow: 0 8px 22px rgba(2,132,199,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.book-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(2,132,199,0.5);
-}
-
-/* ================= PLACES TO VISIT ================= */
-.places-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-.place-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  aspect-ratio: 4 / 3;
-  text-decoration: none;
-  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.place-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 48px rgba(0,0,0,0.28);
-}
-
-.place-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-}
-
-.place-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.2);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  z-index: 2;
-}
-
-.place-card:hover::after {
-  opacity: 1;
-}
-
-.place-card span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 18px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  z-index: 3;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0)
-  );
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
-
-/* ================= THINGS TO EXPERIENCE ================= */
-.experience-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.exp-item {
-  background: white;
-  padding: 28px 22px;
-  border-radius: 18px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease;
-}
-
-.exp-item:hover {
-  transform: translateY(-4px);
-}
-
 /* ================= TEMPLE PAGE ================= */
 .temple-content {
   background: #f8fafc;
@@ -286,87 +133,36 @@ h1, h2, h3 {
   padding: 0 24px;
 }
 
-.temple-intro {
-  max-width: 900px;
-  margin: 0 auto 70px;
-  text-align: center;
-  font-size: 1.15rem;
-  line-height: 1.9;
-  color: #0f172a;
-}
-
 .temple-title {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: center; /* FIX: enforce centering */
 }
 
-.temple-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 36px;
-}
-
-.temple-card {
-  background: white;
-  padding: 36px;
-  border-radius: 20px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
-  text-align: center;
-}
 .temple-card h3 {
   font-size: 1.4rem;
   margin-bottom: 18px;
   text-align: left;
 }
 
-.temple-card ul {
-  padding-left: 20px;
-}
-
-.temple-card li {
-  margin-bottom: 12px;
-  font-size: 1.05rem;
-  color: #334155;
-}
-
-.temple-note {
-  width: 100%;
-  margin: 72px auto 0;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  font-style: italic;
-  color: #475569;
-}
-
+.temple-note,
 .resorts-page .temple-note {
   max-width: 900px;
-  margin: 80px auto 0;
+  margin: 72px auto 0;
   padding: 0 24px;
   text-align: center;
-  font-style: italic;
   font-size: 0.95rem;
   line-height: 1.8;
+  font-style: italic;
   color: #475569;
 }
-
-/* ================= FOOTER ================= */
-.site-footer {
-  background: linear-gradient(to right, #083344, #0b4d63);
-  color: white;
-  text-align: center;
-  padding: 26px 0;
-  margin-top: 60px;
-}
-
 /* ================= CONTACT PAGE BOX FIX ================= */
 .contact-box {
-  max-width: 1100px;       /* ✅ same width as temple-inner */
-  margin: 0 auto;          /* center horizontally */
-  padding: 0 24px;         /* consistent padding */
-  text-align: center;      /* ✅ center content */
+  max-width: 1100px;       /* FIX: match temple-inner width */
+  margin: 0 auto;          /* FIX: center horizontally */
+  padding: 0 24px;         /* FIX: consistent padding */
+  text-align: center;      /* FIX: center content */
   background: white;
   border-radius: 22px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.08);
@@ -384,40 +180,12 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  text-align: center; /* ✅ center headings/content */
+  text-align: center; /* FIX: center headings/content */
 }
-
-.planner-box label {
-  font-weight: 600;
-}
-
-.planner-box select,
-.planner-box button {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  font-size: 1rem;
-}
-
-.planner-box button {
-  background: linear-gradient(to right, #0ea5e9, #0284c7);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.planner-result {
-  margin-top: 48px;
-  background: white;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
-}
-
 /* ================= MOBILE HEADER FIX ================= */
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  font-size: 30px; /* FIX: increased hamburger size */
   color: white;
   cursor: pointer;
 }
@@ -426,18 +194,17 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   .navbar {
     padding: 16px 0;
-    justify-content: flex-start;   /* ✅ logo + hamburger aligned left */
-    gap: 12px;
+    justify-content: space-between; /* FIX: logo left, hamburger right */
+    align-items: center;
   }
 
   .logo {
-    order: 1; /* logo first */
+    order: 1; /* logo first, left side */
   }
 
   .menu-toggle {
     display: block;
-    order: 2; /* hamburger right after logo */
-    margin-left: 8px;
+    order: 2; /* hamburger last, right side */
   }
 
   .nav-links {
@@ -466,13 +233,11 @@ h1, h2, h3 {
 
   .nav-links.show {
     display: flex;
-    max-height: 500px; /* enough for all links */
+    max-height: 500px;
   }
 
-  /* Reduce container padding ONLY for header */
   .site-header .container {
     padding-left: 14px;
     padding-right: 14px;
   }
 }
-
