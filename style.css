@@ -358,11 +358,11 @@ h1, h2, h3 {
 }
 
 .temple-title {
-  max-width: 1100px;   
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 900px;          /* match intro width */
+  margin: 0 auto 64px;       /* center + spacing */
   text-align: center;
 }
+
 
 .temple-grid {
   display: grid;
@@ -614,6 +614,22 @@ h1, h2, h3 {
     font-size: 26px;
   }
 }
+@media (max-width: 768px) {
+
+  .site-header .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    color: white;
+    position: relative;
+    right: 12px;   /* THIS moves it LEFT */
+  }
+}
+
 
 
 
