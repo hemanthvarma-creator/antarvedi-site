@@ -111,6 +111,11 @@ h1, h2, h3 {
 .boating-hero {
   background: url("assets/images/boating.jpg") center/cover no-repeat;
 }
+/* ================= LIGHTHOUSE HERO ================= */
+.lighthouse-hero {
+  background: url("assets/images/lighthouse.jpg") center/cover no-repeat;
+}
+
 
 
 
