@@ -448,7 +448,11 @@ h1, h2, h3 {
   padding: 0 24px;
 
   text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.8;
   font-style: italic;
+  color: #475569;
+  display: block;
 }
 
 
