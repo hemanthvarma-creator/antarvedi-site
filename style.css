@@ -189,6 +189,26 @@ h1, h2, h3 {
   color: #083344;
 }
 
+/* ===== BOOK NOW BUTTON ===== */
+.book-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  box-shadow: 0 8px 20px rgba(2,132,199,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(2,132,199,0.5);
+}
+
 
 
 /* ================= PLACES TO VISIT ================= */
