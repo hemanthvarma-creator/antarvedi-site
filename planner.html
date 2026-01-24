@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="./style.css?v=6">
 </head>
 
-<body>
+<body class="planner-page">
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <nav class="navbar container">
     <div class="logo">
       <img src="assets/images/logo.png" alt="Antarvedi Logo">
     </div>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="temple.html">Temple</a></li>
@@ -22,13 +23,11 @@
       <li><a href="#">Experiences</a></li>
       <li><a href="planner.html" class="active">AI Planner</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      
-      
     </ul>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero planner-hero">
   <div class="hero-content">
     <h1>Plan Your Antarvedi Trip with AI</h1>
@@ -36,15 +35,15 @@
   </div>
 </section>
 
-<!-- CONTENT -->
+<!-- ================= CONTENT ================= -->
 <section class="temple-content">
   <div class="temple-inner">
 
     <h2 class="temple-title">AI Trip Planner</h2>
 
+    <!-- PLANNER INPUT BOX -->
     <div class="planner-box">
 
-      <!-- PURPOSE -->
       <label>Purpose of Visit</label>
       <select id="purpose">
         <option value="temple">Temple Darshan</option>
@@ -54,7 +53,6 @@
         <option value="relax">Relaxation</option>
       </select>
 
-      <!-- DURATION -->
       <label>Trip Duration</label>
       <select id="days">
         <option value="half">Half Day</option>
@@ -63,7 +61,6 @@
         <option value="3">3 Days</option>
       </select>
 
-      <!-- GROUP -->
       <label>Traveling With</label>
       <select id="group">
         <option value="solo">Solo</option>
@@ -72,7 +69,6 @@
         <option value="friends">Friends</option>
       </select>
 
-      <!-- STAY -->
       <label>Stay Preference</label>
       <select id="stay">
         <option value="none">No Stay (Same Day Return)</option>
@@ -80,20 +76,43 @@
         <option value="resort">Resort Stay</option>
       </select>
 
-      <button onclick="generatePlan()">Generate My Plan</button>
+      <button class="btn primary" onclick="generatePlan()">
+        Generate My Plan
+      </button>
 
     </div>
 
-    <!-- OUTPUT -->
-    <div id="planResult" class="planner-result"></div>
+    <!-- OUTPUT (HIDDEN INITIALLY) -->
+    <div id="planResult" class="planner-result" style="display: none;"></div>
 
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   © Antarvedi Teertham & Tourism
 </footer>
 
-<script src="planner.js"></script>
+<!-- ================= SCRIPT ================= -->
+<script>
+  function generatePlan() {
+    const resultBox = document.getElementById("planResult");
+
+    resultBox.innerHTML = `
+      <h3>Your Personalized Antarvedi Plan</h3>
+      <ul>
+        <li>Early morning temple darshan</li>
+        <li>Visit Sagar Sangamam</li>
+        <li>Lunch at local eateries</li>
+        <li>Evening boating experience</li>
+        <li>Relax by the river before return</li>
+      </ul>
+    `;
+
+    resultBox.style.display = "block";
+    resultBox.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
 </body>
 </html>
