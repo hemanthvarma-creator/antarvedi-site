@@ -639,6 +639,27 @@ h1, h2, h3 {
     margin-left: -6px;
   }
 }
+@media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 30px;     /* ⬅️ bigger hamburger */
+    padding: 8px 10px;   /* better touch area */
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-left: -10px;  /* ⬅️ pulls logo left */
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    margin-left: auto;  /* keeps it near logo, not edge */
+  }
+}
+
 
 
 
