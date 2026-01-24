@@ -131,6 +131,11 @@ h1, h2, h3 {
 .contact-hero {
   background: url("assets/images/contact.jpg") center/cover no-repeat;
 }
+/* ================= PLANNER HERO ================= */
+.planner-hero {
+  background: url("assets/images/planner.jpg") center/cover no-repeat;
+}
+
 
 
 
