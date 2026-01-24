@@ -106,11 +106,18 @@
 <footer class="site-footer">
   © Antarvedi Teertham & Tourism
 </footer>
-  <script>
+ <script>
   function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("show");
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    // Animate icon
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
   }
 </script>
+
 
 
 </body>
