@@ -26,6 +26,19 @@ section {
 h1, h2, h3 {
   text-align: center;
 }
+/* Force headings to align with container width */
+.container h1,
+.container h2,
+.container h3,
+.temple-inner h1,
+.temple-inner h2,
+.temple-inner h3 {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 
 /* ================= SECTION HEADINGS ================= */
 .section-title {
@@ -573,13 +586,21 @@ h1, h2, h3 {
   }
 }
 /* ================= MOBILE HEADER REAL FIX ================= */
-@media (max-width: 768px) {
+@@media (max-width: 768px) {
 
-  /* Reduce container padding ONLY for header */
+  /* Pull everything slightly inward */
   .site-header .container {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
+
+  /* Move hamburger left */
+  .menu-toggle {
+    position: relative;
+    right: 12px;
+  }
+}
+
 
   /* Align navbar properly */
   .navbar {
