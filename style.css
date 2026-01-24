@@ -570,6 +570,28 @@ h1, h2, h3 {
     padding-right: 12px;  /* prevents edge hugging */
   }
 }
+/* ================= MOBILE HEADER REAL FIX ================= */
+@media (max-width: 768px) {
+
+  /* Reduce container padding ONLY for header */
+  .site-header .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Align navbar properly */
+  .navbar {
+    padding: 18px 0;
+  }
+
+  /* Hamburger position fix */
+  .menu-toggle {
+    position: relative;
+    right: 6px; /* pulls it LEFT */
+    font-size: 26px;
+  }
+}
+
 
 
 
