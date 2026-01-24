@@ -103,6 +103,11 @@ h1, h2, h3 {
 .sangamam-hero {
   background: url("assets/images/sangamam.jpg") center/cover no-repeat;
 }
+/* ================= BEACH HERO ================= */
+.beach-hero {
+  background: url("assets/images/beach.jpg") center/cover no-repeat;
+}
+
 
 
 .hero::after {
