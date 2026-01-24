@@ -546,6 +546,19 @@ h1, h2, h3 {
     display: flex;
   }
 }
+@media (max-width: 768px) {
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* enough for all links */
+  }
+}
+
 
 
 
