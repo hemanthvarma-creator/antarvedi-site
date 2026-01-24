@@ -107,6 +107,11 @@ h1, h2, h3 {
 .beach-hero {
   background: url("assets/images/beach.jpg") center/cover no-repeat;
 }
+/* ================= BOATING HERO ================= */
+.boating-hero {
+  background: url("assets/images/boating.jpg") center/cover no-repeat;
+}
+
 
 
 
