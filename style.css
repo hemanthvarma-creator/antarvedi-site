@@ -242,6 +242,12 @@ h1, h2, h3 {
   transform: translateY(-2px);
   box-shadow: 0 14px 36px rgba(2,132,199,0.5);
 }
+.contact-box a,
+.contact-box .btn {
+  display: inline-block;
+  margin: 28px auto 0;
+}
+
 
 
 
