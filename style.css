@@ -301,10 +301,6 @@ h1, h2, h3 {
 }
 /* ================= LOCAL STAYS PAGE ================= */
 
-.local-stays-page section {
-  padding: 70px 0;
-}
-
 .local-stays-page .container {
   max-width: 1200px;   /* SAME as home page */
   margin: auto;
