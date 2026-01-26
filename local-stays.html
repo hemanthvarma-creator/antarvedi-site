@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Stays in Antarvedi | Beachside & Budget Stays</title>
+
+  <meta name="description" content="Explore local stays in Antarvedi including beachside resorts and budget accommodations. Discover Apple Resorts and upcoming local stays near Antarvedi beach.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Antarvedi Logo">
+      </a>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="temple.html">Temple</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero resorts-hero">
+  <div class="hero-content">
+    <h1>Local Stays in Antarvedi</h1>
+    <p>Discover trusted beachside resorts and local accommodations for a peaceful stay</p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section>
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="section-title">
+      <div class="line"></div>
+      <h3>Available Local Stays</h3>
+      <div class="line"></div>
+    </div>
+
+    <!-- STAYS GRID -->
+    <div class="places-grid">
+
+      <!-- Apple Resorts -->
+      <a href="apple-resorts.html" class="place-card">
+        <img src="assets/images/apple-resort/cover.jpg" alt="Apple Resorts Antarvedi">
+        <span>Apple Resorts</span>
+      </a>
+
+      <!-- Future stays can be added here -->
+      <!--
+      <a href="xyz-resort.html" class="place-card">
+        <img src="assets/images/xyz/cover.jpg">
+        <span>XYZ Resort</span>
+      </a>
+      -->
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+  }
+
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 
