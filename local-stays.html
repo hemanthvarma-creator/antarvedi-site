@@ -86,13 +86,17 @@
 
 <!-- ================= SCRIPT ================= -->
 <script>
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("show");
-  }
-
-  // Auto year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
 </script>
+
 
 </body>
 </html>
