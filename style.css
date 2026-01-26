@@ -711,10 +711,7 @@ h1, h2, h3 {
   margin: auto;
   padding: 0 24px;
 }
-/* ===== LOCAL STAYS HERO ALIGNMENT FIX ===== */
-.local-stays-page .hero {
-  height: 100vh;
-}
+
 
 
 
