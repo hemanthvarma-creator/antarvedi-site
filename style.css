@@ -142,6 +142,9 @@ h1, h2, h3 {
 .local-stays-hero {
   background: url("assets/images/local-stays.jpg") center/cover no-repeat;
 }
+.apple-resorts-hero {
+  background: url("assets/images/apple-resort.jpeg") center/cover no-repeat;
+}
 
 .hero::after {
   content: "";
@@ -848,12 +851,6 @@ h1, h2, h3 {
   transform: translateY(-3px);
   box-shadow: 0 22px 48px rgba(37, 211, 102, 0.6);
 }
-
-/* Reduce extra footer gap so button looks centered */
-.site-footer {
-  margin-top: 20px;
-}
-
 
 
 
