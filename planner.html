@@ -97,11 +97,12 @@
 </section>
 
 <footer class="site-footer">
-  © Antarvedi Teertham & Tourism
+  © <span id="year"></span> Antarvedi. All rights reserved.
 </footer>
 
 <script src="planner.js"></script>
   <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
   function toggleMenu() {
     const nav = document.querySelector(".nav-links");
     const toggle = document.querySelector(".menu-toggle");
