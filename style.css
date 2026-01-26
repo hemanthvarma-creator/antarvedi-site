@@ -708,29 +708,5 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
 }
-/* ================= LOCAL STAYS PAGE FIX ================= */
-
-.local-stays-page section {
-  background: #f8fafc;
-  padding: 90px 0;
-}
-
-.local-stays-page .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-/* Match home page card size exactly */
-.local-stays-page .places-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-/* Prevent full-width image stretch */
-.local-stays-page .place-card {
-  max-width: 100%;
-}
 
 
