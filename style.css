@@ -716,6 +716,11 @@ h1, h2, h3 {
   margin: auto;
   padding: 0 24px;
 }
+/* ===== FIX GLOBAL SECTION PADDING FOR LOCAL STAYS ===== */
+.local-stays-page section {
+  padding: 0;
+}
+
 
 
 
