@@ -823,6 +823,42 @@ h1, h2, h3 {
   transform: translateY(-3px);
   box-shadow: 0 22px 48px rgba(37, 211, 102, 0.6);
 }
+/* ================= LIGHTBOX ================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.lightbox video {
+  background: black;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
+}
+
 
 
 
