@@ -71,36 +71,64 @@
 
       <!-- Images -->
       <div class="gallery-item">
-        <img src="assets/images/img1.jpeg" alt="Apple Resorts Antarvedi Beach View">
+        <img
+          src="assets/images/img1.jpeg"
+          alt="Apple Resorts Antarvedi Beach View"
+          class="lightbox-item"
+          data-type="image"
+        />
       </div>
 
       <div class="gallery-item">
-        <img src="assets/images/img2.jpeg" alt="Apple Resorts Rooms">
+        <img
+          src="assets/images/img2.jpeg"
+          alt="Apple Resorts rooms"
+          class="lightbox-item"
+          data-type="image"
+        />
+
       </div>
 
       <div class="gallery-item">
-        <img src="assets/images/img3.jpeg" alt="Apple Resorts Property View">
+        <img
+          src="assets/images/img3.jpeg"
+          alt="Apple Resorts Antarvedi property View"
+          class="lightbox-item"
+          data-type="image"
+        />
       </div>
 
       <!-- Videos -->
       <div class="gallery-item">
-        <video controls>
+        <video
+          class="lightbox-item"
+          data-type="video"
+          controls
+        >
           <source src="assets/videos/video1.mp4" type="video/mp4">
         </video>
       </div>
 
+
       <div class="gallery-item">
-        <video controls>
+        <video
+          class="lightbox-item"
+          data-type="video"
+          controls
+        >
           <source src="assets/videos/video2.mp4" type="video/mp4">
         </video>
       </div>
 
-      <div class="gallery-item">
-        <video controls>
+      <<div class="gallery-item">
+        <video
+          class="lightbox-item"
+          data-type="video"
+          controls
+        >
           <source src="assets/videos/video3.mp4" type="video/mp4">
         </video>
       </div>
-
     </div>
 
     <div class="book-now-wrapper">
@@ -141,6 +169,46 @@
     toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
   }
 </script>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const content = document.querySelector(".lightbox-content");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  document.querySelectorAll(".lightbox-item").forEach(item => {
+    item.addEventListener("click", () => {
+      content.innerHTML = "";
+
+      if (item.dataset.type === "image") {
+        const img = document.createElement("img");
+        img.src = item.src;
+        content.appendChild(img);
+      }
+
+      if (item.dataset.type === "video") {
+        const video = document.createElement("video");
+        video.src = item.querySelector("source").src;
+        video.controls = true;
+        video.autoplay = true;
+        content.appendChild(video);
+      }
+
+      lightbox.classList.add("show");
+    });
+  });
+
+  closeBtn.onclick = () => {
+    lightbox.classList.remove("show");
+    content.innerHTML = "";
+  };
+
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
+      content.innerHTML = "";
+    }
+  };
+</script>
+  
   <!-- ================= LIGHTBOX ================= -->
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">✕</span>
