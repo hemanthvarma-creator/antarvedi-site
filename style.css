@@ -301,11 +301,6 @@ h1, h2, h3 {
 }
 /* ================= LOCAL STAYS PAGE ================= */
 
-.local-stays-page .container {
-  max-width: 1200px;   /* SAME as home page */
-  margin: auto;
-  padding: 0 24px;
-}
 
 /* Ensure cards look identical to home page */
 .local-stays-page .places-grid {
