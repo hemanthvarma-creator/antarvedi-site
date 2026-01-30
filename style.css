@@ -886,4 +886,27 @@ h1, h2, h3 {
     object-fit: contain;
   }
 }
+.site-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+  backdrop-filter: blur(6px);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+.menu-toggle {
+  font-size: 26px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-toggle:active {
+  background: rgba(255,255,255,0.15);
+}
 
