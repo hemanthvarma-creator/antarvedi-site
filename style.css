@@ -879,3 +879,11 @@ h1, h2, h3 {
     max-height: 75vh;
   }
 }
+@media (max-width: 768px) {
+  .logo img {
+    height: 48px;
+    max-width: 180px;
+    object-fit: contain;
+  }
+}
+
