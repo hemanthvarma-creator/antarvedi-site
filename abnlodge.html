@@ -143,11 +143,55 @@
   function toggleMenu() {
     const nav = document.querySelector(".nav-links");
     const toggle = document.querySelector(".menu-toggle");
-
     nav.classList.toggle("show");
     toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
   }
 </script>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const content = document.querySelector(".lightbox-content");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  document.querySelectorAll(".lightbox-item").forEach(item => {
+    item.addEventListener("click", () => {
+      content.innerHTML = "";
+
+      if (item.dataset.type === "image") {
+        const img = document.createElement("img");
+        img.src = item.src;
+        content.appendChild(img);
+      }
+
+      if (item.dataset.type === "video") {
+        const video = document.createElement("video");
+        video.src = item.querySelector("source").src;
+        video.controls = true;
+        video.autoplay = true;
+        content.appendChild(video);
+      }
+
+      lightbox.classList.add("show");
+    });
+  });
+
+  closeBtn.onclick = () => {
+    lightbox.classList.remove("show");
+    content.innerHTML = "";
+  };
+
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
+      content.innerHTML = "";
+    }
+  };
+</script>
+  
+  
+
+  
+
+
 
 </body>
 </html>
