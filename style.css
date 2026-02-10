@@ -146,6 +146,12 @@ h1, h2, h3 {
   background: url("assets/images/apple-resort.jpeg") center/cover no-repeat;
 }
 
+/* ================= ABN LODGE HERO ================= */
+.abn-lodge-hero {
+  background: url("assets/images/abn1.jpeg") center/cover no-repeat;
+}
+
+
 .hero::after {
   content: "";
   position: absolute;
