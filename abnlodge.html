@@ -1,1 +1,133 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>ABN Lodge Antarvedi | Stay Near Lakshmi Narasimha Swamy Temple</title>
+
+  <meta name="description"
+        content="ABN Lodge Antarvedi offers comfortable accommodation just 450 meters from Sri Lakshmi Narasimha Swamy Temple. Ideal for pilgrims and families visiting Antarvedi.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+
+<body class="resorts-page">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Antarvedi Logo">
+      </a>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="temple.html">Temple</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="local-stays.html" class="active">Local Stays</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero abn-lodge-hero">
+  <div class="hero-content">
+    <h1>ABN Lodge, Antarvedi</h1>
+    <p>
+      Comfortable and convenient stay just 450 meters from
+      Sri Lakshmi Narasimha Swamy Temple
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <!-- INTRO -->
+    <p class="temple-intro">
+      ABN Lodge is a simple, clean, and budget-friendly accommodation located
+      just <strong>450 meters from Sri Lakshmi Narasimha Swamy Temple, Antarvedi</strong>.
+      It is an ideal stay option for pilgrims, families, and devotees who wish to
+      stay very close to the temple while enjoying a peaceful and comfortable environment.
+      The lodge provides easy access to the temple, sangamam, beach, and nearby local areas,
+      making it a convenient choice for short and extended visits.
+    </p>
+
+    <!-- GALLERY TITLE -->
+    <h2 class="temple-title">ABN Lodge Gallery</h2>
+
+    <!-- ================= GALLERY ================= -->
+    <div class="gallery-slider">
+
+      <div class="gallery-item">
+        <img src="assets/images/abn1.jpeg" alt="ABN Lodge Antarvedi Front View">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/abn2.jpeg" alt="ABN Lodge Rooms">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/abn3.jpeg" alt="ABN Lodge Interior">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/abn4.jpeg" alt="ABN Lodge Accommodation">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/abn5.jpeg" alt="ABN Lodge Stay Area">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/abn6.jpeg" alt="ABN Lodge Nearby View">
+      </div>
+
+    </div>
+
+    <!-- NOTE -->
+    <p class="temple-note">
+      Note: Room availability and pricing may vary based on temple events,
+      festivals, and weekends. Visitors are advised to contact the lodge
+      directly before arrival, especially during peak pilgrimage seasons.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
+</script>
+
+</body>
+</html>
