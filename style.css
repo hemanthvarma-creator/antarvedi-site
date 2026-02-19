@@ -971,3 +971,26 @@ h1, h2, h3 {
     display: none;
   }
 }
+
+/* ICON BASE */
+.nav-item .icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* DEFAULT: show outline */
+.nav-item .fill {
+  display: none;
+}
+
+/* ACTIVE PAGE */
+.nav-item.active .outline {
+  display: none;
+}
+
+.nav-item.active .fill {
+  display: block;
+  transform: translateY(-2px) scale(1.08);
+}
+
