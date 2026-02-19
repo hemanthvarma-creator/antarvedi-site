@@ -183,31 +183,58 @@
     indicator.style.left = `calc(${spacing * index + spacing / 2}% - 3px)`;
   }
 </script>
-
-  <!-- ================= BOTTOM NAV ================= -->
+<!-- ================= BOTTOM NAV (MOBILE) ================= -->
 <nav class="bottom-nav">
+
+  <!-- HOME -->
   <a href="index.html" class="nav-item">
-    <span class="icon">🏠</span>
+    <svg viewBox="0 0 24 24" class="nav-icon">
+      <path d="M3 10L12 3l9 7v10a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>
+    </svg>
+    <span>Home</span>
   </a>
 
+  <!-- TEMPLE -->
   <a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="nav-item">
-    <span class="icon">🛕</span>
+    <svg viewBox="0 0 24 24" class="nav-icon">
+      <path d="M12 2l8 6v12H4V8z"/>
+      <path d="M9 22v-6h6v6"/>
+    </svg>
+    <span>Temple</span>
   </a>
 
+  <!-- LOCAL STAYS -->
   <a href="local-stays.html" class="nav-item">
-    <span class="icon">🏨</span>
+    <svg viewBox="0 0 24 24" class="nav-icon">
+      <rect x="3" y="7" width="18" height="13" rx="2"/>
+      <path d="M7 7V4h10v3"/>
+    </svg>
+    <span>Stays</span>
   </a>
 
+  <!-- AI PLANNER -->
   <a href="planner.html" class="nav-item">
-    <span class="icon">🤖</span>
+    <svg viewBox="0 0 24 24" class="nav-icon">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a7.5 7.5 0 0 0 .1-6"/>
+      <path d="M4.5 9a7.5 7.5 0 0 0 0 6"/>
+    </svg>
+    <span>Planner</span>
   </a>
 
+  <!-- BOATING -->
   <a href="boating.html" class="nav-item">
-    <span class="icon">🚤</span>
+    <svg viewBox="0 0 24 24" class="nav-icon">
+      <path d="M3 17l9-4 9 4"/>
+      <path d="M5 21h14"/>
+      <path d="M12 3v10"/>
+    </svg>
+    <span>Boating</span>
   </a>
 
-  <span class="nav-indicator"></span>
 </nav>
+
+ 
 
 
 </body>
