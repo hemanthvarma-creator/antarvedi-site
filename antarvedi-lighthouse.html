@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V60KJPZ5Q6');
+</script>
+  <meta charset="UTF-8">
+  <title>Antarvedi Lighthouse | Panoramic View of River and Sea</title>
+  <meta name="description" content="Antarvedi Lighthouse offers breathtaking panoramic views of the Godavari River, Bay of Bengal, and surrounding coastline. A top sightseeing spot.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="./style.css?v=6">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Antarvedi Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="local-stays.html">Local Stays</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero lighthouse-hero">
+  <div class="hero-content">
+    <h1>Antarvedi Lighthouse</h1>
+    <p>
+      A thrilling climb to panoramic views of sea, river, forests, and sky
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <!-- INTRO -->
+    <p class="temple-intro">
+      The Antarvedi Lighthouse offers one of the most breathtaking viewpoints
+      in the region. Standing tall near the coastline, it invites visitors
+      to climb its steps and experience a refreshing blend of adventure,
+      greenery, and endless water views from the top.
+    </p>
+
+    <h2 class="temple-title">What Makes the Lighthouse Special</h2>
+
+    <div class="temple-grid">
+
+      <!-- ADVENTURE -->
+      <div class="temple-card">
+        <h3>An Adventurous Climb</h3>
+        <ul>
+          <li>Approximately <strong>101–111 steps</strong> to reach the top</li>
+          <li>Exciting spiral climb inside the lighthouse</li>
+          <li>Perfect mini-adventure for visitors of all ages</li>
+          <li>Entry ticket priced around <strong>₹10–₹20</strong></li>
+        </ul>
+      </div>
+
+      <!-- VIEW -->
+      <div class="temple-card">
+        <h3>Panoramic Views</h3>
+        <ul>
+          <li>Clear views of the <strong>Bay of Bengal beach</strong></li>
+          <li>Godavari River flowing into <strong>Sagar Sangamam</strong></li>
+          <li>Surrounding fishing ponds and waterways</li>
+          <li>Green landscapes blending with water bodies</li>
+        </ul>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="temple-card">
+        <h3>Experience at the Top</h3>
+        <ul>
+          <li>Strong, refreshing sea winds</li>
+          <li>Cool and peaceful atmosphere</li>
+          <li>Feels like greenery and water everywhere</li>
+          <li>Ideal spot for photos and relaxation</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- NOTE -->
+    <p class="temple-note">
+      Note: Entry timings and ticket prices may change based on local authority
+      regulations. Visitors are advised to be cautious while climbing, follow
+      safety instructions, and avoid visiting during extreme weather conditions.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    // Animate icon
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
+</script>
+
+
+
+</body>
+</html>
