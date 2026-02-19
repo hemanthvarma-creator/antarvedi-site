@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V60KJPZ5Q6');
+</script>
+  <meta charset="UTF-8">
+  <title>Boating in Antarvedi | Godavari River Boat Rides & Sea Views</title>
+  <meta name="description" content="Enjoy boating at Antarvedi including Sagar Sangamam boat rides, mangrove forest (Mada Adavulu) boating and speed boating on the Godavari river.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="./style.css?v=6">
+</head>
+<body class="boating-page">
+
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Antarvedi Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="local-stays.html">Local Stays</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero boating-hero">
+  <div class="hero-content">
+    <h1>Godavari Boating</h1>
+    <p>
+      Explore the River, Mangrove Forests, and Sacred Confluence through unforgettable boat journeys
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <!-- INTRO -->
+    <p class="temple-intro">
+      Boating at Antarvedi offers a unique way to experience the beauty and
+      spirituality of the Godavari River. From sacred pilgrimage routes to
+      calm mangrove forests surroundings and thrilling speed rides, boating here caters
+      to devotees, nature lovers, and adventure seekers alike.
+    </p>
+
+    <h2 class="temple-title">Types of Boating Experiences</h2>
+
+    <div class="temple-grid">
+
+      <!-- REGULAR TOURIST BOATING -->
+      <div class="temple-card">
+        <h3>Regular Tourist Boating</h3>
+        <ul>
+          <li>Boat service to <strong>Sagar Sangamam</strong></li>
+          <li>Route includes <strong>Anna Chellula Gattu</strong></li>
+          <li>Popular among pilgrims and families</li>
+          <li>Calm and steady ride suitable for all ages</li>
+        </ul>
+      </div>
+
+      <!-- FOREST / MADA ADAVULU -->
+      <div class="temple-card">
+        <h3>Mangrove Forest</h3>
+        <ul>
+          <li>Boat travels through river center surrounded by mangrove forests</li>
+          <li>Peaceful, scenic, and nature-rich experience</li>
+          <li>Ideal for photography and relaxation</li>
+          <li>Less crowded and highly recommended</li>
+        </ul>
+      </div>
+
+      <!-- SPEED BOATING -->
+      <div class="temple-card">
+        <h3>Speed Boating</h3>
+        <ul>
+          <li>High-speed ride on the Godavari waters</li>
+          <li>Short duration adventure experience</li>
+          <li>Available during favorable weather conditions</li>
+          <li>Safety jackets provided for all riders</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- VISITOR INFO -->
+    <p class="temple-note">
+      Note: Boating availability and routes depend on river conditions and
+      weather. Timings and prices may vary seasonally. Visitors are advised
+      to follow safety guidelines, wear life jackets, and book rides through
+      authorized local operators only.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+ <script>
+   document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    // Animate icon
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
+</script>
+
+
+
+</body>
+</html>
