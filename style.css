@@ -983,3 +983,60 @@ h1, h2, h3 {
     display: none;
   }
 }
+/* Icon background – same as header */
+.icon-bg {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 28, 45, 0.85),
+    rgba(10, 18, 32, 0.75)
+  );
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: all 0.25s ease;
+}
+.nav-item.active .icon-bg {
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 80, 120, 0.9),
+    rgba(12, 40, 70, 0.85)
+  );
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+/* Color control */
+.nav-item {
+  color: rgba(255,255,255,0.55);
+}
+
+.nav-item.active {
+  color: #ffffff;
+}
+.nav-item.active .active-icon {
+  display: block;
+}
+
+.nav-item:not(.active) .inactive-icon {
+  display: block;
+}
+.nav-item.active .icon-bg {
+  transform: translateY(-2px);
+}
