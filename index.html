@@ -167,6 +167,33 @@
     toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
   }
 </script>
+<script>
+  const navItems = document.querySelectorAll(".app-bottom-nav .nav-item");
+  const indicator = document.querySelector(".nav-indicator");
+
+  function setActiveNav() {
+    let found = false;
+
+    navItems.forEach((item, index) => {
+      if (window.location.href.includes(item.getAttribute("href"))) {
+        item.classList.add("active");
+        indicator.style.left = `calc(${index * 20 + 10}% - 20px)`;
+        found = true;
+      } else {
+        item.classList.remove("active");
+      }
+    });
+
+    if (!found) {
+      navItems[0].classList.add("active");
+      indicator.style.left = "10%";
+    }
+  }
+
+  setActiveNav();
+</script>
+  
+  
 
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
