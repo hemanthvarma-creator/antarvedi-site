@@ -56,15 +56,12 @@ h1, h2, h3 {
   top: 0;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.25));
-  backdrop-filter: blur(6px);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 72px;
   padding: 24px 0;
 }
 
@@ -72,9 +69,8 @@ h1, h2, h3 {
   height: 72px;
   display: block;
 }
-
 .logo {
-  margin-right: auto;
+  margin-right: auto;   /* forces logo to the far left */
 }
 
 .nav-links {
@@ -96,19 +92,6 @@ h1, h2, h3 {
   padding-bottom: 4px;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.menu-toggle:active {
-  background: rgba(255,255,255,0.15);
-}
-
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
@@ -116,6 +99,58 @@ h1, h2, h3 {
   position: relative;
   color: white;
 }
+/* ================= TEMPLE HERO OVERRIDE ================= */
+.temple-hero {
+  background: url("assets/images/temple.jpg") center/cover no-repeat;
+}
+/* ================= SANGAMAM HERO ================= */
+.sangamam-hero {
+  background: url("assets/images/sangamam.jpg") center/cover no-repeat;
+}
+/* ================= BEACH HERO ================= */
+.beach-hero {
+  background: url("assets/images/beach.jpg") center/cover no-repeat;
+}
+/* ================= BOATING HERO ================= */
+.boating-hero {
+  background: url("assets/images/boating.jpg") center/cover no-repeat;
+}
+/* ================= LIGHTHOUSE HERO ================= */
+.lighthouse-hero {
+  background: url("assets/images/lighthouse.jpg") center/cover no-repeat;
+}
+/* ================= VASISTA ASHRAMAM HERO ================= */
+.vasista-hero {
+  background: url("assets/images/vasistaashramam.jpg") center/cover no-repeat;
+}
+/* ================= RESORTS HERO ================= */
+.resorts-hero {
+  background: url("assets/images/resorts.jpg") center/cover no-repeat;
+}
+/* ================= TRAVEL HERO ================= */
+.travel-hero {
+  background: url("assets/images/travel.jpg") center/cover no-repeat;
+}
+/* ================= CONTACT HERO ================= */
+.contact-hero {
+  background: url("assets/images/contact.jpg") center/cover no-repeat;
+}
+/* ================= PLANNER HERO ================= */
+.planner-hero {
+  background: url("assets/images/planner.jpg") center/cover no-repeat;
+}
+.local-stays-hero {
+  background: url("assets/images/local-stays.jpg") center/cover no-repeat;
+}
+.apple-resort-hero {
+  background: url("assets/images/apple-resort.jpeg") center/cover no-repeat;
+}
+
+/* ================= ABN LODGE HERO ================= */
+.abn-residency-hero {
+  background: url("assets/images/abnresidency.jpg") center/cover no-repeat;
+}
+
 
 .hero::after {
   content: "";
@@ -181,15 +216,19 @@ h1, h2, h3 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 24px auto 0;
+
+  margin: 24px auto 0;   /* centers button */
   padding: 12px 28px;
   border-radius: 14px;
+
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   color: white;
+
   background: linear-gradient(to right, #0ea5e9, #0284c7);
   box-shadow: 0 8px 22px rgba(2,132,199,0.35);
+
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -197,6 +236,10 @@ h1, h2, h3 {
   transform: translateY(-2px);
   box-shadow: 0 14px 36px rgba(2,132,199,0.5);
 }
+
+
+
+
 
 /* ================= PLACES TO VISIT ================= */
 .places-grid {
@@ -224,8 +267,26 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
+/* dark overlay on hover */
+.place-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.place-card:hover::after {
+  opacity: 1;
+}
+
+/* PLACE TITLE — GUARANTEED VISIBLE */
 .place-card span {
   position: absolute;
   bottom: 0;
@@ -236,9 +297,130 @@ h1, h2, h3 {
   font-weight: 600;
   color: white;
   text-align: center;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5), rgba(0,0,0,0));
+  z-index: 3;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0)
+  );
+
   text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
+/* ================= LOCAL STAYS PAGE ================= */
+
+
+/* Ensure cards look identical to home page */
+.local-stays-page .places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Optional: heading spacing consistency */
+.local-stays-page .section-title {
+  margin-bottom: 56px;
+}
+
+/* ================= THINGS TO EXPERIENCE ================= */
+.experience-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.exp-item {
+  background: white;
+  padding: 28px 22px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= TEMPLE PAGE ================= */
+.temple-content {
+  background: #f8fafc;
+  padding: 100px 0 90px;
+}
+
+.temple-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.temple-intro {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #0f172a;
+}
+
+.temple-title {
+  max-width: 1100px;   
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  margin-bottom: 80px
+}
+
+.temple-card {
+  background: white;
+  padding: 36px;
+  border-radius: 20px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  text-align: center; 
+}
+
+.temple-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.temple-card ul {
+  padding-left: 20px;
+}
+
+.temple-card li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.temple-note {
+  width: 100%;
+  max-width: none;          /* ❌ remove narrow column */
+  margin: 72px auto 0;
+
+  display: flex;            /* ✅ real centering */
+  justify-content: center;
+
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #475569;
+}
+
+
+
+
 
 /* ================= FOOTER ================= */
 .site-footer {
@@ -251,46 +433,10 @@ h1, h2, h3 {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .nav-links {
     gap: 16px;
     font-size: 0.9rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(8, 51, 68, 0.95);
-    flex-direction: column;
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-  }
-
-  .nav-links.show {
-    display: flex;
-    max-height: 500px;
-  }
-
-  .nav-links li {
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 14px 24px;
-    font-size: 1rem;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-    font-size: 36px;
-  }
-
-  .logo img {
-    height: 48px;
-    max-width: 180px;
-    object-fit: contain;
   }
 
   .hero-content h1 {
@@ -309,11 +455,468 @@ h1, h2, h3 {
     padding: 55px 0;
   }
 
-  .places-grid {
+  .places-grid,
+  .experience-bar,
+  .temple-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .temple-title {
+    font-size: 1.9rem;
+  }
+}
+.resorts-page .temple-note {
+  max-width: 900px;
+  margin: 80px auto 0;   /* centers horizontally */
+  padding: 0 24px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #475569;
+}
+/* ================= CONTACT PAGE BOX FIX ================= */
+
+.contact-box {
+  max-width: 900px;          /* same visual width as other pages */
+  margin: 0 auto;            /* center horizontally */
+  padding: 56px 64px;        /* balanced padding */
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 36px 28px;
+  }
+}
+/* ================= AI PLANNER ================= */
+
+.planner-box {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.planner-box label {
+  font-weight: 600;
+}
+
+.planner-box select,
+.planner-box button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.planner-box button {
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.planner-result {
+  margin-top: 48px;
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+/* ================= MOBILE HEADER FIX ================= */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 51, 68, 0.95);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* enough for all links */
+  }
+}
+/* ================= MOBILE HEADER TOGGLE FIX ================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    margin-right: 14px;   /* ⬅️ pulls it left */
+    padding: 6px 8px;
+  }
+
+  .navbar {
+    padding-right: 12px;  /* prevents edge hugging */
+  }
+}
+/* ================= MOBILE HEADER REAL FIX ================= */
+@media (max-width: 768px) {
+
+  /* Reduce container padding ONLY for header */
+  .site-header .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Align navbar properly */
+  .navbar {
+    padding: 18px 0;
+  }
+
+  /* Hamburger position fix */
+  .menu-toggle {
+    margin-left: auto;
+    font-size: 36px;
+    
+  }
+}
+/* ================= FIXES ================= */
+
+/* ================= FINAL HEADING FIXES ================= */
+
+/* Center all headings inside containers */
+.container h1,
+.container h2,
+.container h3,
+.temple-title {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px; /* breathing space */
+}
+
+/* Extra spacing for section titles */
+.temple-title {
+  margin-bottom: 48px;
+}
+
+.temple-intro {
+  margin-bottom: 48px;
+}
+
+/* Override temple-card headings to center */
+.temple-card h3 {
+  text-align: center !important; /* FIX: force centering */
+  margin-bottom: 24px;
+}
+/* ================= CONTACT PAGE FULL CENTERING FIX ================= */
+.contact-box {
+  max-width: 1100px;       /* match other pages */
+  margin: 0 auto;          /* center horizontally */
+  padding: 56px 64px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  text-align: center;      /* center all text inside */
+}
+
+.contact-box h2 {
+  text-align: center !important;
+  margin-bottom: 48px;
+}
+
+.contact-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.contact-box ul li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.contact-box .email-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(2,132,199,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-box .email-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(2,132,199,0.5);
+}
+
+.contact-box .note {
+  margin-top: 36px;
+  font-size: 0.9rem;
+  color: #475569;
+  font-style: italic;
+}
+/* ================= APPLE RESORT CARD SIZE FIX ================= */
+
+.local-stays-page .place-card {
+  max-width: 380px;          /* same size as home page cards */
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;      /* CRITICAL */
+}
+
+.local-stays-page .place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.local-stays-page .temple-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ================= APPLE RESORTS GALLERY ================= */
+
+.gallery-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+/* Individual gallery card */
+.gallery-item {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+
+/* Images */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Videos */
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: black;
+  border-radius: 0;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .gallery-slider {
     grid-template-columns: 1fr;
   }
 }
+/* ================= BOOK NOW WHATSAPP BUTTON ================= */
+
+.book-now-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 9999;
+
+  padding: 14px 28px;
+  border-radius: 34px;
+
+  background: linear-gradient(to right, #25d366, #128c7e);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 12px 28px rgba(18,140,126,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(18,140,126,0.6);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .book-now-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+/* ================= APPLE RESORT PAGE BUTTON FIX ================= */
+
+.resorts-page .book-now-wrapper {
+  position: static !important;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 24px;
+}
+
+.resorts-page .book-now-btn {
+  position: static !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 44px;
+  border-radius: 999px;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  color: white;
+  background: linear-gradient(to right, #25D366, #1EBE5D);
+
+  box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resorts-page .book-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(37, 211, 102, 0.6);
+}
+/* ================= LIGHTBOX MOBILE CENTER FIX ================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;        /* VERTICAL CENTER */
+  justify-content: center;    /* HORIZONTAL CENTER */
+  z-index: 9999;
+  padding: 20px;
+}
+.lightbox.show {
+  display: flex;
+}
+  
+
+.lightbox-content {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 100%;
+  max-height: 80vh;           /* CRITICAL FOR MOBILE */
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+/* Close button positioning */
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Extra mobile safety */
+@media (max-width: 768px) {
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox-content img,
+  .lightbox-content video {
+    max-height: 75vh;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 48px;
+    max-width: 180px;
+    object-fit: contain;
+  }
+}
+.site-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+  backdrop-filter: blur(6px);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+.menu-toggle {
+  font-size: 26px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-toggle:active {
+  background: rgba(255,255,255,0.15);
+}
 /* ================= MOBILE BOTTOM NAV ================= */
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -342,14 +945,17 @@ h1, h2, h3 {
 .bottom-nav .nav-item {
   width: 28px;
   height: 28px;
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: rgba(255, 255, 255, 0.55);
   transition: color 0.25s ease;
 }
 
+/* Active state color */
 .bottom-nav .nav-item.active {
   color: #ffffff;
 }
@@ -358,9 +964,11 @@ h1, h2, h3 {
 .bottom-nav .icon {
   width: 28px;
   height: 28px;
+
   display: none;
 }
 
+/* Show correct icon */
 .bottom-nav .nav-item.active .active-icon {
   display: block;
 }
@@ -375,14 +983,15 @@ h1, h2, h3 {
     display: none;
   }
 }
-
-/* Icon background */
+/* Icon background – same as header */
 .icon-bg {
   width: 44px;
   height: 44px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 14px;
 
   background: linear-gradient(
@@ -393,27 +1002,34 @@ h1, h2, h3 {
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+
   transition: all 0.25s ease;
 }
-
 .nav-item.active .icon-bg {
   background: linear-gradient(
     to bottom,
     rgba(30, 80, 120, 0.9),
     rgba(12, 40, 70, 0.85)
   );
+
   box-shadow:
     0 6px 14px rgba(0,0,0,0.35),
     inset 0 0 0 1px rgba(255,255,255,0.12);
-  transform: translateY(-2px);
 }
-
 .icon {
   width: 24px;
   height: 24px;
   display: none;
 }
 
+/* Color control */
+.nav-item {
+  color: rgba(255,255,255,0.55);
+}
+
+.nav-item.active {
+  color: #ffffff;
+}
 .nav-item.active .active-icon {
   display: block;
 }
@@ -421,4 +1037,6 @@ h1, h2, h3 {
 .nav-item:not(.active) .inactive-icon {
   display: block;
 }
-
+.nav-item.active .icon-bg {
+  transform: translateY(-2px);
+}
