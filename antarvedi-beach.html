@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V60KJPZ5Q6');
+</script>
+  <meta charset="UTF-8">
+  <title>Antarvedi Beach | Peaceful Coastal Beach Near Antarvedi Temple</title>
+  <meta name="description" content="Antarvedi Beach is a serene coastal destination near the Godavari delta, valued for its spiritual atmosphere, natural beauty, and sunrise views.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="./style.css?v=7">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Antarvedi Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="local-stays.html">Local Stays</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero beach-hero">
+  <div class="hero-content">
+    <h1>Antarvedi Beach</h1>
+    <p>
+      A serene coastline where river breeze meets the vast Bay of Bengal
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <!-- INTRO -->
+    <p class="temple-intro">
+      Antarvedi Beach is a peaceful and less-crowded coastal stretch known for
+      its clean sands, gentle waves, and calming atmosphere. Unlike commercial
+      beaches, it offers a raw and natural seaside experience where visitors
+      can relax, enjoy scenic views, and feel close to nature.
+    </p>
+
+    <h2 class="temple-title">Things to Do at the Beach</h2>
+
+    <div class="temple-grid">
+
+      <!-- ACTIVITIES -->
+      <div class="temple-card">
+        <h3>Beach Activities</h3>
+        <ul>
+          <li>Horse riding along the shoreline</li>
+          <li>Buggy car rides on the sand</li>
+          <li>Beach walks and leisure strolls</li>
+          <li>Photography and sunset viewing</li>
+        </ul>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="temple-card">
+        <h3>Experience Highlights</h3>
+        <ul>
+          <li>Wide open beach with minimal crowd</li>
+          <li>Cool sea breeze throughout the day</li>
+          <li>Golden sunsets over the horizon</li>
+          <li>Relaxing ambience ideal for families</li>
+        </ul>
+      </div>
+
+      <!-- VISITOR INFO -->
+      <div class="temple-card">
+        <h3>Visitor Information</h3>
+        <ul>
+          <li><strong>Best Time:</strong> Early morning & evening</li>
+          <li><strong>Season:</strong> October to March</li>
+          <li>Activities available during peak hours</li>
+          <li>Local vendors operate on weekends</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SAFETY NOTE -->
+    <p class="temple-note">
+      Note: Swimming is not advised due to unpredictable sea currents.
+      Visitors are encouraged to follow safety instructions, avoid venturing
+      deep into the water, and support local service providers responsibly.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    // Animate icon
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
+</script>
+
+
+
+</body>
+</html>
