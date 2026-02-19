@@ -915,42 +915,59 @@ h1, h2, h3 {
 .menu-toggle:active {
   background: rgba(255,255,255,0.15);
 }
-/* ================= BOTTOM NAV ================= */
+/* ================= PREMIUM BOTTOM NAV ================= */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 64px;
-  background: #0b1c24;
+  background: rgba(8, 51, 68, 0.95);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 9999;
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-.bottom-nav .nav-item {
-  color: #aaa;
-  font-size: 22px;
+/* NAV ITEM */
+.nav-item {
+  flex: 1;
+  text-align: center;
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  color: #94a3b8;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.25s ease;
 }
 
-.bottom-nav .nav-item.active {
-  color: #fff;
+/* ICON */
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
 }
 
-.bottom-nav .nav-item .icon {
-  display: block;
+/* ACTIVE STATE */
+.nav-item.active {
+  color: #ffffff;
 }
 
-.nav-indicator {
-  position: absolute;
-  bottom: 6px;
-  width: 6px;
-  height: 6px;
-  background: #1da1f2;
-  border-radius: 50%;
-  transition: left 0.3s ease;
+.nav-item.active .nav-icon {
+  fill: currentColor;
+  stroke: none;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* HIDE ON DESKTOP */
+@media (min-width: 769px) {
+  .bottom-nav {
+    display: none;
+  }
 }
