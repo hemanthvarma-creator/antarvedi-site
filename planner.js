@@ -32,60 +32,159 @@ function generatePlan() {
   const stay = document.getElementById("stay").value;
   const result = document.getElementById("planResult");
 
-  const purposeActivities = {
-    temple: [
-      "Early morning darshan at Sri Lakshmi Narasimha Swamy Temple",
-      "Abhishekam and temple rituals",
-      "Annanadanam lunch at temple"
-    ],
-    nature: [
-      "Antarvedi beach walk",
-      "Lighthouse visit for panoramic views",
-      "Sunset photography"
-    ],
-    boating: [
-      "Boating to Sagara Sangamam",
-      "Mada Adavulu mangrove forest boating",
-      "Optional speed boating (weather permitting)"
-    ],
-    relax: [
-      "Quiet beach walk",
-      "Sea-breeze relaxation near lighthouse",
-      "Evening leisure time"
-    ],
-    family: [
-      "Temple darshan suitable for all ages",
-      "Beach visit with family",
-      "Light refreshments and rest time"
-    ]
-  };
-
   let html = `<h3>Your Personalized Antarvedi Travel Plan</h3>`;
 
-  const totalDays = days === "half" ? 1 : parseInt(days);
+  /* ================= HALF DAY ================= */
+  if (days === "half") {
+    html += `<h4>Half Day Plan</h4><ul>`;
 
-  for (let day = 1; day <= totalDays; day++) {
-    html += `<h4>Day ${day}</h4><ul>`;
-    purposeActivities[purpose].forEach(item => {
-      html += `<li>${item}</li>`;
-    });
+    if (purpose === "temple") {
+      html += `
+        <li>Early morning darshan at Sri Lakshmi Narasimha Swamy Temple</li>
+        <li>Short visit to Sagara Sangamam</li>
+        <li>Return before afternoon</li>`;
+    }
+
+    if (purpose === "boating") {
+      html += `
+        <li>Short boating experience</li>
+        <li>Mangrove backwater ride</li>
+        <li>Return by noon</li>`;
+    }
+
+    if (purpose === "relax") {
+      html += `
+        <li>Peaceful beach walk</li>
+        <li>Lighthouse visit</li>
+        <li>Relax and return</li>`;
+    }
+
     html += `</ul>`;
   }
 
-  /* Stay Recommendation */
+  /* ================= 1 DAY ================= */
+  if (days === "1") {
+    html += `<h4>Day 1</h4><ul>`;
+
+    if (purpose === "temple") {
+      html += `
+        <li>Morning temple darshan and abhishekam</li>
+        <li>Annanadam lunch</li>
+        <li>Evening beach walk</li>`;
+    }
+
+    if (purpose === "boating") {
+      html += `
+        <li>Boating to Sagara Sangamam</li>
+        <li>Mada Adavulu mangrove boating</li>
+        <li>Optional speed boating</li>`;
+    }
+
+    if (purpose === "relax") {
+      html += `
+        <li>Relaxed beach visit</li>
+        <li>Lighthouse and sunset views</li>
+        <li>Calm evening</li>`;
+    }
+
+    html += `</ul>`;
+  }
+
+  /* ================= 2 DAYS ================= */
+  if (days === "2") {
+
+    /* ---------- DAY 1 ---------- */
+    html += `<h4>Day 1</h4><ul>`;
+
+    if (purpose === "temple") {
+      html += `
+        <li>Temple darshan and rituals</li>
+        <li>Annanadam lunch</li>
+        <li>Evening beach walk</li>`;
+    }
+
+    if (purpose === "boating") {
+      html += `
+        <li>Boating to Sagara Sangamam</li>
+        <li>Mangrove forest boating</li>
+        <li>Optional speed boating</li>`;
+    }
+
+    if (purpose === "relax") {
+      html += `
+        <li>Beach relaxation</li>
+        <li>Lighthouse visit</li>
+        <li>Sunset photography</li>`;
+    }
+
+    html += `</ul>`;
+
+    /* ---------- DAY 2 ---------- */
+    html += `<h4>Day 2</h4><ul>`;
+
+    if (purpose === "temple") {
+      html += `
+        <li>Boating to Sagara Sangamam</li>
+        <li>Local sightseeing</li>
+        <li>Return journey</li>`;
+    }
+
+    if (purpose === "boating") {
+      html += `
+        <li>Morning temple darshan</li>
+        <li>Dindi backwater resorts visit</li>
+        <li>Leisure time and return</li>`;
+    }
+
+    if (purpose === "relax") {
+      html += `
+        <li>Dindi resort or backwater visit</li>
+        <li>Village exploration</li>
+        <li>Relaxed return</li>`;
+    }
+
+    html += `</ul>`;
+  }
+
+  /* ================= 3 DAYS ================= */
+  if (days === "3") {
+
+    html += `<h4>Day 1 – Spiritual Focus</h4><ul>
+      <li>Temple darshan and rituals</li>
+      <li>Evening beach walk</li>
+    </ul>`;
+
+    html += `<h4>Day 2 – Nature & Boating</h4><ul>
+      <li>Mangrove forest boating</li>
+      <li>Sagara Sangamam visit</li>
+      <li>Sunset photography</li>
+    </ul>`;
+
+    html += `<h4>Day 3 – Relax & Explore</h4><ul>
+      <li>Dindi backwater resorts</li>
+      <li>Local sightseeing</li>
+      <li>Return journey</li>
+    </ul>`;
+  }
+
+  /* ================= STAY ================= */
   html += `<h4>Stay Recommendation</h4><p>`;
+
   if (stay === "none") {
-    html += "No overnight stay required. Same-day return recommended.";
+    html += `No overnight stay required. Same-day return recommended.`;
   }
+
   if (stay === "budget") {
-    html += "Budget local lodges, guest houses, and homestays near Antarvedi and Dindi.";
+    html += `Budget lodges, guest houses, and homestays near Antarvedi and Dindi.`;
   }
+
   if (stay === "resort") {
-    html += "Riverside and backwater resorts at Dindi for a peaceful stay.";
+    html += `Riverside and backwater resorts at Dindi for a peaceful stay.`;
   }
+
   html += `</p>`;
 
-  /* AI Travel Tips */
+  /* ================= AI TIPS ================= */
   html += `
     <h4>AI Travel Tips</h4>
     <ul>
