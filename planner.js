@@ -197,5 +197,6 @@ function generatePlan() {
 
   result.innerHTML = html;
   result.style.display = "block";
+  quickLinks.style.display = "flex";
   result.scrollIntoView({ behavior: "smooth" });
 }
