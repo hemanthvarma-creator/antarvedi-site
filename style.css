@@ -775,12 +775,12 @@ h1, h2, h3 {
 
   box-shadow: 0 12px 28px rgba(18,140,126,0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+}*?
 
 .book-now-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 18px 40px rgba(18,140,126,0.6);
-}*/
+}
 
 /* Mobile optimization */
 @media (max-width: 768px) {
@@ -994,4 +994,9 @@ h1, h2, h3 {
   text-decoration: none;
 
   box-shadow: 0 10px 26px rgba(18,140,126,0.45);
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(18,140,126,0.6);
 }
