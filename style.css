@@ -923,3 +923,27 @@ h1, h2, h3 {
     min-height: 90vh;
   }
 }
+/* ================= HERO BUTTON HOVER EFFECTS ================= */
+
+/* Primary button (Know More) */
+.hero-buttons .primary {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.hero-buttons .primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(2, 132, 199, 0.45);
+  background: linear-gradient(to bottom, #0284c7, #0369a1);
+}
+
+/* Secondary button (Book Now) */
+.hero-buttons .secondary {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.hero-buttons .secondary:hover {
+  transform: translateY(-3px);
+  background: #f1f5f9;
+  color: #020617;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
