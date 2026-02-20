@@ -968,3 +968,8 @@ h1, h2, h3 {
   color: #020617;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
 }
+.book-now-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 24px;
+}
