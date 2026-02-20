@@ -759,7 +759,7 @@ h1, h2, h3 {
 }
 /* ================= BOOK NOW WHATSAPP BUTTON ================= */
 
-.book-now-btn {
+/*.book-now-btn {
   position: static;
     z-index: 9999;
 
@@ -780,7 +780,7 @@ h1, h2, h3 {
 .book-now-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 18px 40px rgba(18,140,126,0.6);
-}
+}*/
 
 /* Mobile optimization */
 @media (max-width: 768px) {
@@ -972,4 +972,26 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   margin: 32px 0 24px;
+}
+/* ================= BOATING PAGE CENTER BUTTON ================= */
+
+.boating-page .book-now-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 24px;
+}
+
+.boating-page .book-now-btn {
+  position: static;
+  padding: 14px 36px;
+  border-radius: 999px;
+
+  background: linear-gradient(to right, #25d366, #128c7e);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 26px rgba(18,140,126,0.45);
 }
