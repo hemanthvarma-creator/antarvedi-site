@@ -760,10 +760,8 @@ h1, h2, h3 {
 /* ================= BOOK NOW WHATSAPP BUTTON ================= */
 
 .book-now-btn {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  z-index: 9999;
+  position: static;
+    z-index: 9999;
 
   padding: 14px 28px;
   border-radius: 34px;
