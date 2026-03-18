@@ -1,104 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V60KJPZ5Q6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>Contact Antarvedi Tourism | Travel Help, Temple & Stay Information</title>
-  <meta name="description" content="Contact Antarvedi tourism for travel guidance, temple information, accomodation help and trip planning support. We're here to assist your visit.">
+  <meta name="description" content="Contact Antarvedi tourism for travel guidance, temple information, accommodation help and trip planning support.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar container">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Antarvedi Logo">
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-
+<header class="site-header scrolled" id="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html">AI Planner</a></li>
-      <li><a href="contact.html" class="active">Contact Us</a></li>
+      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 </header>
-
-<!-- ================= HERO ================= -->
-<section class="hero contact-hero">
-  <div class="hero-content">
+<section class="page-hero" style="padding-top:80px;min-height:40vh;">
+  <div class="page-hero-bg">
+    <img src="assets/images/temple.jpg" alt="Contact Antarvedi">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.5) 0%,rgba(13,26,26,0.9) 100%);"></div>
+  </div>
+  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
+    <p class="breadcrumb">Home → Contact</p>
     <h1>Contact Us</h1>
-    <p>
-      For advertisements, collaborations, suggestions, or general information
-    </p>
+    <p class="hero-sub">For advertisements, collaborations, suggestions, or general information</p>
   </div>
 </section>
-
-<!-- ================= CONTENT ================= -->
-<section class="temple-content">
-  <div class="temple-inner">
-
+<section class="page-content">
+  <div class="page-inner">
     <div class="contact-box">
+      <span class="section-label">Get in Touch</span>
       <h2>Email Us</h2>
-
+      <p>We'd love to hear from you. Reach out for any of the following:</p>
       <ul>
         <li>For advertisements & promotions</li>
         <li>For business collaborations</li>
         <li>For corrections or suggestions</li>
         <li>For general information & inquiries</li>
       </ul>
-
-      <a href="mailto:antarvedi@zohomail.in" class="book-btn">
-        antarvedi@zohomail.in
-      </a>
+      <a href="mailto:antarvedi@zohomail.in" class="btn-book gold">antarvedi@zohomail.in →</a>
     </div>
-
-    <p class="temple-note">
-      Note: We usually respond within 24–48 hours. Please mention the purpose
-      of your message clearly in the subject line for faster assistance.
-    </p>
-
+    <div style="margin-top:2rem;">
+      <p class="page-note">Note: We usually respond within 24–48 hours. Please mention the purpose of your message clearly in the subject line for faster assistance.</p>
+    </div>
   </div>
 </section>
-
-
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  © <span id="year"></span> Antarvedi. All rights reserved.
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
+    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
+    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
 </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() {
-    const nav = document.querySelector(".nav-links");
-    const toggle = document.querySelector(".menu-toggle");
-
-    nav.classList.toggle("show");
-
-    // Animate icon
-    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
-  }
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
+  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
 </script>
-
-
-
 </body>
 </html>
