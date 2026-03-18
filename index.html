@@ -1,193 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V60KJPZ5Q6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V60KJPZ5Q6');
+  </script>
   <meta charset="UTF-8">
-  <title>Antarvedi – Ultimate Tourist Guide | Temple, Beach, Travel & Stays</title>
+  <title>Antarvedi – Where Godavari Meets the Sea | Temple, Beach & Travel</title>
   <link rel="canonical" href="https://antarvedi.in/">
-  <meta name="description" content="Antarvedi is a sacred coastal village where the Godavari river meets the Bay of Bengal, known for the Lakshmi Narasimha Swamy Temple, Sagara sangamam, calm beaches and ancient traditions.">
-  <!-- Open Graph / Instagram / WhatsApp -->
+  <meta name="description" content="Antarvedi is a sacred coastal village where the Godavari river meets the Bay of Bengal, known for the Lakshmi Narasimha Swamy Temple, Sagara Sangamam, beaches and ancient traditions.">
   <meta property="og:title" content="Antarvedi – Ultimate Tourist Guide" />
   <meta property="og:description" content="Explore Antarvedi temple, sagara sangamam, beaches, travel routes, boating and riverside stays." />
   <meta property="og:url" content="https://antarvedi.in/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://antarvedi.in/assets/images/og-home.jpg" />
-
-  <!-- Twitter (also helps some platforms) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Antarvedi – Ultimate Tourist Guide" />
-  <meta name="twitter:description" content="Explore Antarvedi Temple, Sangamam, Beaches, Travel & Riverside Stays in Antarvedi." />
-  <meta name="twitter:image" content="https://antarvedi.in/assets/images/og-home.jpg" />
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="./style.css?v=5">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-home">
 
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar container">
-
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Antarvedi Logo">
-    </div>
-
-    <!-- HAMBURGER -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <!-- NAVIGATION -->
+<!-- ========== HEADER ========== -->
+<header class="site-header" id="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="logo-img">
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html">AI Planner</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-
   </nav>
 </header>
-  
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Where Godavari Meets the Sea</h1>
-    <p>
-      A sacred coastal destination of nature, spirituality, and peace
-    </p>
+<!-- ========== HERO ========== -->
+<section class="hero-fullscreen">
+  <div class="hero-bg">
+    <img src="assets/images/temple.jpg" alt="Antarvedi" class="hero-bg-img">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content-wrap">
+    <p class="hero-eyebrow">Andhra Pradesh · Konaseema</p>
+    <h1 class="hero-title">
+      Where Godavari<br>
+      <em>Meets the Sea</em>
+    </h1>
+    <p class="hero-subtitle">A sacred confluence of river, ocean, and ancient devotion</p>
+    <div class="hero-cta">
+      <a href="#discover" class="cta-primary">Explore Antarvedi</a>
+      <a href="planner.html" class="cta-ghost">Plan Your Visit</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <!-- BUTTONS -->
-    <div class="hero-buttons">
-      <!-- CHANGED: now scrolls to places on same page -->
-      <a href="#places" class="btn primary">Explore Antarvedi</a>
-      <a href="planner.html" class="btn secondary">Plan Visit</a>
+<!-- ========== INTRO STRIP ========== -->
+<section class="intro-strip">
+  <div class="strip-inner">
+    <div class="strip-item">🛕 <span>Nava Narasimha Kshetram</span></div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">🌊 <span>Sagara Sangamam</span></div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">🏖️ <span>Godavari Delta Beaches</span></div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">🚤 <span>River & Mangrove Boating</span></div>
+  </div>
+</section>
+
+<!-- ========== DISCOVER SECTION ========== -->
+<section class="discover-section" id="discover">
+  <div class="section-header">
+    <span class="section-label">Sacred Destinations</span>
+    <h2>Places to Visit</h2>
+    <p>Every corner of Antarvedi holds a story — of faith, nature, and timeless beauty</p>
+  </div>
+
+  <div class="places-mosaic">
+    <!-- Temple – large card -->
+    <a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="mosaic-card mosaic-large">
+      <img src="assets/images/temple.jpg" alt="Sri Lakshmi Narasimha Swamy Temple">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Main Shrine</span>
+        <h3>Sri Lakshmi Narasimha Swamy Temple</h3>
+        <p>The sacred heart of Antarvedi — Dakshina Kashi</p>
+      </div>
+    </a>
+
+    <!-- Sangamam -->
+    <a href="sangamam.html" class="mosaic-card">
+      <img src="assets/images/sangamam.jpg" alt="Sagara Sangamam">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Holy Confluence</span>
+        <h3>Sagara Sangamam</h3>
+        <p>River meets the Bay of Bengal</p>
+      </div>
+    </a>
+
+    <!-- Vasista Ashramam -->
+    <a href="vasista-ashramam-antarvedi.html" class="mosaic-card">
+      <img src="assets/images/vasistaashramam.jpg" alt="Vasista Ashramam">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Ancient Hermitage</span>
+        <h3>Vasista Ashramam</h3>
+        <p>Meditative sanctuary of Sage Vasishta</p>
+      </div>
+    </a>
+
+    <!-- Beach -->
+    <a href="antarvedi-beach.html" class="mosaic-card">
+      <img src="assets/images/beach.jpg" alt="Antarvedi Beach">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Coastal Beauty</span>
+        <h3>Antarvedi Beach</h3>
+        <p>Serene sands of the Godavari delta</p>
+      </div>
+    </a>
+
+    <!-- Lighthouse -->
+    <a href="antarvedi-lighthouse.html" class="mosaic-card">
+      <img src="assets/images/lighthouse.jpg" alt="Antarvedi Lighthouse">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Panoramic Views</span>
+        <h3>Lighthouse</h3>
+        <p>101 steps to breathtaking vistas</p>
+      </div>
+    </a>
+
+    <!-- Boating – large card -->
+    <a href="antarvedi-boating.html" class="mosaic-card mosaic-large">
+      <img src="assets/images/boating.jpg" alt="Godavari Boating">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">River Adventure</span>
+        <h3>Godavari Boating</h3>
+        <p>Mangrove forests, sacred routes & speed rides</p>
+      </div>
+    </a>
+
+    <!-- Resorts -->
+    <a href="resorts.html" class="mosaic-card">
+      <img src="assets/images/resorts.jpg" alt="Riverside Resorts">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Riverside Luxury</span>
+        <h3>Resorts at Dindi</h3>
+        <p>Premium stays by the Godavari</p>
+      </div>
+    </a>
+
+    <!-- Local Stays -->
+    <a href="local-stays.html" class="mosaic-card">
+      <img src="assets/images/local-stays.jpg" alt="Local Stays">
+      <div class="mosaic-info">
+        <span class="mosaic-tag">Beachside Comfort</span>
+        <h3>Local Stays</h3>
+        <p>Affordable, peaceful accommodations</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCE SECTION ========== -->
+<section class="experience-section">
+  <div class="exp-bg">
+    <img src="assets/images/sangamam.jpg" alt="Antarvedi Experience">
+    <div class="exp-overlay"></div>
+  </div>
+  <div class="exp-content">
+    <span class="section-label light">What Awaits You</span>
+    <h2>Things to Experience</h2>
+    <div class="exp-grid">
+      <div class="exp-item">
+        <span class="exp-icon">🚤</span>
+        <h4>Godavari Boating</h4>
+        <p>Glide through mangrove forests and the sacred confluence</p>
+      </div>
+      <div class="exp-item">
+        <span class="exp-icon">🌅</span>
+        <h4>Sunrise Views</h4>
+        <p>The golden hour at Sagara Sangamam is transcendent</p>
+      </div>
+      <div class="exp-item">
+        <span class="exp-icon">📷</span>
+        <h4>Photography</h4>
+        <p>River, sea, temple spires and the lighthouse — endlessly photogenic</p>
+      </div>
+      <div class="exp-item">
+        <span class="exp-icon">🙏</span>
+        <h4>Sacred Rituals</h4>
+        <p>Pitru tarpana, temple darshan, and holy snanam at the theertham</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PLACES TITLE ================= -->
-<section class="section-title" id="places">
-  <span class="line"></span>
-  <h3>Places to Visit</h3>
-  <span class="line"></span>
-</section>
-
-<!-- ================= PLACES GRID ================= -->
-<section class="container">
-  <div class="places-grid">
-
-       <!-- Temple ONLY here + navbar -->
-    <a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="place-card">
-      <img src="assets/images/temple.jpg" alt="antarvedi-lakshmi-narasimha-swamy-temple">
-      <span>Temple</span>
-    </a>
-
-    <a href="vasista-ashramam-antarvedi.html" class="place-card">
-      <img src="assets/images/vasistaashramam.jpg" alt="Vasista Ashramam Antarvedi">
-      <span>Vasista Ashramam</span>
-    </a>
-
-    <a href="sangamam.html" class="place-card">
-      <img src="assets/images/sangamam.jpg" alt="Antarvedi sagara Sangamam">
-      <span>Sagara Sangamam</span>
-    </a>
-
-    <a href="antarvedi-beach.html" class="place-card">
-      <img src="assets/images/beach.jpg" alt="Antarvedi Beach">
-      <span>Beach</span>
-    </a>
-
-    <a href="antarvedi-lighthouse.html" class="place-card">
-      <img src="assets/images/lighthouse.jpg" alt="Antarvedi Lighthouse">
-      <span>Lighthouse</span>
-    </a>
-
-    <a href="antarvedi-boating.html" class="place-card">
-      <img src="assets/images/boating.jpg" alt="Antarvedi Boating">
-      <span>Boating</span>
-    </a>
-
-    <a href="resorts.html" class="place-card">
-      <img src="assets/images/resorts.jpg" alt="Resorts near Antarvedi">
-      <span>Resorts</span>
-    </a>
-     <a href="local-stays.html" class="place-card">
-      <img src="assets/images/local-stays.jpg" alt="Explore Local Stays">
-      <span>Local Stays</span>
-    </a>
-
+<!-- ========== AI PLANNER CTA ========== -->
+<section class="planner-cta-section">
+  <div class="planner-cta-inner">
+    <span class="section-label">Smart Travel Planning</span>
+    <h2>Plan Your Perfect Visit with AI</h2>
+    <p>Get a personalized day-wise itinerary tailored to your purpose, group, and duration of stay</p>
+    <a href="planner.html" class="cta-primary">Open AI Trip Planner →</a>
   </div>
 </section>
 
-<!-- ================= EXPERIENCE TITLE ================= -->
-<section class="section-title">
-  <span class="line"></span>
-  <h3>Things to Experience</h3>
-  <span class="line"></span>
-</section>
-
-<!-- ================= EXPERIENCE BAR ================= -->
-<section class="experience-bar container">
-  <div class="exp-item">🚤 Godavari Boating</div>
-  <div class="exp-item">🌅 Sunrise Views</div>
-  <div class="exp-item">📷 Photography</div>
-  <div class="exp-item">🙏 Sacred Rituals</div>
-</section>
-
-<!-- ================= FOOTER ================= -->
+<!-- ========== FOOTER ========== -->
 <footer class="site-footer">
-  © <span id="year"></span> Antarvedi. All rights reserved.
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal, Andhra Pradesh.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Explore</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-links">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="resorts.html">Resorts</a>
+      <a href="planner.html">AI Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+  </div>
 </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Header scroll effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
   function toggleMenu() {
     const nav = document.querySelector(".nav-links");
     const toggle = document.querySelector(".menu-toggle");
-
-    nav.classList.toggle("show");
-
-    // Animate icon
-    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+    nav.classList.toggle("open");
+    toggle.classList.toggle("active");
   }
+
+  // Intersection observer for reveal animations
+  const reveals = document.querySelectorAll('.mosaic-card, .exp-item, .strip-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
 </script>
-<script>
-  const links = document.querySelectorAll(".bottom-nav .nav-item");
-  const indicator = document.querySelector(".nav-indicator");
-
-  links.forEach((link, index) => {
-    if (link.href === window.location.href) {
-      link.classList.add("active");
-      moveIndicator(index);
-    }
-  });
-
-  function moveIndicator(index) {
-    const spacing = 100 / links.length;
-    indicator.style.left = `calc(${spacing * index + spacing / 2}% - 3px)`;
-  }
-</script>
-
-
-
- 
-
-
 </body>
 </html>
