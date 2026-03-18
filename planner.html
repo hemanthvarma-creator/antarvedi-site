@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V60KJPZ5Q6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
-  <title>Antarvedi Trip Planner | AI Travel plan for Temple, Beach & Stays</title>
+  <title>Antarvedi Trip Planner | AI Travel Plan for Temple, Beach & Stays</title>
   <meta name="description" content="Plan your Antarvedi trip using our AI travel planner. Get personalized day-wise itineraries for temple darshan, beach, boating, family trips and relaxation.">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="./style.css?v=7">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="planner-page">
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar container">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Antarvedi Logo">
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-
+<body>
+<header class="site-header scrolled" id="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="active">AI Planner</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="planner.html" class="nav-highlight active">AI Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero planner-hero">
-  <div class="hero-content">
-    <h1>Plan Your Antarvedi Trip with AI</h1>
-    <p>Answer a few questions and get a smart, day-wise Antarvedi itinerary</p>
+<section class="page-hero" style="padding-top:80px;min-height:46vh;">
+  <div class="page-hero-bg">
+    <img src="assets/images/beach.jpg" alt="AI Trip Planner">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.5) 0%,rgba(13,26,26,0.88) 100%);"></div>
+  </div>
+  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
+    <p class="breadcrumb">Home → AI Planner</p>
+    <h1>Plan Your Antarvedi Trip</h1>
+    <p class="hero-sub">Answer a few questions and get a smart, personalized day-wise itinerary</p>
   </div>
 </section>
 
-<!-- ================= CONTENT ================= -->
-<section class="temple-content">
-  <div class="temple-inner">
-
-    <h2 class="temple-title">AI Trip Planner</h2>
-
-    <!-- INPUT BOX -->
-    <div class="planner-box">
+<section class="page-content">
+  <div class="page-inner">
+    <div class="planner-form-wrap">
+      <span class="section-label" style="margin-top:0;">Customize Your Visit</span>
+      <h2 style="font-family:var(--font-display);color:var(--teal);font-size:1.8rem;margin-bottom:1.5rem;">AI Trip Planner</h2>
 
       <label>Purpose of Visit</label>
-      <select id="purpose" onchange="handlePurposeChange()">
-        <option value="temple">Temple Darshan</option>
-        <option value="nature">Beach & Nature</option>
-        <option value="boating">Boating & Adventure</option>
-        <option value="family">Family Trip</option>
-        <option value="relax">Relaxation</option>
+      <select id="purpose">
+        <option value="temple">🛕 Temple Darshan</option>
+        <option value="nature">🌊 Beach & Nature</option>
+        <option value="boating">🚤 Boating & Adventure</option>
+        <option value="family">👨‍👩‍👧 Family Trip</option>
+        <option value="relax">🌿 Relaxation</option>
       </select>
 
       <label>Trip Duration</label>
-      <select id="days" onchange="handleDaysChange()">
+      <select id="days">
         <option value="half">Half Day</option>
         <option value="1">1 Day</option>
         <option value="2">2 Days</option>
@@ -94,58 +79,95 @@
         <option value="resort">Resort Stay</option>
       </select>
 
-      <button class="btn primary" onclick="generatePlan()">
-        Generate My Plan
-      </button>
-      
-
+      <button class="btn-generate" onclick="generatePlan()">✨ Generate My Plan</button>
     </div>
 
-    <!-- OUTPUT -->
     <div id="planResult" class="planner-result" style="display:none;"></div>
-    
-    <div id="quickLinks" class="quick-links">
-  <div class="quick-card temple" onclick="location.href='temple.html'">
-    <div class="icon">🛕</div>
-    <h4>Temple</h4>
-    <p>Darshan & Timings</p>
-  </div>
 
-  <div class="quick-card boating" onclick="location.href='boating.html'">
-    <div class="icon">🚤</div>
-    <h4>Boating</h4>
-    <p>Sagara Sangamam & mangroves</p>
-  </div>
-
-  <div class="quick-card stay" onclick="location.href='stays.html'">
-    <div class="icon">🏨</div>
-    <h4>Stay</h4>
-    <p>Hotels & resorts</p>
-  </div>
-</div>
-
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:700px;margin:2rem auto 0;">
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="info-card" style="text-align:center;text-decoration:none;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🛕</div>
+        <h3 style="font-size:1rem;">Temple</h3>
+        <p style="font-size:0.8rem;color:var(--text-mid);">Darshan & Timings</p>
+      </a>
+      <a href="antarvedi-boating.html" class="info-card" style="text-align:center;text-decoration:none;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🚤</div>
+        <h3 style="font-size:1rem;">Boating</h3>
+        <p style="font-size:0.8rem;color:var(--text-mid);">Sangamam & Mangroves</p>
+      </a>
+      <a href="local-stays.html" class="info-card" style="text-align:center;text-decoration:none;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🏨</div>
+        <h3 style="font-size:1rem;">Stay</h3>
+        <p style="font-size:0.8rem;color:var(--text-mid);">Hotels & Resorts</p>
+      </a>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  © <span id="year"></span> Antarvedi. All rights reserved.
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
+    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
+    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
 </footer>
 
-<script src="planner.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() {
-    const nav = document.querySelector(".nav-links");
-    const toggle = document.querySelector(".menu-toggle");
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
+  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
 
-    nav.classList.toggle("show");
+  const plans = {
+    temple: {
+      half: `<h3>🛕 Half-Day Temple Darshan</h3><p><strong>Morning (6:00 AM):</strong> Arrive at Sri Lakshmi Narasimha Swamy Temple for early darshan. Witness the divine morning prayers and abhishekam.<br><br><strong>8:00–9:30 AM:</strong> Attend the sacred Abhishekam ritual.<br><br><strong>10:00 AM–12:00 PM:</strong> Visit Sagara Sangamam for a holy dip at the confluence. Explore the Vasista Ashramam nearby.<br><br><strong>12:00–1:00 PM:</strong> Partake in the temple Annadanam (free meals for all devotees).<br><br>Return journey afternoon.</p>`,
+      "1": `<h3>🛕 1-Day Temple & Sangamam Itinerary</h3><p><strong>6:00 AM:</strong> Temple darshan & morning prayers.<br><br><strong>8:00 AM:</strong> Abhishekam & sacred rituals.<br><br><strong>10:00 AM:</strong> Holy bath at Sagara Sangamam. Perform pitru tarpana if applicable.<br><br><strong>12:00 PM:</strong> Annadanam lunch at the temple.<br><br><strong>2:00 PM:</strong> Visit Vasista Ashramam for spiritual reflection.<br><br><strong>4:00 PM:</strong> Stroll along Antarvedi Beach. Enjoy the sunset views.<br><br><strong>6:00 PM:</strong> Evening darshan at the temple. Return journey.</p>`,
+      "2": `<h3>🛕 2-Day Spiritual Journey</h3><p><strong>Day 1 — Arrival & Temple</strong><br>Check in to your stay. Evening darshan at the temple. Explore the temple premises, gopuram, and sacred pools.<br><br><strong>Day 2 — Sangamam & Village</strong><br>6 AM early darshan. Ritual bath at Sangamam. Lighthouse climb (₹20 entry). Beach walk. Vasista Ashramam visit. Return after evening darshan.</p>`,
+      "3": `<h3>🛕 3-Day Complete Spiritual Retreat</h3><p><strong>Day 1:</strong> Arrive, settle in. Evening temple darshan & dinner.<br><strong>Day 2:</strong> Early darshan, abhishekam, Sangamam holy bath, Vasista Ashramam, beach walk.<br><strong>Day 3:</strong> Lighthouse climb, Godavari boating, local market, final darshan, departure.</p>`,
+    },
+    nature: {
+      half: `<h3>🌊 Half-Day Beach & Nature Walk</h3><p><strong>7:00 AM:</strong> Arrive at Antarvedi Beach for a morning walk. Sunrise views are spectacular.<br><br><strong>8:30 AM:</strong> Stroll to Sagara Sangamam. Experience the confluence of river and sea.<br><br><strong>10:00 AM:</strong> Lighthouse climb for panoramic views (₹10–20 entry).<br><br><strong>11:30 AM:</strong> Relax at the beach. Horse riding or buggy rides available.<br><br>Return journey by noon.</p>`,
+      "1": `<h3>🌊 1-Day Coastal Nature Day</h3><p><strong>6:30 AM:</strong> Sunrise at Sagara Sangamam — unmissable.<br><strong>8:00 AM:</strong> Breakfast at a local eatery.<br><strong>9:00 AM:</strong> Beach walk, photography, horse riding.<br><strong>11:00 AM:</strong> Lighthouse climb — 360° views.<br><strong>1:00 PM:</strong> Lunch break.<br><strong>3:00 PM:</strong> Mangrove forest boating tour.<br><strong>5:30 PM:</strong> Golden hour at the beach. Sunset views.<br><strong>7:00 PM:</strong> Return journey.</p>`,
+      "2": `<h3>🌊 2-Day Nature & Coastal Escape</h3><p><strong>Day 1:</strong> Arrive, beach, Sangamam sunset, overnight stay.<br><strong>Day 2:</strong> Early sunrise, lighthouse, boating through mangroves, beach activities, return.</p>`,
+      "3": `<h3>🌊 3-Day Nature Retreat</h3><p><strong>Day 1:</strong> Arrive & explore the village, beach stroll, sunset at Sangamam.<br><strong>Day 2:</strong> Boating (mangroves + speed boat), lighthouse, beach photography.<br><strong>Day 3:</strong> Temple darshan, Vasista Ashramam, peaceful walk, departure.</p>`,
+    },
+    boating: {
+      half: `<h3>🚤 Half-Day Boating Adventure</h3><p><strong>8:00 AM:</strong> Reach the boating point. Board a regular tourist boat to Sagar Sangamam via Anna Chellula Gattu.<br><br><strong>9:30 AM:</strong> Optional: Mangrove forest boating — peaceful and scenic.<br><br><strong>11:00 AM:</strong> Speed boat ride on the Godavari (subject to availability).<br><br><strong>12:30 PM:</strong> Return and lunch. Book via WhatsApp: <strong>+91 89775 17475</strong></p>`,
+      "1": `<h3>🚤 1-Day Boating & Exploration</h3><p><strong>7:00 AM:</strong> Reach boating point early for calm waters.<br><strong>8:00 AM:</strong> Sangamam boat tour.<br><strong>10:00 AM:</strong> Mangrove forest boating.<br><strong>12:00 PM:</strong> Lunch break.<br><strong>2:00 PM:</strong> Speed boating adventure.<br><strong>4:00 PM:</strong> Lighthouse climb for aerial views.<br><strong>6:00 PM:</strong> Beach sunset. Return.</p>`,
+      "2": `<h3>🚤 2-Day River Adventure</h3><p><strong>Day 1:</strong> Arrive, mangrove boating, Sangamam sunset, overnight stay.<br><strong>Day 2:</strong> Early morning river boat, lighthouse, temple visit, return.</p>`,
+      "3": `<h3>🚤 3-Day Boating & Temple Experience</h3><p><strong>Day 1:</strong> Arrive, Sangamam boat tour, beach sunset, rest.<br><strong>Day 2:</strong> All three boating types, lighthouse, beach walk.<br><strong>Day 3:</strong> Temple darshan, village walk, departure.</p>`,
+    },
+    family: {
+      half: `<h3>👨‍👩‍👧 Family Half-Day Visit</h3><p><strong>8:00 AM:</strong> Temple visit for blessings. Kids enjoy the temple architecture and gopuram.<br><br><strong>10:00 AM:</strong> Sangamam — see where river meets sea. Great for photos!<br><br><strong>11:00 AM:</strong> Beach fun: horse riding, buggy rides, sandplay.<br><br><strong>1:00 PM:</strong> Lunch and return home.</p>`,
+      "1": `<h3>👨‍👩‍👧 1-Day Family Fun Day</h3><p><strong>7:00 AM:</strong> Temple darshan (manageable for all ages).<br><strong>9:00 AM:</strong> Annadanam breakfast at the temple.<br><strong>10:00 AM:</strong> Sangamam holy dip or sightseeing.<br><strong>11:30 AM:</strong> Lighthouse climb (fun challenge for kids).<br><strong>1:00 PM:</strong> Lunch.<br><strong>2:30 PM:</strong> Beach activities: horse riding, buggy car, walks.<br><strong>5:00 PM:</strong> Boat ride.<br><strong>7:00 PM:</strong> Return home.</p>`,
+      "2": `<h3>👨‍👩‍👧 2-Day Family Trip</h3><p><strong>Day 1:</strong> Arrive, temple, Annadanam lunch, beach afternoon, local stay overnight.<br><strong>Day 2:</strong> Sangamam, lighthouse, boating, beach, return evening.</p>`,
+      "3": `<h3>👨‍👩‍👧 3-Day Family Getaway</h3><p><strong>Day 1:</strong> Arrive & settle in. Evening temple darshan.<br><strong>Day 2:</strong> Full day — Sangamam, lighthouse, beach, boating, local food.<br><strong>Day 3:</strong> Vasista Ashramam, peaceful beach morning, temple farewell darshan, departure.</p>`,
+    },
+    relax: {
+      half: `<h3>🌿 Half-Day Peaceful Escape</h3><p><strong>7:00 AM:</strong> Sunrise walk at Sagara Sangamam. Pure serenity.<br><br><strong>8:30 AM:</strong> Sit at the beach. Let the breeze do its work.<br><br><strong>10:00 AM:</strong> Brief visit to Vasista Ashramam for quiet reflection.<br><br><strong>12:00 PM:</strong> Temple darshan for inner peace. Return refreshed.</p>`,
+      "1": `<h3>🌿 1-Day Rejuvenation Day</h3><p><strong>6:30 AM:</strong> Sunrise at Sangamam — meditative and divine.<br><strong>8:00 AM:</strong> Slow beach walk. No rush.<br><strong>10:00 AM:</strong> Vasista Ashramam — sit in silence.<br><strong>12:00 PM:</strong> Temple Annadanam lunch.<br><strong>2:00 PM:</strong> Rest or short nap at your stay.<br><strong>4:00 PM:</strong> Evening mangrove boat ride.<br><strong>6:00 PM:</strong> Sunset at the beach. Return.</p>`,
+      "2": `<h3>🌿 2-Day Slow Travel</h3><p><strong>Day 1:</strong> Arrive gently. Beach. Sangamam sunset. Dinner. Rest.<br><strong>Day 2:</strong> Early morning darshan. Ashramam. Peaceful boating. Beach afternoon. Return.</p>`,
+      "3": `<h3>🌿 3-Day Retreat & Reset</h3><p><strong>Day 1:</strong> Arrive. Settle. Beach sunset. Sleep early.<br><strong>Day 2:</strong> Sangamam at sunrise. Temple darshan. Ashramam. Resort rest afternoon. Boat ride at dusk.<br><strong>Day 3:</strong> Lighthouse sunrise view. Village walk. Final darshan. Depart refreshed.</p>`,
+    }
+  };
 
-    // Animate icon
-    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  function generatePlan() {
+    const purpose = document.getElementById('purpose').value;
+    const days = document.getElementById('days').value;
+    const group = document.getElementById('group').value;
+    const stay = document.getElementById('stay').value;
+    const result = document.getElementById('planResult');
+
+    let planHTML = plans[purpose]?.[days] || `<h3>Your Custom Plan</h3><p>A wonderful trip awaits! Visit the temple, Sangamam, beach, and enjoy boating — the order depends on your arrival time. Contact us for a personalized plan.</p>`;
+
+    let stayNote = '';
+    if (stay === 'budget') stayNote = `<p style="margin-top:1rem;padding:1rem;background:rgba(201,168,76,0.1);border-radius:8px;">🏨 <strong>Stay Suggestion:</strong> <a href="local-stays.html" style="color:var(--teal);text-decoration:underline;">Apple Resorts or ABN Residency</a> — budget-friendly and close to the temple.</p>`;
+    if (stay === 'resort') stayNote = `<p style="margin-top:1rem;padding:1rem;background:rgba(201,168,76,0.1);border-radius:8px;">🏨 <strong>Stay Suggestion:</strong> <a href="resorts.html" style="color:var(--teal);text-decoration:underline;">Sterling Dindi, Club Mahindra RVR, or Haritha Resort</a> — premium riverside luxury.</p>`;
+
+    result.innerHTML = planHTML + stayNote;
+    result.style.display = 'block';
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 </script>
-
-
-  
 </body>
 </html>
