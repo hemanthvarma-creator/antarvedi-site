@@ -1,81 +1,52 @@
+<!-- SANGAMAM PAGE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V60KJPZ5Q6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>Antarvedi Sagara Sangamam | Where Godavari River Meets the Sea</title>
   <meta name="description" content="Sagara Sangamam in Antarvedi is the sacred confluence where the Godavari river meets the sea, known for spiritual rituals, prayers, and pilgrim visits.">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-  
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar container">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Antarvedi Logo">
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-
+<header class="site-header scrolled" id="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html">AI Planner</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-
-<!-- ================= HERO ================= -->
-<section class="hero sangamam-hero">
-  <div class="hero-content">
+<section class="page-hero" style="padding-top:80px;min-height:52vh;">
+  <div class="page-hero-bg">
+    <img src="assets/images/sangamam.jpg" alt="Sagara Sangamam">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.35) 0%,rgba(13,26,26,0.85) 100%);"></div>
+  </div>
+  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
+    <p class="breadcrumb">Home → Sagara Sangamam</p>
     <h1>Sagara Sangamam</h1>
-    <p>
-      Where the sacred Godavari River meets the vast Bay of Bengal
-    </p>
+    <p class="hero-sub">Where the sacred Godavari River meets the vast Bay of Bengal</p>
   </div>
 </section>
-
-<!-- ================= CONTENT ================= -->
-<section class="temple-content">
-  <div class="temple-inner">
-
-    <!-- INTRO -->
-    <p class="temple-intro">
-      Sangamam at Antarvedi is a sacred confluence where the holy River Godavari
-      merges with the Bay of Bengal. This rare natural phenomenon holds immense
-      spiritual significance and is revered by pilgrims and visitors alike.
-      The meeting of river and sea creates a serene yet powerful atmosphere,
-      symbolizing unity, purification, and divine balance.
-    </p>
-
-    <!-- SECTION TITLE -->
-    <h2 class="temple-title">Spiritual & Natural Significance</h2>
-
-    <div class="temple-grid">
-
-      <!-- SPIRITUAL -->
-      <div class="temple-card">
-        <h3>Spiritual Importance</h3>
+<section class="page-content">
+  <div class="page-inner">
+    <p class="page-intro">Sangamam at Antarvedi is a sacred confluence where the holy River Godavari merges with the Bay of Bengal. This rare natural phenomenon holds immense <strong>spiritual significance</strong> and creates a serene yet powerful atmosphere symbolizing unity, purification, and divine balance.</p>
+    <h2 class="content-title">Spiritual & Natural Significance</h2>
+    <div class="cards-grid">
+      <div class="info-card">
+        <h3>🙏 Spiritual Importance</h3>
         <ul>
           <li>Considered highly sacred in Hindu tradition</li>
           <li>Devotees perform holy snanam (ritual bath)</li>
@@ -83,10 +54,8 @@
           <li>Closely associated with Antarvedi Temple worship</li>
         </ul>
       </div>
-
-      <!-- NATURE -->
-      <div class="temple-card">
-        <h3>Natural Beauty</h3>
+      <div class="info-card">
+        <h3>🌊 Natural Beauty</h3>
         <ul>
           <li>Visible contrast between river and sea waters</li>
           <li>Peaceful surroundings with open horizons</li>
@@ -94,10 +63,8 @@
           <li>Perfect for photography and quiet reflection</li>
         </ul>
       </div>
-
-      <!-- VISIT INFO -->
-      <div class="temple-card">
-        <h3>Best Time to Visit</h3>
+      <div class="info-card">
+        <h3>🗓️ Best Time to Visit</h3>
         <ul>
           <li><strong>Season:</strong> October to March</li>
           <li><strong>Time:</strong> Early morning & sunset</li>
@@ -105,37 +72,22 @@
           <li>Weather is calm and pleasant in winter</li>
         </ul>
       </div>
-
     </div>
-
-    <!-- SAFETY NOTE -->
-    <p class="temple-note">
-      Note: Swimming near the confluence is not recommended due to strong
-      undercurrents. Visitors are advised to follow local guidance, respect
-      religious practices, and help preserve the natural environment.
-    </p>
-
+    <p class="page-note">Note: Swimming near the confluence is not recommended due to strong undercurrents. Visitors are advised to follow local guidance, respect religious practices, and help preserve the natural environment.</p>
   </div>
 </section>
-
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  © <span id="year"></span> Antarvedi. All rights reserved.
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
+    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
+    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
 </footer>
- <script>
-   document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() {
-    const nav = document.querySelector(".nav-links");
-    const toggle = document.querySelector(".menu-toggle");
-
-    nav.classList.toggle("show");
-
-    // Animate icon
-    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
-  }
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
+  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
 </script>
-
-
-
 </body>
 </html>
