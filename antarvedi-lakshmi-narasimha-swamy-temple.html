@@ -9,64 +9,60 @@
   <meta name="description" content="Sri Lakshmi Narasimha Swamy Temple in Antarvedi is a sacred pilgrimage site at the Godavari Sagara Sangamam, known for its ancient history, rituals, festivals and spiritual significance.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="active">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="page-hero" style="padding-top:80px;">
-  <div class="page-hero-bg">
-    <img src="assets/images/temple.jpg" alt="Sri Lakshmi Narasimha Swamy Temple">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.4) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Temple</p>
-    <h1>Sri Lakshmi Narasimha Swamy Temple</h1>
-    <p class="hero-sub">A sacred pilgrimage site at the confluence of the Godavari River and the Bay of Bengal</p>
-    <div style="margin-top:1.8rem;">
-      <a href="https://www.aptemples.org/en-in/temples/SLNSD/aboutTemple" target="_blank" class="btn-book gold">Book Darshan →</a>
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/temple.jpg" alt="Sri Lakshmi Narasimha Swamy Temple Antarvedi"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Temple</span></p>
+    <h1>Sri Lakshmi Narasimha<br>Swamy Temple</h1>
+    <p class="page-hero-sub">A sacred pilgrimage at the divine confluence of the Godavari River and the Bay of Bengal</p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="https://www.aptemples.org/en-in/temples/SLNSD/aboutTemple" target="_blank" class="btn-primary">Book Darshan →</a>
     </div>
   </div>
 </section>
-
-<section class="page-content">
+<section class="page-body">
   <div class="page-inner">
-    <p class="page-intro">
-      Sri Lakshmi Narasimha Swamy Temple, Antarvedi, is an ancient and revered shrine located at the sacred confluence of the Godavari River and the Bay of Bengal. Established by <strong>Sage Vasishta</strong>, the temple attracts thousands of devotees and is traditionally known as <strong>Dakshina Kashi</strong> — the Kashi of South India.
-    </p>
-
-    <h2 class="content-title">Temple Timings & Rituals</h2>
-    <div class="cards-grid">
+    <div class="intro-block reveal">
+      <p>Sri Lakshmi Narasimha Swamy Temple, Antarvedi, is an ancient and revered shrine located at the sacred confluence of the Godavari River and the Bay of Bengal. Established by <strong>Sage Vasishta</strong>, this holy kshetram is known as <strong>Dakshina Kashi</strong> — the Kashi of South India.</p>
+    </div>
+    <h2 class="content-title reveal">Temple Timings & Rituals</h2>
+    <div class="cards-grid reveal">
       <div class="info-card">
         <h3>🕕 Darshan Timings</h3>
         <ul>
-          <li><strong>Temple Opens:</strong> 6:00 AM</li>
-          <li><strong>Morning Darshan:</strong> 6:00 AM – 12:30 PM</li>
+          <li><strong>Opens:</strong> 6:00 AM daily</li>
+          <li><strong>Morning:</strong> 6:00 AM – 12:30 PM</li>
           <li><strong>Afternoon Break:</strong> 1:00 PM – 3:30 PM</li>
-          <li><strong>Evening Darshan:</strong> 3:30 PM – 7:30 PM</li>
+          <li><strong>Evening:</strong> 3:30 PM – 7:30 PM</li>
         </ul>
       </div>
       <div class="info-card">
         <h3>🪔 Abhishekams</h3>
         <ul>
-          <li><strong>Daily Abhishekam:</strong> 8:00 AM – 9:30 AM</li>
-          <li>Special Abhishekams on Ekadasi and festival days</li>
+          <li><strong>Daily Abhishekam:</strong> 8:00 – 9:30 AM</li>
+          <li>Special sevas on Ekadasi and festival days</li>
           <li>Tirukalyanam on auspicious occasions</li>
         </ul>
       </div>
@@ -74,62 +70,70 @@
         <h3>🍚 Annadanam</h3>
         <ul>
           <li><strong>Timings:</strong> 10:00 AM – 3:00 PM</li>
-          <li>Free meals served daily to all devotees</li>
-          <li>A sacred tradition of the temple for generations</li>
+          <li>Free sacred meals served to all devotees</li>
+          <li>A centuries-old tradition of the temple</li>
         </ul>
       </div>
     </div>
-
-    <h2 class="content-title">History & Sacred Traditions</h2>
-    <div class="rich-text">
-      <p>Sri Lakshmi Narasimha Swamy Temple at Antarvedi is one of the most historically significant Vaishnavite temples in Andhra Pradesh. Located at the divine confluence of the Vasishta branch of the Godavari River and the Bay of Bengal, this holy place is revered as a powerful kshetram where river, sea, and spirituality unite.</p>
-      <p>The presiding deity, <strong>Lord Lakshmi Narasimha Swamy</strong>, represents the fierce yet compassionate form of Lord Vishnu, symbolizing protection of devotees and the destruction of adharma. Devotees believe that worshipping Lord Narasimha at Antarvedi grants courage, relief from fear, spiritual strength, and divine blessings for generations.</p>
-      <p>According to historical records and temple inscriptions, the temple was rebuilt in the early 19th century by <strong>Sri Koppanathi Krishnamma</strong>, a devotee of Lord Vishnu from the <strong>Agni Kula Kshatriya</strong> community, with major renovations completed around <strong>1823 AD (Shalivahana Saka 1745)</strong>.</p>
-      <p>Antarvedi finds mention in local Puranic lore. The great sage <strong>Vasishtha</strong> performed intense penance at this sacred confluence. In the Treta Yuga, <strong>Lord Rama</strong> is believed to have visited during his exile to worship Lord Narasimha. In the Dwapara Yuga, <strong>Arjuna</strong> is said to have meditated here to gain spiritual clarity and warrior strength.</p>
-      <p>The <strong>Antarvedi Theertham</strong> — a holy dip where river meets sea — is believed to wash away sins and grant moksha. Pilgrims gather for the grand <strong>Sri Lakshmi Narasimha Swamy Vari Kalyanam</strong> on Bheeshma Ekadasi, followed by the magnificent <strong>Rathotsavam</strong> the next day.</p>
-      <p>Major festivals including <strong>Bheeshma Ekadasi</strong>, <strong>Ratha Saptami</strong>, <strong>Narasimha Jayanti</strong>, and the divine <strong>Tirukalyanam</strong> are celebrated with immense devotion, drawing pilgrims from across Andhra Pradesh and neighboring states.</p>
+    <h2 class="content-title reveal">History & Sacred Traditions</h2>
+    <div class="rich-text reveal">
+      <p>Sri Lakshmi Narasimha Swamy Temple at Antarvedi is one of the most historically significant Vaishnavite temples in Andhra Pradesh, located at the divine confluence where the Vasishta branch of the Godavari meets the Bay of Bengal.</p>
+      <p>The presiding deity, <strong>Lord Lakshmi Narasimha Swamy</strong>, represents the fierce yet compassionate form of Lord Vishnu — symbolizing protection of devotees and the destruction of adharma. Devotees believe that darshan at Antarvedi grants courage, spiritual strength, and divine blessings for generations.</p>
+      <p>Historical records state the temple was rebuilt in the early 19th century by <strong>Sri Koppanathi Krishnamma</strong> of the <strong>Agni Kula Kshatriya</strong> community, with major renovations completed around <strong>1823 AD (Shalivahana Saka 1745)</strong>.</p>
+      <p>In the <strong>Treta Yuga</strong>, <strong>Lord Rama</strong> is believed to have visited this sacred land during his exile to worship Lord Narasimha. In the <strong>Dwapara Yuga</strong>, <strong>Arjuna</strong> is said to have meditated here at the confluence to gain divine clarity and warrior strength.</p>
+      <p>The <strong>Antarvedi Theertham festival</strong> is celebrated with grand devotion — thousands gather for the <strong>Sri Lakshmi Narasimha Swamy Vari Kalyanam</strong> on Bheeshma Ekadasi, followed by the magnificent <strong>Rathotsavam</strong>. Devotees take a holy dip at the Sangamam on Pournami, believing it washes away sins and grants moksha.</p>
+      <p>Major festivals — <strong>Bheeshma Ekadasi</strong>, <strong>Ratha Saptami</strong>, <strong>Narasimha Jayanti</strong>, and the divine <strong>Tirukalyanam</strong> — draw pilgrims from across Andhra Pradesh and neighboring states, transforming Antarvedi into a vibrant spiritual hub.</p>
     </div>
-
-    <div style="margin-top:3rem;">
-      <p class="page-note">Note: Timings may change during festivals and special occasions. Please verify details through the official AP Temples website before planning your visit.</p>
+    <div class="cta-block reveal" style="margin-top:4rem;">
+      <p class="page-note">Note: Timings may change during festivals and special occasions. Please verify through the official AP Temples website before planning your visit.</p>
     </div>
   </div>
 </section>
-
 <footer class="site-footer">
-  <div class="footer-inner">
+  <div class="footer-grid">
     <div class="footer-brand">
       <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
-      <p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p>
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
     </div>
-    <div class="footer-links">
-      <h5>Explore</h5>
+    <div class="footer-col">
+      <h5>Visit</h5>
       <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
       <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
       <a href="antarvedi-beach.html">Beach</a>
       <a href="antarvedi-lighthouse.html">Lighthouse</a>
       <a href="antarvedi-boating.html">Boating</a>
     </div>
-    <div class="footer-links">
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
       <h5>Plan</h5>
       <a href="travel.html">Travel Guide</a>
-      <a href="local-stays.html">Local Stays</a>
-      <a href="resorts.html">Resorts</a>
-      <a href="planner.html">AI Planner</a>
+      <a href="planner.html">AI Trip Planner</a>
       <a href="contact.html">Contact Us</a>
     </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
 </footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("open");
-    document.querySelector(".menu-toggle").classList.toggle("active");
-  }
-  window.addEventListener('scroll', () => {
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
-  });
+document.getElementById("year").textContent = new Date().getFullYear();
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('menuToggle').classList.toggle('active');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>
