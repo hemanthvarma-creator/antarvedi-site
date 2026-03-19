@@ -4,104 +4,181 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
-  <title>Riverside Resorts Near Antarvedi | Riverside Resorts at Dindi</title>
-  <meta name="description" content="Explore the premium riverside resorts near Antarvedi. Peaceful stays beside the Godavari River, ideal for relaxation and nature lovers.">
+  <title>Antarvedi AI Trip Planner | Personalized Itinerary for Temple, Beach & Stays</title>
+  
+  <meta name="description" content="Plan your Antarvedi trip using our AI travel planner. Get personalized day-wise itineraries for temple darshan, beach, boating, family trips and relaxation.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta active">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<section class="page-hero" style="padding-top:80px;min-height:52vh;">
-  <div class="page-hero-bg">
-    <img src="assets/images/resorts.jpg" alt="Resorts near Antarvedi">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.3) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Resorts</p>
-    <h1>Resorts Around Antarvedi</h1>
-    <p class="hero-sub">Comfortable stays by the Godavari River, coconut groves, and serene backwaters</p>
+
+<section class="page-hero" style="min-height:50vh;">
+  <div class="page-hero-bg"><img src="assets/images/beach.jpg" alt="Antarvedi AI Trip Planner"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">AI Planner</span></p>
+    <h1>AI Trip<br><em>Planner</em></h1>
+    <p class="page-hero-sub">Answer 4 questions. Get a personalized day-wise Antarvedi itinerary instantly.</p>
   </div>
 </section>
-<section class="page-content">
+<section class="page-body">
   <div class="page-inner">
-    <p class="page-intro">The region around Antarvedi and nearby <strong>Dindi village</strong> offers some of the best riverside and backwater resort experiences in Andhra Pradesh. Whether you seek luxurious comfort, peaceful nature retreats, or riverfront relaxation, these resorts provide memorable stays.</p>
-    <h2 class="content-title">Top Resorts You Can Stay At</h2>
-    <div class="resort-cards-grid">
-      <div class="resort-card">
-        <div class="resort-card-body">
-          <h3>Dindi RVR, On the Godavari</h3>
-          <ul>
-            <li>Premium riverside resort with scenic Godavari views</li>
-            <li>Swimming pool, restaurant, gym & indoor games</li>
-            <li>Modern rooms with air-conditioning and balconies</li>
-            <li>Ideal for families and peaceful leisure stays</li>
-          </ul>
+    <div class="planner-wrap">
+      <div class="planner-form reveal">
+        <span class="label">Customize Your Visit</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Purpose of Visit</label>
+            <select id="purpose">
+              <option value="temple">🛕 Temple Darshan</option>
+              <option value="nature">🌊 Beach & Nature</option>
+              <option value="boating">🚤 Boating & Adventure</option>
+              <option value="family">👨‍👩‍👧 Family Trip</option>
+              <option value="relax">🌿 Relaxation & Peace</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Trip Duration</label>
+            <select id="days">
+              <option value="half">Half Day</option>
+              <option value="1">1 Day</option>
+              <option value="2">2 Days</option>
+              <option value="3">3 Days</option>
+            </select>
+          </div>
         </div>
-        <div class="resort-card-footer">
-          <a href="https://www.clubmahindra.com/our-resorts/dindi-rvr-godavari-club-mahindra-associate-resort" target="_blank" class="btn-book gold" style="display:block;text-align:center;padding:0.85rem;">Book Now →</a>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Traveling With</label>
+            <select id="group">
+              <option value="solo">Solo</option>
+              <option value="couple">Couple</option>
+              <option value="family">Family with Kids</option>
+              <option value="friends">Friends Group</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Stay Preference</label>
+            <select id="stay">
+              <option value="none">No Stay (Day Trip)</option>
+              <option value="budget">Budget Stay (Local)</option>
+              <option value="resort">Resort Stay (Dindi)</option>
+            </select>
+          </div>
         </div>
+        <button type="button" class="btn-primary" onclick="generatePlan()" style="width:100%;justify-content:center;border-radius:12px;">✦ Generate My Plan</button>
       </div>
-      <div class="resort-card">
-        <div class="resort-card-body">
-          <h3>Dindi Haritha Coconut Country</h3>
-          <ul>
-            <li>Riverside resort surrounded by coconut groves</li>
-            <li>Swimming pool, restaurant & spa services</li>
-            <li>Peaceful backwater environment</li>
-            <li>Great for family vacations and weekend trips</li>
-          </ul>
-        </div>
-        <div class="resort-card-footer">
-          <a href="https://www.aptdc.gov.in/" target="_blank" class="btn-book gold" style="display:block;text-align:center;padding:0.85rem;">Book Now →</a>
-        </div>
-      </div>
-      <div class="resort-card">
-        <div class="resort-card-body">
-          <h3>Sterling – Dindi By The Godavari</h3>
-          <ul>
-            <li>Premium Sterling Holidays riverside resort</li>
-            <li>Swimming pool, spa, restaurant & sunset views</li>
-            <li>Well-designed rooms with modern comforts</li>
-            <li>Perfect for couples and luxury travelers</li>
-          </ul>
-        </div>
-        <div class="resort-card-footer">
-          <a href="https://www.sterlingholidays.com/resorts/dindi" target="_blank" class="btn-book gold" style="display:block;text-align:center;padding:0.85rem;">Book Now →</a>
-        </div>
+      <div id="planResult" class="planner-result"></div>
+      <div class="quick-cards reveal">
+        <a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="quick-card">
+          <span class="qicon">🛕</span><h4>Temple</h4><p>Darshan & Timings</p>
+        </a>
+        <a href="antarvedi-boating.html" class="quick-card">
+          <span class="qicon">🚤</span><h4>Boating</h4><p>Sangamam & Mangroves</p>
+        </a>
+        <a href="local-stays.html" class="quick-card">
+          <span class="qicon">🏨</span><h4>Stay</h4><p>Hotels & Resorts</p>
+        </a>
       </div>
     </div>
-    <p class="page-note">Note: Resort facilities, pricing, and availability may vary seasonally. It's recommended to book in advance and check with the resort for offers, packages, and on-site activities.</p>
   </div>
 </section>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
-    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
-    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
-  </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
-</footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
-  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
+const plans={temple:{half:'<h3>🛕 Half-Day Temple Darshan</h3><p><strong>6:00 AM</strong> — Arrive at Sri Lakshmi Narasimha Swamy Temple for early darshan. Experience the dawn prayers in the ancient sanctum.<br><br><strong>8:00 AM</strong> — Attend the sacred Abhishekam ritual.<br><br><strong>10:00 AM</strong> — Visit Sagara Sangamam for a holy dip. Walk to Vasista Ashramam for quiet reflection.<br><br><strong>12:00 PM</strong> — Partake in the free Annadanam (temple meals). Return journey afternoon.</p>',1:'<h3>🛕 1-Day Temple & Sangamam</h3><p><strong>6:00 AM</strong> — Early darshan & morning prayers.<br><strong>8:00 AM</strong> — Abhishekam & sacred rituals.<br><strong>10:00 AM</strong> — Holy bath at Sagara Sangamam.<br><strong>12:00 PM</strong> — Annadanam lunch.<br><strong>2:00 PM</strong> — Vasista Ashramam visit.<br><strong>4:00 PM</strong> — Beach stroll and lighthouse climb.<br><strong>6:30 PM</strong> — Evening darshan. Return.</p>',2:'<h3>🛕 2-Day Spiritual Journey</h3><p><strong>Day 1</strong> — Arrive, check in. Evening darshan at the temple. Explore gopuram and temple precincts.<br><br><strong>Day 2</strong> — 6 AM darshan, Abhishekam, Sangamam holy bath, Vasista Ashramam, beach walk, lighthouse climb. Evening darshan, return.</p>',3:'<h3>🛕 3-Day Spiritual Retreat</h3><p><strong>Day 1</strong> — Arrive. Evening temple darshan & settle in.<br><strong>Day 2</strong> — Early darshan, Abhishekam, Sangamam, Vasista Ashramam, beach.<br><strong>Day 3</strong> — Lighthouse, mangrove boating, final darshan, departure.</p>'},nature:{half:'<h3>🌊 Half-Day Coastal Experience</h3><p><strong>7:00 AM</strong> — Arrive at Antarvedi Beach for sunrise walk. The golden hour is extraordinary.<br><br><strong>8:30 AM</strong> — Walk to Sagara Sangamam to witness where river meets sea.<br><br><strong>10:00 AM</strong> — Lighthouse climb (₹20 entry) for 360° panoramic views.<br><br><strong>12:00 PM</strong> — Horse riding or buggy car along the shore. Return by noon.</p>',1:'<h3>🌊 1-Day Coastal Nature Day</h3><p><strong>6:30 AM</strong> — Sunrise at Sangamam.<br><strong>8:00 AM</strong> — Local breakfast.<br><strong>9:00 AM</strong> — Beach walk, photography, horse riding.<br><strong>11:00 AM</strong> — Lighthouse climb.<br><strong>1:00 PM</strong> — Lunch.<br><strong>3:00 PM</strong> — Mangrove forest boating.<br><strong>5:30 PM</strong> — Golden hour at the beach. Sunset views.<br><strong>7:00 PM</strong> — Return.</p>',2:'<h3>🌊 2-Day Nature Escape</h3><p><strong>Day 1</strong> — Arrive, beach walk, Sangamam at sunset, overnight stay.<br><strong>Day 2</strong> — Early sunrise, lighthouse climb, boating through mangroves, beach activities, return.</p>',3:'<h3>🌊 3-Day Nature Retreat</h3><p><strong>Day 1</strong> — Arrive, beach walk, Sangamam sunset.<br><strong>Day 2</strong> — All 3 boating types, lighthouse, photography.<br><strong>Day 3</strong> — Temple darshan, Vasista Ashramam, beach farewell, departure.</p>'},boating:{half:'<h3>🚤 Half-Day Boating Adventure</h3><p><strong>8:00 AM</strong> — Board a tourist boat to Sagar Sangamam via Anna Chellula Gattu.<br><br><strong>9:30 AM</strong> — Mangrove forest boating — peaceful and scenic.<br><br><strong>11:00 AM</strong> — Speed boat ride on the Godavari (weather permitting).<br><br>Book via WhatsApp: <strong>+91 89775 17475</strong></p>',1:'<h3>🚤 Full Boating Day</h3><p><strong>7:00 AM</strong> — Early start for calm waters.<br><strong>8:00 AM</strong> — Sangamam boat tour.<br><strong>10:00 AM</strong> — Mangrove forest boating.<br><strong>12:00 PM</strong> — Lunch.<br><strong>2:00 PM</strong> — Speed boating adventure.<br><strong>4:00 PM</strong> — Lighthouse climb for aerial views.<br><strong>6:00 PM</strong> — Beach sunset. Return.</p>',2:'<h3>🚤 2-Day River Adventure</h3><p><strong>Day 1</strong> — Arrive, mangrove boating, Sangamam sunset, overnight stay.<br><strong>Day 2</strong> — Morning river boat, speed ride, lighthouse, temple darshan, return.</p>',3:'<h3>🚤 3-Day Boating & Temple</h3><p><strong>Day 1</strong> — Arrive, Sangamam boat tour, beach sunset.<br><strong>Day 2</strong> — All three boating types, lighthouse, beach.<br><strong>Day 3</strong> — Temple darshan, village walk, departure.</p>'},family:{half:'<h3>👨‍👩‍👧 Family Half-Day</h3><p><strong>8:00 AM</strong> — Temple visit for blessings. Kids love the colorful gopuram.<br><br><strong>10:00 AM</strong> — Sangamam — see where two waters meet. Great for photos!<br><br><strong>11:00 AM</strong> — Beach fun: horse riding, buggy car rides, sandplay.<br><br><strong>1:00 PM</strong> — Lunch and return.</p>',1:'<h3>👨‍👩‍👧 1-Day Family Day</h3><p><strong>7:00 AM</strong> — Temple darshan, suitable for all ages.<br><strong>9:00 AM</strong> — Annadanam breakfast.<br><strong>10:00 AM</strong> — Sangamam and lighthouse climb (kids love it!).<br><strong>1:00 PM</strong> — Lunch.<br><strong>2:30 PM</strong> — Beach activities: horse riding, buggy car, walks.<br><strong>5:00 PM</strong> — Boat ride.<br><strong>7:00 PM</strong> — Return home.</p>',2:'<h3>👨‍👩‍👧 2-Day Family Trip</h3><p><strong>Day 1</strong> — Temple, Annadanam lunch, beach afternoon, local overnight stay.<br><strong>Day 2</strong> — Sangamam, lighthouse, boating, beach, return.</p>',3:'<h3>👨‍👩‍👧 3-Day Family Getaway</h3><p><strong>Day 1</strong> — Arrive, evening temple darshan, dinner, rest.<br><strong>Day 2</strong> — Sangamam, lighthouse, beach activities, boating, local food.<br><strong>Day 3</strong> — Vasista Ashramam, beach morning, final darshan, departure.</p>'},relax:{half:'<h3>🌿 Half-Day Peaceful Escape</h3><p><strong>7:00 AM</strong> — Sunrise walk at Sagara Sangamam. Pure serenity.<br><br><strong>8:30 AM</strong> — Sit at the beach. Let the sound of waves do its work.<br><br><strong>10:00 AM</strong> — Vasista Ashramam for quiet reflection.<br><br><strong>12:00 PM</strong> — Temple darshan for inner peace. Return refreshed.</p>',1:'<h3>🌿 1-Day Rejuvenation</h3><p><strong>6:30 AM</strong> — Sunrise at Sangamam — meditative and divine.<br><strong>8:00 AM</strong> — Slow beach walk. No rush.<br><strong>10:00 AM</strong> — Vasista Ashramam — sit in silence.<br><strong>12:00 PM</strong> — Temple Annadanam lunch.<br><strong>3:00 PM</strong> — Rest or nap at your stay.<br><strong>5:00 PM</strong> — Mangrove boat ride at golden hour.<br><strong>7:00 PM</strong> — Sunset at the beach. Return.</p>',2:'<h3>🌿 2-Day Slow Travel</h3><p><strong>Day 1</strong> — Arrive gently. Beach. Sangamam sunset. Dinner. Early sleep.<br><strong>Day 2</strong> — Early morning darshan. Ashramam. Peaceful boating. Beach afternoon. Return refreshed.</p>',3:'<h3>🌿 3-Day Full Reset</h3><p><strong>Day 1</strong> — Arrive. Settle. Beach sunset. Sleep early.<br><strong>Day 2</strong> — Sangamam sunrise. Temple darshan. Ashramam. Resort rest. Boat ride at dusk.<br><strong>Day 3</strong> — Lighthouse sunrise view. Village walk. Final darshan. Depart reborn.</p>'}};
+function generatePlan(){
+  const p=document.getElementById('purpose').value,d=document.getElementById('days').value;
+  const st=document.getElementById('stay').value;
+  const el=document.getElementById('planResult');
+  let html=plans[p]?.[d]||'<h3>Your Custom Plan</h3><p>A wonderful trip awaits — visit the temple, Sangamam, beach, and enjoy boating. Contact us for a fully personalized plan.</p>';
+  let stay='';
+  if(st==='budget')stay='<p style="margin-top:1.5rem;padding:1rem 1.5rem;background:rgba(201,160,72,0.08);border:1px solid rgba(201,160,72,0.2);border-radius:8px;font-size:0.88rem;color:rgba(240,234,216,0.7);">🏨 <strong style="color:#e8c46a;">Stay Suggestion:</strong> <a href="local-stays.html" style="color:#c9a048;text-decoration:underline;">Apple Resorts or ABN Residency</a> — budget-friendly and close to the temple.</p>';
+  if(st==='resort')stay='<p style="margin-top:1.5rem;padding:1rem 1.5rem;background:rgba(201,160,72,0.08);border:1px solid rgba(201,160,72,0.2);border-radius:8px;font-size:0.88rem;color:rgba(240,234,216,0.7);">🏨 <strong style="color:#e8c46a;">Stay Suggestion:</strong> <a href="resorts.html" style="color:#c9a048;text-decoration:underline;">Sterling Dindi, Club Mahindra RVR, or Haritha Resort</a> — premium riverside luxury.</p>';
+  el.innerHTML=html+stay;
+  el.style.display='block';
+  el.scrollIntoView({behavior:'smooth',block:'start'});
+}
 </script>
-</body>
-</html>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Visit</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="planner.html">AI Trip Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
+</footer>
+<div class="nav-overlay" id="navOverlay"></div>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+// Cursor - mouse devices only
+const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
+if(window.matchMedia("(pointer: fine)").matches&&dot&&ring){
+  let mx=0,my=0,rx=0,ry=0,ca=false;
+  document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+"px";dot.style.top=my+"px";if(!ca){ca=true;document.body.classList.add("cursor-active");}});
+  (function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+"px";ring.style.top=ry+"px";requestAnimationFrame(a);})();
+  document.querySelectorAll("a,button,.gallery-item").forEach(function(el){
+    el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
+    el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
+  });
+}
+// Header scroll
+var hdr=document.getElementById("header");
+function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
+window.addEventListener("scroll",hs,{passive:true});hs();
+// Mobile menu with overlay
+var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
+function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";}
+function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";}
+function toggleMenu(){nl.classList.contains("open")?closeMenu():openMenu();}
+if(ov)ov.addEventListener("click",closeMenu);
+if(nl)nl.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu);});
+// Scroll reveal
+if("IntersectionObserver" in window){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.08});
+  document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
+}else{document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible");});}
+</script>
+</body></html>
