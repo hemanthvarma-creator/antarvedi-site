@@ -1,89 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>ABN Residency Antarvedi | Stay Near Lakshmi Narasimha Swamy Temple</title>
-  <meta name="description" content="ABN Residency Antarvedi offers comfortable accommodation just 400 meters from Sri Lakshmi Narasimha Swamy Temple. Ideal for pilgrims and families visiting Antarvedi.">
+  
+  <meta name="description" content="ABN Residency Antarvedi offers comfortable accommodation just 400 meters from Sri Lakshmi Narasimha Swamy Temple. Ideal for pilgrims and families.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html" class="active">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<section class="page-hero" style="padding-top:80px;min-height:52vh;">
-  <div class="page-hero-bg">
-    <img src="assets/images/abn1.jpg" alt="ABN Residency Antarvedi">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.3) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Local Stays → ABN Residency</p>
-    <h1>ABN Residency, Antarvedi</h1>
-    <p class="hero-sub">Comfortable and convenient stay just 400 meters from Sri Lakshmi Narasimha Swamy Temple</p>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/abn1.jpg" alt="ABN Residency Antarvedi"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><a href="local-stays.html">Local Stays</a><span class="sep">›</span><span class="cur">ABN Residency</span></p>
+    <h1>ABN Residency<br><em>Antarvedi</em></h1>
+    <p class="page-hero-sub">Comfortable stay just 400 meters from Sri Lakshmi Narasimha Swamy Temple</p>
   </div>
 </section>
-<section class="page-content">
+<section class="page-body">
   <div class="page-inner">
-    <p class="page-intro">ABN Residency is a simple, clean, and budget-friendly accommodation located just <strong>400 meters from Sri Lakshmi Narasimha Swamy Temple, Antarvedi</strong>. An ideal choice for pilgrims, families, and devotees who wish to stay very close to the temple while enjoying a peaceful environment.</p>
-
-    <h2 class="content-title">ABN Residency Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-grid-item"><img src="assets/images/abn1.jpg" alt="ABN Residency Front View" class="lightbox-item" data-type="image"></div>
-      <div class="gallery-grid-item"><img src="assets/images/abn2.jpeg" alt="ABN Residency Rooms" class="lightbox-item" data-type="image"></div>
-      <div class="gallery-grid-item"><img src="assets/images/abn3.jpeg" alt="ABN Residency Interior" class="lightbox-item" data-type="image"></div>
-      <div class="gallery-grid-item"><img src="assets/images/abn4.jpeg" alt="ABN Residency Accommodation" class="lightbox-item" data-type="image"></div>
-      <div class="gallery-grid-item"><img src="assets/images/abn5.jpeg" alt="ABN Residency Stay Area" class="lightbox-item" data-type="image"></div>
-      <div class="gallery-grid-item"><img src="assets/images/abn6.jpeg" alt="ABN Residency Nearby View" class="lightbox-item" data-type="image"></div>
+    <div class="intro-block reveal">
+      <p>ABN Residency is a simple, clean, and budget-friendly accommodation located just <strong>400 meters from Sri Lakshmi Narasimha Swamy Temple</strong>. An ideal choice for pilgrims, families, and devotees seeking proximity to the temple with a peaceful and comfortable environment.</p>
     </div>
-
-    <div class="book-btn-wrap">
-      <a href="https://wa.me/919000821894?text=Hello%20I%20want%20to%20book%20a%20room%20at%20ABN%20Residency%20Antarvedi" target="_blank" class="btn-book whatsapp">📞 Book Now on WhatsApp</a>
+    <h2 class="content-title reveal">ABN Residency Gallery</h2>
+    <div class="gallery-masonry reveal">
+      <div class="gallery-item"><img src="assets/images/abn1.jpg" alt="ABN Residency Front View" class="lightbox-item" data-type="image"></div>
+      <div class="gallery-item"><img src="assets/images/abn2.jpeg" alt="ABN Residency Rooms" class="lightbox-item" data-type="image"></div>
+      <div class="gallery-item"><img src="assets/images/abn3.jpeg" alt="ABN Residency Interior" class="lightbox-item" data-type="image"></div>
+      <div class="gallery-item"><img src="assets/images/abn4.jpeg" alt="ABN Residency Accommodation" class="lightbox-item" data-type="image"></div>
+      <div class="gallery-item"><img src="assets/images/abn5.jpeg" alt="ABN Residency Stay" class="lightbox-item" data-type="image"></div>
+      <div class="gallery-item"><img src="assets/images/abn6.jpeg" alt="ABN Residency View" class="lightbox-item" data-type="image"></div>
     </div>
-    <p class="page-note">Note: Room availability and pricing may vary based on temple events, festivals, and weekends. Visitors are advised to contact the residency directly before arrival, especially during peak pilgrimage seasons.</p>
+    <div class="cta-block reveal">
+      <a href="https://wa.me/919000821894?text=Hello%20I%20want%20to%20book%20a%20room%20at%20ABN%20Residency%20Antarvedi" target="_blank" class="btn-wa">📞 Book Now on WhatsApp</a>
+    </div>
+    <div class="reveal" style="margin-top:2rem;">
+      <p class="page-note">Note: Room availability and pricing vary based on temple events, festivals, and weekends. Contact the residency directly before arrival, especially during peak pilgrimage seasons.</p>
+    </div>
   </div>
 </section>
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
   <div class="lightbox-content"></div>
 </div>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
-    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
-    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
-  </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
-</footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
-  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
-  const lightbox = document.getElementById("lightbox");
-  const content = document.querySelector(".lightbox-content");
-  document.querySelectorAll(".lightbox-item").forEach(item => {
-    item.addEventListener("click", () => {
-      content.innerHTML = "";
-      if (item.dataset.type === "image") { const img = document.createElement("img"); img.src = item.src; content.appendChild(img); }
-      lightbox.classList.add("show");
-    });
-  });
-  function closeLightbox() { lightbox.classList.remove("show"); content.innerHTML = ""; }
-  lightbox.onclick = (e) => { if (e.target === lightbox) closeLightbox(); };
+const lb=document.getElementById('lightbox'),lbc=document.querySelector('.lightbox-content');
+document.querySelectorAll('.lightbox-item').forEach(item=>{
+  item.addEventListener('click',()=>{lbc.innerHTML='';const img=document.createElement('img');img.src=item.src;lbc.appendChild(img);lb.classList.add('show');});
+});
+function closeLightbox(){lb.classList.remove('show');lbc.innerHTML='';}
+lb.onclick=e=>{if(e.target===lb)closeLightbox();};
 </script>
-</body>
-</html>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Visit</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="planner.html">AI Trip Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
+</footer>
+<div class="nav-overlay" id="navOverlay"></div>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+// Cursor - mouse devices only
+const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
+if(window.matchMedia("(pointer: fine)").matches&&dot&&ring){
+  let mx=0,my=0,rx=0,ry=0,ca=false;
+  document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+"px";dot.style.top=my+"px";if(!ca){ca=true;document.body.classList.add("cursor-active");}});
+  (function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+"px";ring.style.top=ry+"px";requestAnimationFrame(a);})();
+  document.querySelectorAll("a,button,.gallery-item").forEach(function(el){
+    el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
+    el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
+  });
+}
+// Header scroll
+var hdr=document.getElementById("header");
+function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
+window.addEventListener("scroll",hs,{passive:true});hs();
+// Mobile menu with overlay
+var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
+function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";}
+function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";}
+function toggleMenu(){nl.classList.contains("open")?closeMenu():openMenu();}
+if(ov)ov.addEventListener("click",closeMenu);
+if(nl)nl.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu);});
+// Scroll reveal
+if("IntersectionObserver" in window){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.08});
+  document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
+}else{document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible");});}
+</script>
+</body></html>
