@@ -5,88 +5,125 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>Antarvedi Lighthouse | Panoramic View of River and Sea</title>
-  <meta name="description" content="Antarvedi Lighthouse offers breathtaking panoramic views of the Godavari River, Bay of Bengal, and surrounding coastline.">
+  
+  <meta name="description" content="Antarvedi Lighthouse offers breathtaking panoramic views of the Godavari River, Bay of Bengal, and surrounding coastline. A top sightseeing spot.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<section class="page-hero" style="padding-top:80px;min-height:52vh;">
-  <div class="page-hero-bg">
-    <img src="assets/images/lighthouse.jpg" alt="Antarvedi Lighthouse">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.3) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Lighthouse</p>
-    <h1>Antarvedi Lighthouse</h1>
-    <p class="hero-sub">A thrilling climb to panoramic views of sea, river, forests, and sky</p>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/lighthouse.jpg" alt="Antarvedi Lighthouse"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Lighthouse</span></p>
+    <h1>Antarvedi<br><em>Lighthouse</em></h1>
+    <p class="page-hero-sub">A thrilling climb to panoramic views of sea, river, forests, and endless sky</p>
   </div>
 </section>
-<section class="page-content">
+<section class="page-body">
   <div class="page-inner">
-    <p class="page-intro">The Antarvedi Lighthouse offers one of the most <strong>breathtaking viewpoints</strong> in the region. Standing tall near the coastline, it invites visitors to climb its steps and experience a refreshing blend of adventure, greenery, and endless water views from the top.</p>
-    <h2 class="content-title">What Makes the Lighthouse Special</h2>
-    <div class="cards-grid">
+    <div class="intro-block reveal">
+      <p>The Antarvedi Lighthouse offers one of the most <strong>breathtaking viewpoints</strong> in the region. Standing tall near the coastline, it invites visitors to climb its spiral steps and experience a refreshing blend of adventure, greenery, and endless water horizons from the top.</p>
+    </div>
+    <h2 class="content-title reveal">What Makes the Lighthouse Special</h2>
+    <div class="cards-grid reveal">
       <div class="info-card">
-        <h3>🧗 An Adventurous Climb</h3>
+        <h3>🧗 The Climb</h3>
         <ul>
           <li>Approximately <strong>101–111 steps</strong> to the top</li>
-          <li>Exciting spiral climb inside the lighthouse</li>
+          <li>Exciting spiral staircase inside</li>
           <li>Perfect mini-adventure for all ages</li>
-          <li>Entry ticket priced around <strong>₹10–₹20</strong></li>
+          <li>Entry ticket around <strong>₹10–₹20</strong></li>
         </ul>
       </div>
       <div class="info-card">
-        <h3>🌅 Panoramic Views</h3>
+        <h3>🌅 The View</h3>
         <ul>
-          <li>Clear views of the <strong>Bay of Bengal beach</strong></li>
-          <li>Godavari River flowing into <strong>Sagar Sangamam</strong></li>
-          <li>Surrounding fishing ponds and waterways</li>
-          <li>Green landscapes blending with water bodies</li>
+          <li>360° views of the <strong>Bay of Bengal</strong></li>
+          <li>Godavari River flowing to <strong>Sangamam</strong></li>
+          <li>Fishing ponds and mangrove waterways</li>
+          <li>Green landscapes blending with water</li>
         </ul>
       </div>
       <div class="info-card">
-        <h3>🌬️ Experience at the Top</h3>
+        <h3>🌬️ The Experience</h3>
         <ul>
-          <li>Strong, refreshing sea winds</li>
+          <li>Strong, refreshing sea winds at the top</li>
           <li>Cool and peaceful atmosphere</li>
-          <li>Feels like greenery and water everywhere</li>
-          <li>Ideal spot for photos and relaxation</li>
+          <li>Feels like the world is just water and sky</li>
+          <li>Ideal for photography & quiet reflection</li>
         </ul>
       </div>
     </div>
-    <p class="page-note">Note: Entry timings and ticket prices may change based on local authority regulations. Visitors are advised to be cautious while climbing, follow safety instructions, and avoid visiting during extreme weather conditions.</p>
+    <div class="cta-block reveal">
+      <p class="page-note">Note: Entry timings and ticket prices may change. Be cautious while climbing, follow safety instructions, and avoid visiting during extreme weather conditions.</p>
+    </div>
   </div>
 </section>
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
-    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
-    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Visit</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="planner.html">AI Trip Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
 </footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
-  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
+document.getElementById("year").textContent = new Date().getFullYear();
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('menuToggle').classList.toggle('active');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>
