@@ -120,6 +120,7 @@
     <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
   </div>
 </footer>
+<button class="nav-close-btn" id="navCloseBtn" onclick="closeMenu()" aria-label="Close menu">✕</button>
 <div class="nav-overlay" id="navOverlay"></div>
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -140,8 +141,9 @@ function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
 window.addEventListener("scroll",hs,{passive:true});hs();
 // Mobile menu with overlay
 var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
-function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";}
-function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";}
+var cb=document.getElementById("navCloseBtn");
+function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";if(cb)cb.classList.add("open");}
+function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";if(cb)cb.classList.remove("open");}
 function toggleMenu(){nl.classList.contains("open")?closeMenu():openMenu();}
 if(ov)ov.addEventListener("click",closeMenu);
 if(nl)nl.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu);});

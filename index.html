@@ -281,6 +281,7 @@
   </div>
 </footer>
 
+<button class="nav-close-btn" id="navCloseBtn" onclick="closeMenu()" aria-label="Close menu">✕</button>
 <div class="nav-overlay" id="navOverlay"></div>
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -318,24 +319,25 @@ const navLinks = document.getElementById('navLinks');
 const menuBtn = document.getElementById('menuToggle');
 const navOverlay = document.getElementById('navOverlay');
 
+const closeBtn = document.getElementById('navCloseBtn');
 function openMenu() {
   navLinks.classList.add('open');
   menuBtn.classList.add('active');
   navOverlay.classList.add('show');
-  document.body.style.overflow = 'hidden'; // prevent scroll behind menu
+  document.body.style.overflow = 'hidden';
+  if (closeBtn) closeBtn.classList.add('open');
 }
 function closeMenu() {
   navLinks.classList.remove('open');
   menuBtn.classList.remove('active');
   navOverlay.classList.remove('show');
   document.body.style.overflow = '';
+  if (closeBtn) closeBtn.classList.remove('open');
 }
 function toggleMenu() {
   navLinks.classList.contains('open') ? closeMenu() : openMenu();
 }
-// Close menu when overlay is tapped
 navOverlay.addEventListener('click', closeMenu);
-// Close menu when a nav link is tapped
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
 // ── Reveal on scroll ──
