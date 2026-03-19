@@ -1,187 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V60KJPZ5Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V60KJPZ5Q6');
+</script>
   <meta charset="UTF-8">
   <title>Antarvedi Beach | Peaceful Coastal Beach Near Antarvedi Temple</title>
-  
   <meta name="description" content="Antarvedi Beach is a serene coastal destination near the Godavari delta, valued for its spiritual atmosphere, natural beauty, and sunrise views.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="46x46" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="./style.css?v=7">
 </head>
 <body>
-<!-- MOBILE NAV PANEL (outside header, direct child of body) -->
-<div id="mobileNav" class="mobile-nav" role="dialog" aria-label="Navigation">
-  <div class="mobile-nav-header">
-    <img src="assets/images/logo.png" alt="Antarvedi" class="mobile-nav-logo">
-    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
-  </div>
-  <nav class="mobile-nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
-    <li><a href="travel.html">Travel</a></li>
-    <li><a href="local-stays.html">Local Stays</a></li>
-    <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </nav>
-</div>
-<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<header class="site-header scrolled" id="header">
-  <nav class="navbar">
-    <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Antarvedi Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="planner.html">AI Planner</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="page-hero">
-  <div class="page-hero-bg"><img src="assets/images/beach.jpg" alt="Antarvedi Beach"></div>
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content">
-    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Beach</span></p>
-    <h1>Antarvedi<br><em>Beach</em></h1>
-    <p class="page-hero-sub">A serene coastline where river breeze meets the vast Bay of Bengal</p>
+<!-- ================= HERO ================= -->
+<section class="hero beach-hero">
+  <div class="hero-content">
+    <h1>Antarvedi Beach</h1>
+    <p>
+      A serene coastline where river breeze meets the vast Bay of Bengal
+    </p>
   </div>
 </section>
-<section class="page-body">
-  <div class="page-inner">
-    <div class="intro-block reveal">
-      <p>Antarvedi Beach is a peaceful and less-crowded coastal stretch known for its <strong>clean sands, gentle waves, and calming atmosphere</strong>. Unlike commercial beaches, it offers a raw and natural seaside experience where visitors can relax, enjoy scenic views, and feel close to nature.</p>
-    </div>
-    <h2 class="content-title reveal">Things to Do at the Beach</h2>
-    <div class="cards-grid reveal">
-      <div class="info-card">
-        <h3>🏖️ Beach Activities</h3>
+
+<!-- ================= CONTENT ================= -->
+<section class="temple-content">
+  <div class="temple-inner">
+
+    <!-- INTRO -->
+    <p class="temple-intro">
+      Antarvedi Beach is a peaceful and less-crowded coastal stretch known for
+      its clean sands, gentle waves, and calming atmosphere. Unlike commercial
+      beaches, it offers a raw and natural seaside experience where visitors
+      can relax, enjoy scenic views, and feel close to nature.
+    </p>
+
+    <h2 class="temple-title">Things to Do at the Beach</h2>
+
+    <div class="temple-grid">
+
+      <!-- ACTIVITIES -->
+      <div class="temple-card">
+        <h3>Beach Activities</h3>
         <ul>
           <li>Horse riding along the shoreline</li>
-          <li>Buggy car rides on the golden sand</li>
+          <li>Buggy car rides on the sand</li>
           <li>Beach walks and leisure strolls</li>
-          <li>Photography at sunrise and sunset</li>
+          <li>Photography and sunset viewing</li>
         </ul>
       </div>
-      <div class="info-card">
-        <h3>✨ Highlights</h3>
+
+      <!-- EXPERIENCE -->
+      <div class="temple-card">
+        <h3>Experience Highlights</h3>
         <ul>
-          <li>Wide open beach with minimal crowds</li>
+          <li>Wide open beach with minimal crowd</li>
           <li>Cool sea breeze throughout the day</li>
-          <li>Golden sunsets over the open horizon</li>
-          <li>Relaxing ambience ideal for all ages</li>
+          <li>Golden sunsets over the horizon</li>
+          <li>Relaxing ambience ideal for families</li>
         </ul>
       </div>
-      <div class="info-card">
-        <h3>ℹ️ Visitor Info</h3>
+
+      <!-- VISITOR INFO -->
+      <div class="temple-card">
+        <h3>Visitor Information</h3>
         <ul>
           <li><strong>Best Time:</strong> Early morning & evening</li>
           <li><strong>Season:</strong> October to March</li>
-          <li>Activities peak during weekends</li>
-          <li>Local vendors on Saturdays & Sundays</li>
+          <li>Activities available during peak hours</li>
+          <li>Local vendors operate on weekends</li>
         </ul>
       </div>
+
     </div>
-    <div class="cta-block reveal">
-      <p class="page-note">Note: Swimming is not advised due to unpredictable sea currents. Follow safety instructions, avoid venturing deep into the water, and support local service providers responsibly.</p>
-    </div>
+
+    <!-- SAFETY NOTE -->
+    <p class="temple-note">
+      Note: Swimming is not advised due to unpredictable sea currents.
+      Visitors are encouraged to follow safety instructions, avoid venturing
+      deep into the water, and support local service providers responsibly.
+    </p>
+
   </div>
 </section>
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
-      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Visit</h5>
-      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
-      <a href="sangamam.html">Sagara Sangamam</a>
-      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
-      <a href="antarvedi-beach.html">Beach</a>
-      <a href="antarvedi-lighthouse.html">Lighthouse</a>
-      <a href="antarvedi-boating.html">Boating</a>
-    </div>
-    <div class="footer-col">
-      <h5>Stay</h5>
-      <a href="local-stays.html">Local Stays</a>
-      <a href="apple-resorts.html">Apple Resorts</a>
-      <a href="abn-residency.html">ABN Residency</a>
-      <a href="resorts.html">Dindi Resorts</a>
-    </div>
-    <div class="footer-col">
-      <h5>Plan</h5>
-      <a href="travel.html">Travel Guide</a>
-      <a href="planner.html">AI Trip Planner</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
-    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
-  </div>
-</footer>
-<button class="nav-close-btn" id="navCloseBtn" onclick="closeMenu()" aria-label="Close menu">✕</button>
-<div class="nav-overlay" id="navOverlay"></div>
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-// Cursor - mouse devices only
-const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
-if(window.matchMedia("(pointer: fine)").matches&&dot&&ring){
-  let mx=0,my=0,rx=0,ry=0,ca=false;
-  document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+"px";dot.style.top=my+"px";if(!ca){ca=true;document.body.classList.add("cursor-active");}});
-  (function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+"px";ring.style.top=ry+"px";requestAnimationFrame(a);})();
-  document.querySelectorAll("a,button,.gallery-item").forEach(function(el){
-    el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
-    el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
-  });
-}
-// Header scroll
-var hdr=document.getElementById("header");
-function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
-window.addEventListener("scroll",hs,{passive:true});hs();
-// Mobile menu with overlay
-var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
-// ── Mobile nav (standalone panel, outside header) ──
-var mobileNav = document.getElementById('mobileNav');
-var mobileNavOverlay = document.getElementById('mobileNavOverlay');
-var mobileNavClose = document.getElementById('mobileNavClose');
-var menuBtn = document.getElementById('menuToggle');
 
-function openMenu() {
-  mobileNav.classList.add('open');
-  mobileNavOverlay.classList.add('show');
-  menuBtn.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-  mobileNav.classList.remove('open');
-  mobileNavOverlay.classList.remove('show');
-  menuBtn.classList.remove('active');
-  document.body.style.overflow = '';
-}
-function toggleMenu() {
-  mobileNav.classList.contains('open') ? closeMenu() : openMenu();
-}
-if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMenu);
-if (mobileNavClose)   mobileNavClose.addEventListener('click', closeMenu);
-// Close on any nav link tap
-document.querySelectorAll('.mobile-nav-links a').forEach(function(a) {
-  a.addEventListener('click', closeMenu);
-});
-// Scroll reveal
-if("IntersectionObserver" in window){
-  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.08});
-  document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
-}else{document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible");});}
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  © <span id="year"></span> Antarvedi. All rights reserved.
+</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    // Animate icon
+    toggle.textContent = nav.classList.contains("show") ? "✕" : "☰";
+  }
 </script>
-</body></html>
+
+
+
+</body>
+</html>
