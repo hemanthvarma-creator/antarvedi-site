@@ -120,17 +120,35 @@
     <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
   </div>
 </footer>
+<div class="nav-overlay" id="navOverlay"></div>
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
-const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
-(function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
-document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
-const hdr=document.getElementById('header');
-window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('menuToggle').classList.toggle('active');}
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Cursor - mouse devices only
+const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
+if(window.matchMedia("(pointer: fine)").matches&&dot&&ring){
+  let mx=0,my=0,rx=0,ry=0,ca=false;
+  document.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+"px";dot.style.top=my+"px";if(!ca){ca=true;document.body.classList.add("cursor-active");}});
+  (function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+"px";ring.style.top=ry+"px";requestAnimationFrame(a);})();
+  document.querySelectorAll("a,button,.gallery-item").forEach(function(el){
+    el.addEventListener("mouseenter",function(){document.body.classList.add("cursor-hover");});
+    el.addEventListener("mouseleave",function(){document.body.classList.remove("cursor-hover");});
+  });
+}
+// Header scroll
+var hdr=document.getElementById("header");
+function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
+window.addEventListener("scroll",hs,{passive:true});hs();
+// Mobile menu with overlay
+var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
+function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";}
+function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";}
+function toggleMenu(){nl.classList.contains("open")?closeMenu():openMenu();}
+if(ov)ov.addEventListener("click",closeMenu);
+if(nl)nl.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu);});
+// Scroll reveal
+if("IntersectionObserver" in window){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.08});
+  document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
+}else{document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible");});}
 </script>
 </body></html>
