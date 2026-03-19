@@ -281,39 +281,81 @@
   </div>
 </footer>
 
+<div class="nav-overlay" id="navOverlay"></div>
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Custom cursor
+// ── Custom cursor (desktop/mouse only) ──
 const dot = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
-let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px'; });
-(function animate() { ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12; ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px'; requestAnimationFrame(animate); })();
-document.querySelectorAll('a,button,.bento-card').forEach(el => { el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover')); el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover')); });
-
-// Header scroll
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
-
-// Mobile menu
-function toggleMenu() {
-  const nav = document.getElementById('navLinks');
-  const btn = document.getElementById('menuToggle');
-  nav.classList.toggle('open');
-  btn.classList.toggle('active');
+if (window.matchMedia('(pointer: fine)').matches && dot && ring) {
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0, cursorActive = false;
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+    if (!cursorActive) { cursorActive = true; document.body.classList.add('cursor-active'); }
+  });
+  (function animateCursor() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateCursor);
+  })();
+  document.querySelectorAll('a, button, .bento-card, .place-card, .resort-card, .gallery-item').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
 }
 
-// Reveal on scroll
-const revealEls = document.querySelectorAll('.reveal');
-const revObs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), 0); revObs.unobserve(e.target); } });
-}, { threshold: 0.1 });
-revealEls.forEach(el => revObs.observe(el));
+// ── Header scroll effect ──
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Smooth scroll for anchor links
+// ── Mobile menu ──
+const navLinks = document.getElementById('navLinks');
+const menuBtn = document.getElementById('menuToggle');
+const navOverlay = document.getElementById('navOverlay');
+
+function openMenu() {
+  navLinks.classList.add('open');
+  menuBtn.classList.add('active');
+  navOverlay.classList.add('show');
+  document.body.style.overflow = 'hidden'; // prevent scroll behind menu
+}
+function closeMenu() {
+  navLinks.classList.remove('open');
+  menuBtn.classList.remove('active');
+  navOverlay.classList.remove('show');
+  document.body.style.overflow = '';
+}
+function toggleMenu() {
+  navLinks.classList.contains('open') ? closeMenu() : openMenu();
+}
+// Close menu when overlay is tapped
+navOverlay.addEventListener('click', closeMenu);
+// Close menu when a nav link is tapped
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+// ── Reveal on scroll ──
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => revObs.observe(el));
+} else {
+  // Fallback for old browsers
+  revealEls.forEach(el => el.classList.add('visible'));
+}
+
+// ── Smooth scroll anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); });
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
 });
 </script>
 </body>
