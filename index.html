@@ -19,6 +19,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-home">
+<!-- MOBILE NAV PANEL (outside header, direct child of body) -->
+<div id="mobileNav" class="mobile-nav" role="dialog" aria-label="Navigation">
+  <div class="mobile-nav-header">
+    <img src="assets/images/logo.png" alt="Antarvedi" class="mobile-nav-logo">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="mobile-nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="local-stays.html">Local Stays</a></li>
+    <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </nav>
+</div>
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
 
 <!-- CURSOR -->
 <div class="cursor-dot" id="cursorDot"></div>
@@ -319,26 +336,33 @@ const navLinks = document.getElementById('navLinks');
 const menuBtn = document.getElementById('menuToggle');
 const navOverlay = document.getElementById('navOverlay');
 
-const closeBtn = document.getElementById('navCloseBtn');
+// ── Mobile nav (standalone panel, outside header) ──
+var mobileNav = document.getElementById('mobileNav');
+var mobileNavOverlay = document.getElementById('mobileNavOverlay');
+var mobileNavClose = document.getElementById('mobileNavClose');
+var menuBtn = document.getElementById('menuToggle');
+
 function openMenu() {
-  navLinks.classList.add('open');
+  mobileNav.classList.add('open');
+  mobileNavOverlay.classList.add('show');
   menuBtn.classList.add('active');
-  navOverlay.classList.add('show');
   document.body.style.overflow = 'hidden';
-  if (closeBtn) closeBtn.classList.add('open');
 }
 function closeMenu() {
-  navLinks.classList.remove('open');
+  mobileNav.classList.remove('open');
+  mobileNavOverlay.classList.remove('show');
   menuBtn.classList.remove('active');
-  navOverlay.classList.remove('show');
   document.body.style.overflow = '';
-  if (closeBtn) closeBtn.classList.remove('open');
 }
 function toggleMenu() {
-  navLinks.classList.contains('open') ? closeMenu() : openMenu();
+  mobileNav.classList.contains('open') ? closeMenu() : openMenu();
 }
-navOverlay.addEventListener('click', closeMenu);
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMenu);
+if (mobileNavClose)   mobileNavClose.addEventListener('click', closeMenu);
+// Close on any nav link tap
+document.querySelectorAll('.mobile-nav-links a').forEach(function(a) {
+  a.addEventListener('click', closeMenu);
+});
 
 // ── Reveal on scroll ──
 const revealEls = document.querySelectorAll('.reveal');

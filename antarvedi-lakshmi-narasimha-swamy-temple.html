@@ -13,6 +13,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- MOBILE NAV PANEL (outside header, direct child of body) -->
+<div id="mobileNav" class="mobile-nav" role="dialog" aria-label="Navigation">
+  <div class="mobile-nav-header">
+    <img src="assets/images/logo.png" alt="Antarvedi" class="mobile-nav-logo">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html" class="active">Temple</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="local-stays.html">Local Stays</a></li>
+    <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </nav>
+</div>
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
@@ -144,12 +161,33 @@ function hs(){hdr.classList.toggle("scrolled",window.scrollY>60);}
 window.addEventListener("scroll",hs,{passive:true});hs();
 // Mobile menu with overlay
 var nl=document.getElementById("navLinks"),mb=document.getElementById("menuToggle"),ov=document.getElementById("navOverlay");
-var cb=document.getElementById("navCloseBtn");
-function openMenu(){nl.classList.add("open");mb.classList.add("active");ov.classList.add("show");document.body.style.overflow="hidden";if(cb)cb.classList.add("open");}
-function closeMenu(){nl.classList.remove("open");mb.classList.remove("active");ov.classList.remove("show");document.body.style.overflow="";if(cb)cb.classList.remove("open");}
-function toggleMenu(){nl.classList.contains("open")?closeMenu():openMenu();}
-if(ov)ov.addEventListener("click",closeMenu);
-if(nl)nl.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu);});
+// ── Mobile nav (standalone panel, outside header) ──
+var mobileNav = document.getElementById('mobileNav');
+var mobileNavOverlay = document.getElementById('mobileNavOverlay');
+var mobileNavClose = document.getElementById('mobileNavClose');
+var menuBtn = document.getElementById('menuToggle');
+
+function openMenu() {
+  mobileNav.classList.add('open');
+  mobileNavOverlay.classList.add('show');
+  menuBtn.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  mobileNav.classList.remove('open');
+  mobileNavOverlay.classList.remove('show');
+  menuBtn.classList.remove('active');
+  document.body.style.overflow = '';
+}
+function toggleMenu() {
+  mobileNav.classList.contains('open') ? closeMenu() : openMenu();
+}
+if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMenu);
+if (mobileNavClose)   mobileNavClose.addEventListener('click', closeMenu);
+// Close on any nav link tap
+document.querySelectorAll('.mobile-nav-links a').forEach(function(a) {
+  a.addEventListener('click', closeMenu);
+});
 // Scroll reveal
 if("IntersectionObserver" in window){
   var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.08});
