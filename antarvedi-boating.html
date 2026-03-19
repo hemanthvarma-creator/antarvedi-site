@@ -5,95 +5,132 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>Boating in Antarvedi | Godavari River Boat Rides & Sea Views</title>
+  
   <meta name="description" content="Enjoy boating at Antarvedi including Sagar Sangamam boat rides, mangrove forest boating and speed boating on the Godavari river.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<section class="page-hero" style="padding-top:80px;min-height:52vh;">
-  <div class="page-hero-bg">
-    <img src="assets/images/boating.jpg" alt="Godavari Boating">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.3) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Boating</p>
-    <h1>Godavari Boating</h1>
-    <p class="hero-sub">Explore the River, Mangrove Forests, and Sacred Confluence through unforgettable boat journeys</p>
-    <div style="margin-top:1.8rem;display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="#boating-info" class="btn-book gold">Know More</a>
-      <a href="https://wa.me/918977517475?text=Hi%20I%20want%20to%20book%20a%20boating%20ride%20at%20Antarvedi" target="_blank" class="btn-book whatsapp">📞 Book on WhatsApp</a>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/boating.jpg" alt="Godavari Boating Antarvedi"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Boating</span></p>
+    <h1>Godavari<br><em>Boating</em></h1>
+    <p class="page-hero-sub">Explore the river, mangrove forests, and sacred confluence through unforgettable boat journeys</p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#boating-info" class="btn-primary">Know More</a>
+      <a href="https://wa.me/918977517475?text=Hi%20I%20want%20to%20book%20a%20boating%20ride%20at%20Antarvedi" target="_blank" class="btn-wa">📞 Book on WhatsApp</a>
     </div>
   </div>
 </section>
-<section class="page-content" id="boating-info">
+<section class="page-body" id="boating-info">
   <div class="page-inner">
-    <p class="page-intro">Boating at Antarvedi offers a unique way to experience the beauty and spirituality of the Godavari River. From <strong>sacred pilgrimage routes</strong> to calm mangrove forests and thrilling speed rides, boating here caters to devotees, nature lovers, and adventure seekers alike.</p>
-    <h2 class="content-title">Types of Boating Experiences</h2>
-    <div class="cards-grid">
+    <div class="intro-block reveal">
+      <p>Boating at Antarvedi offers a unique way to experience the beauty and spirituality of the Godavari. From <strong>sacred pilgrimage routes</strong> to calm mangrove corridors and thrilling speed rides — boating here caters to devotees, nature lovers, and adventure seekers alike.</p>
+    </div>
+    <h2 class="content-title reveal">Types of Boating Experiences</h2>
+    <div class="cards-grid reveal">
       <div class="info-card">
-        <h3>🚤 Regular Tourist Boating</h3>
+        <h3>🚤 Tourist Boating</h3>
         <ul>
           <li>Boat service to <strong>Sagar Sangamam</strong></li>
-          <li>Route includes <strong>Anna Chellula Gattu</strong></li>
+          <li>Route via <strong>Anna Chellula Gattu</strong></li>
           <li>Popular among pilgrims and families</li>
-          <li>Calm and steady ride suitable for all ages</li>
+          <li>Calm ride suitable for all ages</li>
         </ul>
       </div>
       <div class="info-card">
-        <h3>🌿 Mangrove Forest Boating</h3>
+        <h3>🌿 Mangrove Forest</h3>
         <ul>
-          <li>Boat travels through mangrove forests</li>
-          <li>Peaceful, scenic, and nature-rich experience</li>
-          <li>Ideal for photography and relaxation</li>
-          <li>Less crowded and highly recommended</li>
+          <li>Boat through ancient mangrove corridors</li>
+          <li>Peaceful, scenic, nature-rich experience</li>
+          <li>Ideal for photography and mindfulness</li>
+          <li>Less crowded — highly recommended</li>
         </ul>
       </div>
       <div class="info-card">
         <h3>⚡ Speed Boating</h3>
         <ul>
           <li>High-speed ride on the Godavari waters</li>
-          <li>Short duration adventure experience</li>
-          <li>Available during favorable weather conditions</li>
+          <li>Short-duration thrill experience</li>
+          <li>Available in favorable weather</li>
           <li>Safety jackets provided for all riders</li>
         </ul>
       </div>
     </div>
-    <div class="book-btn-wrap">
-      <a href="https://wa.me/918977517475?text=Hi%20I%20want%20to%20book%20a%20boating%20experience%20at%20Antarvedi" target="_blank" class="btn-book whatsapp">Book Boating on WhatsApp →</a>
+    <div class="cta-block reveal">
+      <a href="https://wa.me/918977517475?text=Hi%20I%20want%20to%20book%20a%20boating%20experience%20at%20Antarvedi" target="_blank" class="btn-wa">📞 Book Boating on WhatsApp</a>
     </div>
-    <p class="page-note">Note: Boating availability and routes depend on river conditions and weather. Timings and prices may vary seasonally. Visitors are advised to follow safety guidelines, wear life jackets, and book rides through authorized local operators only.</p>
+    <div class="reveal" style="margin-top:2rem;">
+      <p class="page-note">Note: Boating availability depends on river conditions and weather. Timings and prices vary seasonally. Follow safety guidelines, wear life jackets, and book through authorized local operators only.</p>
+    </div>
   </div>
 </section>
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
-    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
-    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Visit</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="planner.html">AI Trip Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
 </footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
-  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
+document.getElementById("year").textContent = new Date().getFullYear();
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('menuToggle').classList.toggle('active');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>
