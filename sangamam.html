@@ -1,4 +1,3 @@
-<!-- SANGAMAM PAGE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,45 +5,47 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V60KJPZ5Q6');</script>
   <meta charset="UTF-8">
   <title>Antarvedi Sagara Sangamam | Where Godavari River Meets the Sea</title>
+  
   <meta name="description" content="Sagara Sangamam in Antarvedi is the sacred confluence where the Godavari river meets the sea, known for spiritual rituals, prayers, and pilgrim visits.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <header class="site-header scrolled" id="header">
   <nav class="navbar">
     <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Antarvedi" class="logo-img"></a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a></li>
       <li><a href="travel.html">Travel</a></li>
       <li><a href="local-stays.html">Local Stays</a></li>
-      <li><a href="planner.html" class="nav-highlight">AI Planner</a></li>
+      <li><a href="planner.html" class="nav-cta">✦ AI Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<section class="page-hero" style="padding-top:80px;min-height:52vh;">
-  <div class="page-hero-bg">
-    <img src="assets/images/sangamam.jpg" alt="Sagara Sangamam">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,26,0.35) 0%,rgba(13,26,26,0.85) 100%);"></div>
-  </div>
-  <div class="page-hero-content" style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;">
-    <p class="breadcrumb">Home → Sagara Sangamam</p>
-    <h1>Sagara Sangamam</h1>
-    <p class="hero-sub">Where the sacred Godavari River meets the vast Bay of Bengal</p>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/sangamam.jpg" alt="Sagara Sangamam Antarvedi"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Sagara Sangamam</span></p>
+    <h1>Sagara<br><em>Sangamam</em></h1>
+    <p class="page-hero-sub">Where the sacred Godavari River merges into the vast Bay of Bengal</p>
   </div>
 </section>
-<section class="page-content">
+<section class="page-body">
   <div class="page-inner">
-    <p class="page-intro">Sangamam at Antarvedi is a sacred confluence where the holy River Godavari merges with the Bay of Bengal. This rare natural phenomenon holds immense <strong>spiritual significance</strong> and creates a serene yet powerful atmosphere symbolizing unity, purification, and divine balance.</p>
-    <h2 class="content-title">Spiritual & Natural Significance</h2>
-    <div class="cards-grid">
+    <div class="intro-block reveal">
+      <p>Sangamam at Antarvedi is a sacred confluence where the holy River Godavari merges with the Bay of Bengal. This rare natural phenomenon holds immense <strong>spiritual significance</strong> and creates a serene yet powerful atmosphere — symbolizing unity, purification, and divine balance.</p>
+    </div>
+    <h2 class="content-title reveal">Spiritual & Natural Significance</h2>
+    <div class="cards-grid reveal">
       <div class="info-card">
         <h3>🙏 Spiritual Importance</h3>
         <ul>
@@ -58,36 +59,71 @@
         <h3>🌊 Natural Beauty</h3>
         <ul>
           <li>Visible contrast between river and sea waters</li>
-          <li>Peaceful surroundings with open horizons</li>
-          <li>Ideal spot for sunrise and early morning views</li>
-          <li>Perfect for photography and quiet reflection</li>
+          <li>Peaceful open horizon, unlike any other place</li>
+          <li>Ideal for sunrise and early morning meditation</li>
+          <li>Extraordinary photography location</li>
         </ul>
       </div>
       <div class="info-card">
         <h3>🗓️ Best Time to Visit</h3>
         <ul>
           <li><strong>Season:</strong> October to March</li>
-          <li><strong>Time:</strong> Early morning & sunset</li>
+          <li><strong>Time:</strong> Early morning & at sunset</li>
           <li>Monsoon months may have strong currents</li>
-          <li>Weather is calm and pleasant in winter</li>
+          <li>Bheeshma Ekadasi — most sacred day</li>
         </ul>
       </div>
     </div>
-    <p class="page-note">Note: Swimming near the confluence is not recommended due to strong undercurrents. Visitors are advised to follow local guidance, respect religious practices, and help preserve the natural environment.</p>
+    <div class="cta-block reveal">
+      <p class="page-note">Note: Swimming near the confluence is not recommended due to strong undercurrents. Visitors are advised to follow local guidance, respect religious practices, and preserve the natural environment.</p>
+    </div>
   </div>
 </section>
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo"><p>A sacred coastal destination at the confluence of the Godavari River and the Bay of Bengal.</p></div>
-    <div class="footer-links"><h5>Explore</h5><a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a><a href="sangamam.html">Sagara Sangamam</a><a href="antarvedi-beach.html">Beach</a><a href="antarvedi-boating.html">Boating</a></div>
-    <div class="footer-links"><h5>Plan</h5><a href="travel.html">Travel Guide</a><a href="local-stays.html">Local Stays</a><a href="planner.html">AI Planner</a><a href="contact.html">Contact Us</a></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Antarvedi" class="footer-logo">
+      <p>A sacred coastal destination where the Godavari River meets the Bay of Bengal — Andhra Pradesh, India.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Visit</h5>
+      <a href="antarvedi-lakshmi-narasimha-swamy-temple.html">Temple</a>
+      <a href="sangamam.html">Sagara Sangamam</a>
+      <a href="vasista-ashramam-antarvedi.html">Vasista Ashramam</a>
+      <a href="antarvedi-beach.html">Beach</a>
+      <a href="antarvedi-lighthouse.html">Lighthouse</a>
+      <a href="antarvedi-boating.html">Boating</a>
+    </div>
+    <div class="footer-col">
+      <h5>Stay</h5>
+      <a href="local-stays.html">Local Stays</a>
+      <a href="apple-resorts.html">Apple Resorts</a>
+      <a href="abn-residency.html">ABN Residency</a>
+      <a href="resorts.html">Dindi Resorts</a>
+    </div>
+    <div class="footer-col">
+      <h5>Plan</h5>
+      <a href="travel.html">Travel Guide</a>
+      <a href="planner.html">AI Trip Planner</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> Antarvedi. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Antarvedi. All rights reserved.</p>
+    <span class="footer-fine">antarvedi.in &nbsp;·&nbsp; Konaseema, Andhra Pradesh</span>
+  </div>
 </footer>
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  function toggleMenu() { document.querySelector(".nav-links").classList.toggle("open"); document.querySelector(".menu-toggle").classList.toggle("active"); }
-  window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60); });
+document.getElementById("year").textContent = new Date().getFullYear();
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('menuToggle').classList.toggle('active');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>
